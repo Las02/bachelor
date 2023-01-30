@@ -1,0 +1,523 @@
+Candidatus Guanabacterium
+Acidicapsa
+Acidipila
+Acidisarcina
+Acidobacterium
+Alloacidobacterium
+Bryocella
+Candidatus Koribacter
+Candidatus Sulfotelmatobacter
+Candidatus Sulfotelmatomonas
+Edaphobacter
+Granulicella
+Occallatibacter
+Paracidobacterium
+Pseudacidobacterium
+Silvibacterium
+Telmatobacter
+Terracidiphilus
+Terriglobus
+Bryobacter
+Paludibaculum
+Candidatus Anaerovoracibacter
+Candidatus Solibacter
+Candidatus Sulfopaludibacter
+Candidatus Acidoferrum
+Candidatus Angelobacter
+Candidatus Versatilivorator
+Aridibacter
+Blastocatella
+Stenotrophobacter
+Tellurimicrobium
+Arenimicrobium
+Brevitalea
+Pyrinomonas
+Chloracidobacterium
+Candidatus Polarisedimenticola
+Acanthopleuribacter
+Sulfidibacter
+Geothrix
+Holophaga
+Thermotomaculum
+Candidatus Multivorans
+Candidatus Sulfomarinibacter
+Thermoanaerobaculum
+Candidatus Marinacidobacterium
+Luteitalea
+Vicinamibacter
+Aquifex
+Hydrogenivirga
+Hydrogenobacter
+Hydrogenobaculum
+Thermocrinis
+Thermosulfidibacter
+Persephonella
+Sulfurihydrogenibium
+Venenivibrio
+Hydrogenothermus
+Balnearium
+Desulfurobacterium
+Phorcysia
+Thermovibrio
+Atribacter
+Candidatus Caldatribacterium
+Candidatus Methylomirabilis
+Candidatus Absconditicoccus
+Vampirococcus
+Candidatus Aerophobus
+Candidatus Aminicenans
+Candidatus Saccharicenans
+Candidatus Binatus
+Candidatus Bipolaricaulis
+Candidatus Acetothermum
+Candidatus Calescibacterium
+Candidatus Babela
+Candidatus Chromulinivorax
+Vermiphilus
+Candidatus Fervidibacter
+Candidatus Mcinerneyibacterium
+Candidatus Muirbacterium
+Candidatus Ozemobacter
+Candidatus Peribacter
+Candidatus Minimicrobia
+Candidatus Mycosynbacter
+Candidatus Nanoperiomorbus
+Candidatus Nanogingivalis
+Candidatus Nanosyncoccus
+Candidatus Nanosynbacter
+Candidatus Chaera
+Candidatus Microsaccharimonas
+Candidatus Nanosynsacchari
+Candidatus Saccharimonas
+Candidatus Stahlbacteria
+Candidatus Sumerlaea
+Candidatus Elulimicrobium
+Candidatus Altimarinus
+Candidatus Microgenomatus
+Candidatus Chazhemtobacterium
+Candidatus Paceibacter
+Candidatus Sonnebornia
+Candidatus Hydrothermus
+Bactoderma
+Candidatus Avacholeplasma
+Candidatus Avigastranaerophilus
+Candidatus Galligastranaerophilus
+Candidatus Moduliflexus
+Candidatus Ovobacter
+Candidatus Scatenecus
+Candidatus Scatousia
+Candidatus Spyradomonas
+Candidatus Vecturithrix
+Candidatus Ventrenecus
+Chlorochromatium
+Deinonema
+Nanobacterium
+Pseudogluconobacter
+Ruminobacillus
+Smegmaraptor
+Stibiobacter
+Streptofusia
+Thermothrix
+Caldisericum
+Candidatus Cryosericum
+Caldithrix
+Calorithrix
+Candidatus Krumholzibacterium
+Candidatus Tharpella
+Chrysiogenes
+Desulfurispira
+Desulfurispirillum
+Coleospermum
+Calditerrivibrio
+Deferribacter
+Petrothermobacter
+Deferrivibrio
+Flexistipes
+Denitrovibrio
+Geovibrio
+Limisalsivibrio
+Seleniivibrio
+Mucispirillum
+Dictyoglomus
+Candidatus Avelusimicrobium
+Elusimicrobium
+Endomicrobium
+Aliifodinibius
+Balneola
+Fodinibius
+Gracilimonas
+Halalkalibaculum
+Rhodohalobacter
+Cyclonatronum
+Natronogracilivirga
+Soortia
+Bifissio
+Candidatus Paenicardinium
+Candidatus Sulfidibacterium
+Venteria
+Rhodocaloribacter
+Salinibacter
+Rhodothermus
+Toxothrix
+Acetofilamentum
+Candidatus Avibacteroides
+Candidatus Caccoplasma
+Candidatus Gallibacteroides
+Bacteroides
+Caecibacteroides
+Mediterranea
+Paraphocaeicola
+Phocaeicola
+Acetothermus
+Candidatus Aphodosoma
+Candidatus Armantifilum
+Candidatus Avimuribaculum
+Candidatus Azobacteroides
+Candidatus Cryptobacteroides
+Candidatus Egerieousia
+Candidatus Enterocola
+Candidatus Gallipaludibacter
+Candidatus Limisoma
+Candidatus Onthomorpha
+Candidatus Ordinivivax
+Candidatus Pullibacteroides
+Candidatus Symbiothrix
+Balneicella
+Barnesiella
+Coprobacter
+Dysgonomonas
+Fermentimonas
+Petrimonas
+Proteiniphilum
+Seramator
+Candidatus Amulumruptor
+Duncaniella
+Heminiphilus
+Candidatus Merdivivens
+Muribaculum
+Paramuribaculum
+Sangeribacter
+Sodaliphilus
+Candidatus Homeothermus
+Lentimicrobium
+Butyricimonas
+Culturomica
+Odoribacter
+Paludibacter
+Candidatus Vestibaculum
+Falsiporphyromonas
+Gabonia
+Gabonibacter
+Lascolabacillus
+Macellibacteroides
+Massilibacteroides
+Microbacter
+Porphyromonas
+Sanguibacteroides
+Alloprevotella
+Hallella
+Marseilla
+Massiliprevotella
+Metaprevotella
+Palleniella
+Paraprevotella
+Prevotella
+Candidatus Caccomonas
+Prevotellamassilia
+Pseudoprevotella
+Acetobacteroides
+Alistipes
+Anaerocella
+Gallalistipes
+Millionella
+Mucinivorans
+Rikenella
+Candidatus Avirikenella
+Candidatus Coprenecus
+Ruminofilibacter
+Tidjanibacter
+Salinivirga
+Parabacteroides
+Tannerella
+Perlabentimonas
+Tenuifilum
+Williamwhitmania
+Ancylomarina
+Labilibaculum
+Marinifilum
+Alkaliflexus
+Alkalitalea
+Anaerophaga
+Breznakibacter
+Carboxylicivirga
+Geofilum
+Labilibacter
+Mangroviflexus
+Marinilabilia
+Natronoflexus
+Saccharicrinis
+Thermophagus
+Aquipluma
+Draconibacterium
+Mangrovibacterium
+Maribellus
+Mariniphaga
+Meniscus
+Prolixibacter
+Puteibacter
+Roseimarinus
+Sunxiuqinia
+Tangfeifania
+Agriterribacter
+Arachidicoccus
+Arvibacter
+Asinibacterium
+Aurantisolimonas
+Chitinophaga
+Cnuella
+Compostibacter
+Crenotalea
+Deminuibacter
+Dinghuibacter
+Edaphobaculum
+Edaphocola
+Ferruginibacter
+Filimonas
+Flaviaesturariibacter
+Flavihumibacter
+Flavipsychrobacter
+Flavisolibacter
+Flavitalea
+Foetidibacter
+Ginsengibacter
+Gynurincola
+Hanamia
+Haoranjiania
+Heliimonas
+Hydrobacter
+Hydrotalea
+Ilyomonas
+Lacibacter
+Limnovirga
+Longitalea
+Mucibacter
+Nemorincola
+Niabella
+Niastella
+Niveitalea
+Panacibacter
+Paracnuella
+Parafilimonas
+Paraflavitalea
+Parasediminibacterium
+Parasegetibacter
+Phnomibacter
+Pinibacter
+Pseudobacter
+Pseudocnuella
+Pseudoflavitalea
+Puia
+Rurimicrobium
+Sediminibacterium
+Segetibacter
+Taibaiella
+Terrimonas
+Thermoflavifilum
+Vibrionimonas
+Candidatus Amoebophilus
+Candidatus Cardinium
+Bernardetia
+Garritya
+Hugenholtzia
+Catalinimonas
+Porifericola
+Tunicatimonas
+Cesiribacter
+Nafulsella
+Algoriphagus
+Aquiflexum
+Arthrospiribacter
+Belliella
+Cecembia
+Cognataquiflexum
+Cyclobacterium
+Echinicola
+Fontibacter
+Indibacter
+Litoribacter
+Lunatibacter
+Lunatimonas
+Mariniradius
+Mongoliibacter
+Mongoliicoccus
+Mongoliitalea
+Negadavirga
+Nitritalea
+Pararhodonellum
+Penaeicola
+Pleomorphovibrio
+Shivajiella
+Anditalea
+Aquirufa
+Arundinibacter
+Candidatus Magnospira
+Candidatus Nephrothrix
+Chryseosolibacter
+Chryseotalea
+Cytophaga
+Dawidia
+Edaphorhabdus
+Rhabdobacter
+Rhodocytophaga
+Rhodonellum
+Rudanella
+Sandaracinomonas
+Siphonobacter
+Spirosoma
+Sporocytophaga
+Tellurirhabdus
+Luteivirga
+Solirubrum
+Algivirga
+Flammeovirga
+Flexithrix
+Imperialibacter
+Limibacter
+Perexilibacter
+Rapidithrix
+Sediminitomix
+Flexibacter
+Chryseolinea
+Fulvivirga
+Ohtaekwangia
+Parachryseolinea
+Pseudochryseolinea
+Xanthovirga
+Adhaeribacter
+Botryobacter
+Hymenobacter
+Nibribacter
+Parahymenobacter
+Pontibacter
+Rufibacter
+Sabulibacter
+Siccationidurans
+Mangrovivirga
+Marivirga
+Eisenibacter
+Microscilla
+Mooreia
+Aureibacter
+Fulvitalea
+Persicobacter
+Raineya
+Ekhidna
+Marinoscillum
+Reichenbachiella
+Roseivirga
+Arcicella
+Arcticibacterium
+Arsenicibacter
+Dyadobacter
+Emticicia
+Fibrella
+Fibrisoma
+Fibrivirga
+Flectobacillus
+Fluviimonas
+Huanghella
+Jiulongibacter
+Lacihabitans
+Larkinella
+Leadbetterella
+Marinilongibacter
+Nibrella
+Persicitalea
+Pseudarcicella
+Ravibacter
+Runella
+Taeseokella
+Telluribacter
+Rhodoflexus
+Thermoflexibacter
+Thermonema
+Blattabacterium
+Candidatus Brownia
+Brumimicrobium
+Crocinitomix
+Fluviicola
+Lishizhenia
+Putridiphycobacter
+Salinirepens
+Taishania
+Wandonia
+Acidiluteibacter
+Candidatus Marisimplicoccus
+Cryomorpha
+'Thalassorhabdus' Choi et al. 2018
+Abyssalbus
+Actibacter
+Aegicerativicinus
+Aequorivita
+Aestuariibaculum
+Aestuariimonas
+Aestuariivivens
+Aggregatimonas
+Algibacter
+Algitalea
+Altibacter
+Constantimarinum
+Amniculibacterium
+Antarcticibacterium
+Antarcticimonas
+Aquaticitalea
+Aquibacter
+Aquimarina
+Arcticiflavibacter
+Arenibacter
+Arenitalea
+Ascidiaceibacter
+Ascidianibacter
+Ascidiimonas
+Aurantiacicella
+Aurantibacter
+Aurantivirga
+Aureibaculum
+Aureicoccus
+Aureimarina
+Aureisphaera
+Aureitalea
+Aureivirga
+Avrilella
+Bizionia
+Candidatus Amoebinatus
+Candidatus Arcticimaribacter
+Candidatus Hemobacterium
+Candidatus Maricapacicella
+Candidatus Marivariicella
+Candidatus Prosiliicoccus
+Capnocytophaga
+Cellulophaga
+Changchengzhania
+Citreibacter
+Citreitalea
+Coccinimonas
+Coccinistipes
+Cochleicola
+Coenonia
+Confluentibacter
+Coraliitalea
+Corallibacter
+Costertonia
+Croceibacter
+Croceimarina
+Croceitalea
+Croceivirga
+Daejeonia
+Dokdonia
+Eudoraea
+Euzebyella
+Feifantangia
+Flagellimonas
+Flavicella
+Flavihalobacter
