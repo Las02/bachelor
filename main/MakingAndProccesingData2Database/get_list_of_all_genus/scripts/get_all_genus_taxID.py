@@ -1,6 +1,5 @@
 
 import requests
-
 # Extract all the taxid for all bacterial genuses
 url = "https://api.ncbi.nlm.nih.gov/datasets/v2alpha/taxonomy/taxon/2/filtered_subtree?rank_limits=GENUS"
 data = requests.get(url).json()

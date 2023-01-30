@@ -1,0 +1,112 @@
+
+***RibDif running on Ruegeria***
+
+
+Downloading all strains of Ruegeria into Ruegeria/refseq/bacteria/ with ncbi-genome-download.
+
+	9 genomes downloaded.
+
+
+Gunzipping all files.
+
+
+Renaming fastas and adding GCF (for genomes with multiple chromosomes).
+
+
+Finding all rRNA genes longer than 90% of expected length with barrnap.
+
+
+Fishing out 16S genes.
+
+
+Renaming 16S headers.
+
+
+Splitting 16S.
+
+
+Skipping detailed intra-genomic analysis and ANI (if needed, use -a/--ANI).
+
+
+Alligning full-length 16S genes within genomes with muscle and building trees with fastree.
+
+
+Summarizing data into Ruegeria/Ruegeria-summary.csv.
+
+
+Skipping alignments and trees (if needed, use -m/--msa).
+
+
+
+Running amplicon analysis with default primers.
+
+
+-------------------------------------
+
+Working on v3v4-primers:
+
+
+Making amplicons with in_silico_pcr.
+
+
+Skipping alignments and trees (if needed, use -m/--msa).
+
+
+Making unique clusters with vsearch.
+
+
+Making amplicon cluster membership heatmaps.
+
+
+Summary:
+
+Genomes: 9
+	Named: 3
+	Non-named: 6
+
+Named species: 2
+
+1 of 9 (11.11%) genomes have multiple alleles.
+
+0 of 2 (0%) species have at least one overlap.
+
+No species overlap.
+
+-------------------------------------
+
+Working on v1v9-primers:
+
+
+Making amplicons with in_silico_pcr.
+
+
+Skipping alignments and trees (if needed, use -m/--msa).
+
+
+Making unique clusters with vsearch.
+
+
+Making amplicon cluster membership heatmaps.
+
+
+Summary:
+
+Genomes: 9
+	Named: 3
+	Non-named: 6
+
+Named species: 2
+
+1 of 9 (11.11%) genomes have multiple alleles.
+
+0 of 2 (0%) species have at least one overlap.
+
+No species overlap.
+
+-------------------------------------
+
+
+Done.
+
+
+
