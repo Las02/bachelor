@@ -1,0 +1,14 @@
+c8ac3309e63c5dac32d9bfcf29d22be2  ./annotation_hashes.txt
+071628edc1704ab34ebe17e49ae040be  ./GCF_900489655.1_MMC-Mcap.dnaA_assembly_report.txt
+d378eeb4a721ad644fb9962fe4468a55  ./GCF_900489655.1_MMC-Mcap.dnaA_assembly_stats.txt
+bcd9d30dd15627557216859f68781e5b  ./GCF_900489655.1_MMC-Mcap.dnaA_cds_from_genomic.fna.gz
+2a7fec9bac574e8dd712b68088e61f8a  ./GCF_900489655.1_MMC-Mcap.dnaA_feature_count.txt.gz
+800bcafd6ec0691d4fcd68491ee5d981  ./GCF_900489655.1_MMC-Mcap.dnaA_feature_table.txt.gz
+bbb084c42a2eb69deb4c8215e789e727  ./GCF_900489655.1_MMC-Mcap.dnaA_genomic.fna.gz
+0a101aee115130007fb403c1d53e507e  ./GCF_900489655.1_MMC-Mcap.dnaA_genomic.gbff.gz
+153a663a80134ddb461cf203e077aa20  ./GCF_900489655.1_MMC-Mcap.dnaA_genomic.gff.gz
+26f76e6907aea1e8e8a214efcb4c977e  ./GCF_900489655.1_MMC-Mcap.dnaA_genomic.gtf.gz
+efeb48863ad7fba8d5089027a1b8790b  ./GCF_900489655.1_MMC-Mcap.dnaA_protein.faa.gz
+78fc37e0e27419b04d3f14eb5d1a7aec  ./GCF_900489655.1_MMC-Mcap.dnaA_protein.gpff.gz
+ee4d3e8ca0d29d71bde697964a5b4e2d  ./GCF_900489655.1_MMC-Mcap.dnaA_rna_from_genomic.fna.gz
+2e54de778f3646161ea5f6ef401344fc  ./GCF_900489655.1_MMC-Mcap.dnaA_translated_cds.faa.gz

@@ -1,0 +1,14 @@
+bfdf04a6034e23d0abf3b0c6da6dfa36  ./annotation_hashes.txt
+b9f5dfbb73d46788d81c310fb24e6642  ./GCF_000953235.1_ILRI181.1_assembly_report.txt
+1e37463501480548ff860d7e4161c7f2  ./GCF_000953235.1_ILRI181.1_assembly_stats.txt
+96f5d52dd45d06d5123b52a12aedd13e  ./GCF_000953235.1_ILRI181.1_cds_from_genomic.fna.gz
+9a30781b113e5d9ac6f1efd3dfe1497a  ./GCF_000953235.1_ILRI181.1_feature_count.txt.gz
+938f32e6235bbba721535becef7d1cc3  ./GCF_000953235.1_ILRI181.1_feature_table.txt.gz
+b4eea2120cf47099889e3e2a0d5b4dce  ./GCF_000953235.1_ILRI181.1_genomic.fna.gz
+915d3375fe6c04ea3e5d9713a59f64e9  ./GCF_000953235.1_ILRI181.1_genomic.gbff.gz
+3147729d8e11444e30972e599e824c46  ./GCF_000953235.1_ILRI181.1_genomic.gff.gz
+1e65e3e4a9acea80d204b49fb86b1e8e  ./GCF_000953235.1_ILRI181.1_genomic.gtf.gz
+baea15b51b3e3f3a8247ef44e756906a  ./GCF_000953235.1_ILRI181.1_protein.faa.gz
+ea10f4e2f311ab6d4e4eba7be636dc62  ./GCF_000953235.1_ILRI181.1_protein.gpff.gz
+445be924a7b158668ac53a69b8b428e4  ./GCF_000953235.1_ILRI181.1_rna_from_genomic.fna.gz
+e7ad9eaa48d2c1f5bd123dc73f75f6e7  ./GCF_000953235.1_ILRI181.1_translated_cds.faa.gz

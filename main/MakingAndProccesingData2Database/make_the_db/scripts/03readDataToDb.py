@@ -83,7 +83,7 @@ genus_list = ["Mycoplasm", "Ruegeria"]
 # Read the data into the database
 for genus in genus_list:
      # read summary.tsv file from ribdiff into pandas df
-    genus_info = pd.read_csv(f"./{genus}/{genus}-summary.tsv", sep="\t", index_col=False)
+    genus_info = pd.read_csv(f"../temp/{genus}/{genus}-summary.tsv", sep="\t", index_col=False)
     
     # rename the columns to match the names in the db
     genus_info = genus_info.rename(columns={
@@ -105,19 +105,19 @@ for genus in genus_list:
     read_ani2db(genus_info, conn)
    
     # Read the full 16s genes in the db
-    filepath = f"./{genus}/full/{genus}.16S"
+    filepath = f"../temp/{genus}/full/{genus}.16S"
     table = "s16full_sequence"
     jointable = "species2s16full_sequence"
     read_seq_to_db(filepath, conn, table, jointable)
     
     # Read in the v1v9 amplicons in the db
-    filepath = f"./{genus}/amplicons/{genus}-v1v9.amplicons"
+    filepath = f"../temp/{genus}/amplicons/{genus}-v1v9.amplicons"
     table = "v1v9sequence"
     jointable = "species2V1V9sequence"
     read_seq_to_db(filepath, conn, table, jointable)
     
     # Read in the v3v4 amplicons in the db
-    filepath = f"./{genus}/amplicons/{genus}-v3v4.amplicons"
+    filepath = f"../temp/{genus}/amplicons/{genus}-v3v4.amplicons"
     table = "v3v4sequence"
     jointable = "species2V3V4sequence"
     read_seq_to_db(filepath, conn, table, jointable)

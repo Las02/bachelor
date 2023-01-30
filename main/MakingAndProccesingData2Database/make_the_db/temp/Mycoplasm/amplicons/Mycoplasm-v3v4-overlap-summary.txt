@@ -1,0 +1,15 @@
+Summary:
+
+Genomes: 331
+	Named: 318
+	Non-named: 13
+
+Named species: 55
+
+118 of 331 (35.65%) genomes have multiple alleles.
+
+4 of 55 (7.273%) species have at least one overlap.
+
+The following species overlap:
+	 gallisepticum/tullyi
+	capricolum/leachii

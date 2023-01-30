@@ -1,0 +1,14 @@
+0e9b68bdb28d947e5552ba58f62b18a4  ./annotation_hashes.txt
+ba7e55ca168d6062707e99f15e9e67b3  ./GCF_000835085.1_ASM83508v1_assembly_report.txt
+35d170389832562022ab72345a9e97bb  ./GCF_000835085.1_ASM83508v1_assembly_stats.txt
+edb03fbe841ad959aac2c30adf0d4c09  ./GCF_000835085.1_ASM83508v1_cds_from_genomic.fna.gz
+f5290f8358fffd4c040ccec2098002d4  ./GCF_000835085.1_ASM83508v1_feature_count.txt.gz
+5033b7ef99de47140674cbad9a2cf1c6  ./GCF_000835085.1_ASM83508v1_feature_table.txt.gz
+80b5448439d773f0ca848d4242259a48  ./GCF_000835085.1_ASM83508v1_genomic.fna.gz
+e5aa179ba3bbf9bdb2d73a6bec32899b  ./GCF_000835085.1_ASM83508v1_genomic.gbff.gz
+8723f16ff2543c9e4a3c17cbe2724369  ./GCF_000835085.1_ASM83508v1_genomic.gff.gz
+33058d941c29136dff3b31d16615d468  ./GCF_000835085.1_ASM83508v1_genomic.gtf.gz
+42386e8d4f5c043827b9ef1043f4ff4c  ./GCF_000835085.1_ASM83508v1_protein.faa.gz
+1839be721ebcf6122c9830219a4ea8c0  ./GCF_000835085.1_ASM83508v1_protein.gpff.gz
+ecbaf2252dc81a158b1b697eff6d72f7  ./GCF_000835085.1_ASM83508v1_rna_from_genomic.fna.gz
+692a98ffdf6803a0d6ccda720f41ff99  ./GCF_000835085.1_ASM83508v1_translated_cds.faa.gz

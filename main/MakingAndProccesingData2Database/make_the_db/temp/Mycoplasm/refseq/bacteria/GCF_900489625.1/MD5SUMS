@@ -1,0 +1,14 @@
+130aed74c92491c36c7e59b74291c692  ./annotation_hashes.txt
+a3163f4de8471495077177a64e350d09  ./GCF_900489625.1_MMC-glpO_assembly_report.txt
+42022a0ba0b4b7cbd67f2a0e1307ee67  ./GCF_900489625.1_MMC-glpO_assembly_stats.txt
+2255ae61b326931209d4066cb034becd  ./GCF_900489625.1_MMC-glpO_cds_from_genomic.fna.gz
+ed82d15a407d42d2b63442ae8e7f0bf5  ./GCF_900489625.1_MMC-glpO_feature_count.txt.gz
+b7de24440e95d4d609da7d3ac32e2a11  ./GCF_900489625.1_MMC-glpO_feature_table.txt.gz
+18006e9c5756db5e199b980c7824b65d  ./GCF_900489625.1_MMC-glpO_genomic.fna.gz
+3db0b09490c53f509270d0b78d225a65  ./GCF_900489625.1_MMC-glpO_genomic.gbff.gz
+804fa155203309a61a9d7781126ad961  ./GCF_900489625.1_MMC-glpO_genomic.gff.gz
+b1922716dac961b62f3adc1233ba0a1e  ./GCF_900489625.1_MMC-glpO_genomic.gtf.gz
+7f794b0d4145dd88e1c4a9369d2e964e  ./GCF_900489625.1_MMC-glpO_protein.faa.gz
+7a83cd33f25093731f53a2fab5d0a08b  ./GCF_900489625.1_MMC-glpO_protein.gpff.gz
+5f345b5f471c7aeb422fa2fc1778c0b7  ./GCF_900489625.1_MMC-glpO_rna_from_genomic.fna.gz
+8060041932453bfa95d98e277f07aa0e  ./GCF_900489625.1_MMC-glpO_translated_cds.faa.gz

@@ -1,0 +1,14 @@
+dbd8255d201102a872d206ecf2f7b0d8  ./annotation_hashes.txt
+b56b53349427ce3f266a3d6a4e8df3fc  ./GCF_900489675.1_MMC-GTS_assembly_report.txt
+970aa009c4bdaf8ad8dfbc46093e93b9  ./GCF_900489675.1_MMC-GTS_assembly_stats.txt
+cf7e8cd294f5cfcd06b71f9ab232fb83  ./GCF_900489675.1_MMC-GTS_cds_from_genomic.fna.gz
+56bb44ab514629438b68529793f1bf08  ./GCF_900489675.1_MMC-GTS_feature_count.txt.gz
+1cc567cccc06c7353942dc75769fea72  ./GCF_900489675.1_MMC-GTS_feature_table.txt.gz
+de2a21934931136c92ccf1c1350f1e08  ./GCF_900489675.1_MMC-GTS_genomic.fna.gz
+e7e32737748429d7bf686d481bfdc4af  ./GCF_900489675.1_MMC-GTS_genomic.gbff.gz
+dbe4e9965f1bac7c7cdafa7e5ab33581  ./GCF_900489675.1_MMC-GTS_genomic.gff.gz
+64e3a9240e4048f5f184c92385b1c5a6  ./GCF_900489675.1_MMC-GTS_genomic.gtf.gz
+22c07a04b771aa5c61a35284423d6bc2  ./GCF_900489675.1_MMC-GTS_protein.faa.gz
+d129dd3bb52914e636d24dc4b1507ee4  ./GCF_900489675.1_MMC-GTS_protein.gpff.gz
+6ff171dc54957473878fb4846ddc43f1  ./GCF_900489675.1_MMC-GTS_rna_from_genomic.fna.gz
+ad8699af83de7fe65fb822809d1f1d55  ./GCF_900489675.1_MMC-GTS_translated_cds.faa.gz

@@ -1,0 +1,1 @@
+RibDif.sh --genus Mycoplasm --primers /home/lsd/Desktop/ribdif/RibDif/default.primers --clobber false --ANI true --frag false --msa false --id 1 --threads 6

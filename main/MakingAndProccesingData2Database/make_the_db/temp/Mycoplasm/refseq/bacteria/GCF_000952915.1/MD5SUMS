@@ -1,0 +1,14 @@
+a58c8204810897893554cc52eda23d3f  ./annotation_hashes.txt
+f8ef6fd1808e31b92133a96603dbe93d  ./GCF_000952915.1_9231-Abomsa_assembly_V8_assembly_report.txt
+8acddfc69a7e24a0d6986517de6b4f18  ./GCF_000952915.1_9231-Abomsa_assembly_V8_assembly_stats.txt
+59af7858f182bb654dadba500bd9d3e5  ./GCF_000952915.1_9231-Abomsa_assembly_V8_cds_from_genomic.fna.gz
+49fd5492f6f2b1fa05e54f5a213a5a7b  ./GCF_000952915.1_9231-Abomsa_assembly_V8_feature_count.txt.gz
+7ed0734753e07f7d6ea73373156211c6  ./GCF_000952915.1_9231-Abomsa_assembly_V8_feature_table.txt.gz
+2f161d5ecac77fa1c5fbf42e6a425cc8  ./GCF_000952915.1_9231-Abomsa_assembly_V8_genomic.fna.gz
+62af98dbc5a0bc6da3e154220b5de2ce  ./GCF_000952915.1_9231-Abomsa_assembly_V8_genomic.gbff.gz
+029c8bb764324cdf87baecdc7cc0b5c9  ./GCF_000952915.1_9231-Abomsa_assembly_V8_genomic.gff.gz
+d6180176976877a0d4d08466c97242f5  ./GCF_000952915.1_9231-Abomsa_assembly_V8_genomic.gtf.gz
+6c17aa956d6f54211c503c17b356d166  ./GCF_000952915.1_9231-Abomsa_assembly_V8_protein.faa.gz
+740c4e4caa6f837fe477d3ea14ffba29  ./GCF_000952915.1_9231-Abomsa_assembly_V8_protein.gpff.gz
+83613e65d787adb47c262298a1b04e85  ./GCF_000952915.1_9231-Abomsa_assembly_V8_rna_from_genomic.fna.gz
+43f2762f906a0ce3b68e19960ffdcb24  ./GCF_000952915.1_9231-Abomsa_assembly_V8_translated_cds.faa.gz

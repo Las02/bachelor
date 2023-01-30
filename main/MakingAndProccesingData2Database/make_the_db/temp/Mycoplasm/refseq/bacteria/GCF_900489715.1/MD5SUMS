@@ -1,0 +1,14 @@
+1da7b6a2a146eaa9bb839aac17b4efaf  ./annotation_hashes.txt
+c23680a3531d6875520f301c76184db1  ./GCF_900489715.1_MMC-GTS-gIpF-gIpU_assembly_report.txt
+bfc53b05e2e31fef8904783cfb0fb3a0  ./GCF_900489715.1_MMC-GTS-gIpF-gIpU_assembly_stats.txt
+068275aeb6371e08667b74740cb3ea04  ./GCF_900489715.1_MMC-GTS-gIpF-gIpU_cds_from_genomic.fna.gz
+136a3b8f154d1304de925ad2a5b32fb3  ./GCF_900489715.1_MMC-GTS-gIpF-gIpU_feature_count.txt.gz
+8b34ee278f68a3680120f383c69395ae  ./GCF_900489715.1_MMC-GTS-gIpF-gIpU_feature_table.txt.gz
+59cf7ffce619885d05ff8ed04d58aab4  ./GCF_900489715.1_MMC-GTS-gIpF-gIpU_genomic.fna.gz
+25b6d7a871c682ac01b15434bea7fde5  ./GCF_900489715.1_MMC-GTS-gIpF-gIpU_genomic.gbff.gz
+e35daebea25e6c193fadbd8ccadee136  ./GCF_900489715.1_MMC-GTS-gIpF-gIpU_genomic.gff.gz
+5976969c1b2ca98665177dbce77f8471  ./GCF_900489715.1_MMC-GTS-gIpF-gIpU_genomic.gtf.gz
+576f7f3917fba15240146bc3643b1828  ./GCF_900489715.1_MMC-GTS-gIpF-gIpU_protein.faa.gz
+ee60308230aa6ded62275345f5ca154a  ./GCF_900489715.1_MMC-GTS-gIpF-gIpU_protein.gpff.gz
+d9abc23e7e4b29a36cac8f654be73597  ./GCF_900489715.1_MMC-GTS-gIpF-gIpU_rna_from_genomic.fna.gz
+902264c36f547fe4369cf6dce918e120  ./GCF_900489715.1_MMC-GTS-gIpF-gIpU_translated_cds.faa.gz
