@@ -1,0 +1,458 @@
+the following cannot not be added: GCF_025997995.1 Sediminibacterium sp. TEGAF015 chromosome complete genome Sediminibacter
+due to [('GCF_025997995.1', 'Sediminibacterium', 'Sediminibacterium sp. TEGAF015 chromosome complete genome')]
+the following cannot not be added: GCF_003258705.1 Arcticibacterium luteifluviistationis strain SM1504T chromosome complete genome Arcticibacter
+due to [('GCF_003258705.1', 'Arcticibacterium', 'Arcticibacterium luteifluviistationis strain SM1504T chromosome complete genome')]
+the following cannot not be added: GCF_001305615.1 Actibacterium sp. EMB200-NS6 strain EMBL200 NS6 chromosome complete genome Actibacterium
+due to [('GCF_001305615.1', 'Actibacter', 'Actibacterium sp. EMB200-NS6 strain EMBL200 NS6 chromosome complete genome')]
+the following cannot not be added: GCF_001008165.2 Croceibacterium atlanticum strain 26DY36 chromosome complete genome Croceibacterium
+due to [('GCF_001008165.2', 'Croceibacter', 'Croceibacterium atlanticum strain 26DY36 chromosome complete genome')]
+the following cannot not be added: GCF_014117445.1 Sandaracinobacteroides saxicola strain M6 chromosome complete genome Sandaracinobacteroides
+due to [('GCF_014117445.1', 'Sandaracinobacter', 'Sandaracinobacteroides saxicola strain M6 chromosome complete genome')]
+the following cannot not be added: GCF_003100395.1 Aquabacterium olei strain NBRC 110486 chromosome complete genome Aquabacterium
+due to [('GCF_003100395.1', 'Aquabacter', 'Aquabacterium olei strain NBRC 110486 chromosome complete genome')]
+the following cannot not be added: GCF_003955735.1 Undibacterium parvum strain DSM 23061 chromosome complete genome Undibacterium
+due to [('GCF_003955735.1', 'Undibacter', 'Undibacterium parvum strain DSM 23061 chromosome complete genome')]
+the following cannot not be added: GCF_009937955.1 Undibacterium sp. KW1 chromosome complete genome Undibacterium
+due to [('GCF_009937955.1', 'Undibacter', 'Undibacterium sp. KW1 chromosome complete genome')]
+the following cannot not be added: GCF_009937975.1 Undibacterium sp. YM2 chromosome complete genome Undibacterium
+due to [('GCF_009937975.1', 'Undibacter', 'Undibacterium sp. YM2 chromosome complete genome')]
+the following cannot not be added: GCF_018802605.1 Paludibacterium paludis strain BCRC 80514 chromosome complete genome Paludibacterium
+due to [('GCF_018802605.1', 'Paludibacter', 'Paludibacterium paludis strain BCRC 80514 chromosome complete genome')]
+the following cannot not be added: GCF_018802645.1 Paludibacterium yongneupense strain BCRC 80531 chromosome complete genome Paludibacterium
+due to [('GCF_018802645.1', 'Paludibacter', 'Paludibacterium yongneupense strain BCRC 80531 chromosome complete genome')]
+the following cannot not be added: GCF_018802765.1 Paludibacterium sp. B53371 chromosome complete genome Paludibacterium
+due to [('GCF_018802765.1', 'Paludibacter', 'Paludibacterium sp. B53371 chromosome complete genome')]
+the following cannot not be added: GCF_000364445.2 Methylobacterium mesophilicum SR1.66 chromosome complete genome Methylobacter
+due to [('GCF_000364445.2', 'Methylobacterium', 'Methylobacterium mesophilicum SR1.66 chromosome complete genome')]
+the following cannot not be added: GCF_001548015.1 Methylobacterium aquaticum strain MA-22A chromosome complete genome Methylobacter
+due to [('GCF_001548015.1', 'Methylobacterium', 'Methylobacterium aquaticum strain MA-22A chromosome complete genome')]
+the following cannot not be added: GCF_003173715.1 Methylobacterium durans strain 17SD2-17 chromosome complete genome Methylobacter
+due to [('GCF_003173715.1', 'Methylobacterium', 'Methylobacterium durans strain 17SD2-17 chromosome complete genome')]
+the following cannot not be added: GCF_008000895.1 Methylobacterium sp. WL1 chromosome complete genome Methylobacter
+due to [('GCF_008000895.1', 'Methylobacterium', 'Methylobacterium sp. WL1 chromosome complete genome')]
+the following cannot not be added: GCF_000019365.1 Methylobacterium sp. 4-46 complete sequence Methylobacter
+due to [('GCF_000019365.1', 'Methylobacterium', 'Methylobacterium sp. 4-46 complete sequence')]
+the following cannot not be added: GCF_021398735.1 Methylobacterium oryzae strain H33R-06 chromosome complete genome Methylobacter
+due to [('GCF_021398735.1', 'Methylobacterium', 'Methylobacterium oryzae strain H33R-06 chromosome complete genome')]
+the following cannot not be added: GCF_000022085.1 Methylobacterium nodulans ORS 2060 complete sequence Methylobacter
+due to [('GCF_000022085.1', 'Methylobacterium', 'Methylobacterium nodulans ORS 2060 complete sequence')]
+the following cannot not be added: GCF_001936175.1 Methylobacterium phyllosphaerae strain CBMB27 chromosome complete genome Methylobacter
+due to [('GCF_001936175.1', 'Methylobacterium', 'Methylobacterium phyllosphaerae strain CBMB27 chromosome complete genome')]
+the following cannot not be added: GCF_000757795.1 Methylobacterium oryzae CBMB20 chromosome complete genome Methylobacter
+due to [('GCF_000757795.1', 'Methylobacterium', 'Methylobacterium oryzae CBMB20 chromosome complete genome')]
+the following cannot not be added: GCF_001854385.1 Methylobacterium sp. C1 chromosome complete genome Methylobacter
+due to [('GCF_001854385.1', 'Methylobacterium', 'Methylobacterium sp. C1 chromosome complete genome')]
+the following cannot not be added: GCF_003254375.1 Methylobacterium sp. XJLW chromosome complete genome Methylobacter
+due to [('GCF_003254375.1', 'Methylobacterium', 'Methylobacterium sp. XJLW chromosome complete genome')]
+the following cannot not be added: GCF_003173735.1 Methylobacterium radiodurans strain 17Sr1-43 chromosome complete genome Methylobacter
+due to [('GCF_003173735.1', 'Methylobacterium', 'Methylobacterium radiodurans strain 17Sr1-43 chromosome complete genome')]
+the following cannot not be added: GCF_000019725.1 Methylobacterium radiotolerans JCM 2831 complete sequence Methylobacter
+due to [('GCF_000019725.1', 'Methylobacterium', 'Methylobacterium radiotolerans JCM 2831 complete sequence')]
+the following cannot not be added: GCF_016804325.1 Methylobacterium aquaticum strain BG2 chromosome complete genome Methylobacter
+due to [('GCF_016804325.1', 'Methylobacterium', 'Methylobacterium aquaticum strain BG2 chromosome complete genome')]
+the following cannot not be added: GCF_017347565.1 Methylobacterium indicum strain VL1 chromosome complete genome Methylobacter
+due to [('GCF_017347565.1', 'Methylobacterium', 'Methylobacterium indicum strain VL1 chromosome complete genome')]
+the following cannot not be added: GCF_003173755.1 Methylobacterium terrae strain 17Sr1-28 chromosome complete genome Methylobacter
+due to [('GCF_003173755.1', 'Methylobacterium', 'Methylobacterium terrae strain 17Sr1-28 chromosome complete genome')]
+the following cannot not be added: GCF_021228015.1 Methylobacterium currus strain TP-3 chromosome 2 complete sequence Methylobacter
+due to [('GCF_021228015.1', 'Methylobacterium', 'Methylobacterium currus strain TP-3 chromosome 2 complete sequence')]
+the following cannot not be added: GCF_003173775.1 Methylobacterium sp. 17Sr1-1 chromosome complete genome Methylobacter
+due to [('GCF_003173775.1', 'Methylobacterium', 'Methylobacterium sp. 17Sr1-1 chromosome complete genome')]
+the following cannot not be added: GCF_021484845.1 Methylobacterium radiotolerans strain NYY1 chromosome complete genome Methylobacter
+due to [('GCF_021484845.1', 'Methylobacterium', 'Methylobacterium radiotolerans strain NYY1 chromosome complete genome')]
+the following cannot not be added: GCF_022533465.1 Methylobacterium organophilum strain WPA B chromosome complete genome Methylobacter
+due to [('GCF_022533465.1', 'Methylobacterium', 'Methylobacterium organophilum strain WPA B chromosome complete genome')]
+the following cannot not be added: GCF_023546765.1 Methylobacterium tardum strain DSM 19566 chromosome complete genome Methylobacter
+due to [('GCF_023546765.1', 'Methylobacterium', 'Methylobacterium tardum strain DSM 19566 chromosome complete genome')]
+the following cannot not be added: GCF_025813715.1 Methylobacterium sp. FF17 chromosome complete genome Methylobacter
+due to [('GCF_025813715.1', 'Methylobacterium', 'Methylobacterium sp. FF17 chromosome complete genome')]
+the following cannot not be added: GCF_001651805.1 Marinobacterium aestuarii strain ST58-10 chromosome complete genome Marinobacter
+due to [('GCF_001651805.1', 'Marinobacterium', 'Marinobacterium aestuarii strain ST58-10 chromosome complete genome')]
+the following cannot not be added: GCF_012848475.1 Marinobacterium sp. LSUCC0821 chromosome complete genome Marinobacter
+due to [('GCF_012848475.1', 'Marinobacterium', 'Marinobacterium sp. LSUCC0821 chromosome complete genome')]
+the following cannot not be added: GCF_017310015.1 Marinobacterium georgiense strain IC961 chromosome complete genome Marinobacter
+due to [('GCF_017310015.1', 'Marinobacterium', 'Marinobacterium georgiense strain IC961 chromosome complete genome')]
+the following cannot not be added: GCF_022343685.1 Marinobacterium sediminicola strain 1.7287 chromosome complete genome Marinobacter
+due to [('GCF_022343685.1', 'Marinobacterium', 'Marinobacterium sediminicola strain 1.7287 chromosome complete genome')]
+the following cannot not be added: GCF_024397915.1 Marinobacterium rhizophilum strain D13-1 chromosome complete genome Marinobacter
+due to [('GCF_024397915.1', 'Marinobacterium', 'Marinobacterium rhizophilum strain D13-1 chromosome complete genome')]
+the following cannot not be added: GCF_000025885.1 Aminobacterium colombiense DSM 12261 complete sequence Aminobacterium
+due to [('GCF_000025885.1', 'Aminobacter', 'Aminobacterium colombiense DSM 12261 complete sequence')]
+the following cannot not be added: GCF_001643775.1 Denitrobacterium detoxificans strain NPOH1 chromosome complete genome Denitrobacterium
+due to [('GCF_001643775.1', 'Denitrobacter', 'Denitrobacterium detoxificans strain NPOH1 chromosome complete genome')]
+the following cannot not be added: GCF_000015005.1 Mycolicibacterium smegmatis MC2 155 complete sequence Mycolicibacterium
+due to [('GCF_000015005.1', 'Mycolicibacter', 'Mycolicibacterium smegmatis MC2 155 complete sequence')]
+the following cannot not be added: GCF_001307545.1 Mycolicibacterium fortuitum strain CT6 chromosome complete genome Mycolicibacterium
+due to [('GCF_001307545.1', 'Mycolicibacter', 'Mycolicibacterium fortuitum strain CT6 chromosome complete genome')]
+the following cannot not be added: GCF_000767605.1 Mycolicibacterium smegmatis MC2 155 chromosome complete genome Mycolicibacterium
+due to [('GCF_000767605.1', 'Mycolicibacter', 'Mycolicibacterium smegmatis MC2 155 chromosome complete genome')]
+the following cannot not be added: GCF_000230895.2 Mycolicibacterium rhodesiae NBB3 complete sequence Mycolicibacterium
+due to [('GCF_000230895.2', 'Mycolicibacter', 'Mycolicibacterium rhodesiae NBB3 complete sequence')]
+the following cannot not be added: GCF_000184435.1 Mycolicibacterium gilvum Spyr1 complete sequence Mycolicibacterium
+due to [('GCF_000184435.1', 'Mycolicibacter', 'Mycolicibacterium gilvum Spyr1 complete sequence')]
+the following cannot not be added: GCF_000015305.1 Mycolicibacterium vanbaalenii PYR-1 complete sequence Mycolicibacterium
+due to [('GCF_000015305.1', 'Mycolicibacter', 'Mycolicibacterium vanbaalenii PYR-1 complete sequence')]
+the following cannot not be added: GCF_000331165.2 Mycolicibacterium smegmatis MKD8 chromosome complete genome Mycolicibacterium
+due to [('GCF_000331165.2', 'Mycolicibacter', 'Mycolicibacterium smegmatis MKD8 chromosome complete genome')]
+the following cannot not be added: GCF_000767665.1 Mycolicibacterium smegmatis strain INHR1 chromosome complete genome Mycolicibacterium
+due to [('GCF_000767665.1', 'Mycolicibacter', 'Mycolicibacterium smegmatis strain INHR1 chromosome complete genome')]
+the following cannot not be added: GCF_000266905.1 Mycolicibacterium chubuense NBB4 complete sequence Mycolicibacterium
+due to [('GCF_000266905.1', 'Mycolicibacter', 'Mycolicibacterium chubuense NBB4 complete sequence')]
+the following cannot not be added: GCF_000317305.3 Mycolicibacterium neoaurum VKM Ac-1815D complete sequence Mycolicibacterium
+due to [('GCF_000317305.3', 'Mycolicibacter', 'Mycolicibacterium neoaurum VKM Ac-1815D complete sequence')]
+the following cannot not be added: GCF_000283295.1 Mycolicibacterium smegmatis MC2 155 complete sequence Mycolicibacterium
+due to [('GCF_000283295.1', 'Mycolicibacter', 'Mycolicibacterium smegmatis MC2 155 complete sequence')]
+the following cannot not be added: GCF_000767705.1 Mycolicibacterium smegmatis strain INHR2 chromosome complete genome Mycolicibacterium
+due to [('GCF_000767705.1', 'Mycolicibacter', 'Mycolicibacterium smegmatis strain INHR2 chromosome complete genome')]
+the following cannot not be added: GCF_001457595.1 Mycolicibacterium smegmatis strain NCTC8159 chromosome 1 complete sequence Mycolicibacterium
+due to [('GCF_001457595.1', 'Mycolicibacter', 'Mycolicibacterium smegmatis strain NCTC8159 chromosome 1 complete sequence')]
+the following cannot not be added: GCF_001583415.1 Mycolicibacterium phlei strain CCUG 21000 chromosome complete genome Mycolicibacterium
+due to [('GCF_001583415.1', 'Mycolicibacter', 'Mycolicibacterium phlei strain CCUG 21000 chromosome complete genome')]
+the following cannot not be added: GCF_001655245.1 Mycolicibacterium vaccae 95051 chromosome complete genome Mycolicibacterium
+due to [('GCF_001655245.1', 'Mycolicibacter', 'Mycolicibacterium vaccae 95051 chromosome complete genome')]
+the following cannot not be added: GCF_003367335.1 Mycolicibacterium neoaurum strain HGMS2 chromosome complete genome Mycolicibacterium
+due to [('GCF_003367335.1', 'Mycolicibacter', 'Mycolicibacterium neoaurum strain HGMS2 chromosome complete genome')]
+the following cannot not be added: GCF_005670685.2 Mycolicibacterium mucogenicum DSM 44124 chromosome complete genome Mycolicibacterium
+due to [('GCF_005670685.2', 'Mycolicibacter', 'Mycolicibacterium mucogenicum DSM 44124 chromosome complete genome')]
+the following cannot not be added: GCF_009931355.1 Mycolicibacterium monacense DSM 44395 chromosome complete genome Mycolicibacterium
+due to [('GCF_009931355.1', 'Mycolicibacter', 'Mycolicibacterium monacense DSM 44395 chromosome complete genome')]
+the following cannot not be added: GCF_010725485.1 Mycolicibacterium parafortuitum strain JCM 6367 chromosome Mycolicibacterium
+due to [('GCF_010725485.1', 'Mycolicibacter', 'Mycolicibacterium parafortuitum strain JCM 6367 chromosome')]
+the following cannot not be added: GCF_010725725.1 Mycolicibacterium pulveris strain JCM 6370 chromosome Mycolicibacterium
+due to [('GCF_010725725.1', 'Mycolicibacter', 'Mycolicibacterium pulveris strain JCM 6370 chromosome')]
+the following cannot not be added: GCF_010727475.1 Mycolicibacterium mageritense strain JCM 12375 chromosome complete genome Mycolicibacterium
+due to [('GCF_010727475.1', 'Mycolicibacter', 'Mycolicibacterium mageritense strain JCM 12375 chromosome complete genome')]
+the following cannot not be added: GCF_010729305.1 Mycolicibacterium psychrotolerans strain JCM 13323 chromosome complete genome Mycolicibacterium
+due to [('GCF_010729305.1', 'Mycolicibacter', 'Mycolicibacterium psychrotolerans strain JCM 13323 chromosome complete genome')]
+the following cannot not be added: GCF_010726245.1 Mycolicibacterium aichiense strain JCM 6376 chromosome complete genome Mycolicibacterium
+due to [('GCF_010726245.1', 'Mycolicibacter', 'Mycolicibacterium aichiense strain JCM 6376 chromosome complete genome')]
+the following cannot not be added: GCF_010725885.1 Mycolicibacterium tokaiense strain JCM 6373 chromosome Mycolicibacterium
+due to [('GCF_010725885.1', 'Mycolicibacter', 'Mycolicibacterium tokaiense strain JCM 6373 chromosome')]
+the following cannot not be added: GCF_010726955.1 Mycolicibacterium fallax strain JCM 6405 chromosome Mycolicibacterium
+due to [('GCF_010726955.1', 'Mycolicibacter', 'Mycolicibacterium fallax strain JCM 6405 chromosome')]
+the following cannot not be added: GCF_010727325.1 Mycolicibacterium alvei strain JCM 12272 chromosome complete genome Mycolicibacterium
+due to [('GCF_010727325.1', 'Mycolicibacter', 'Mycolicibacterium alvei strain JCM 12272 chromosome complete genome')]
+the following cannot not be added: GCF_010726085.1 Mycolicibacterium moriokaense strain JCM 6375 chromosome complete genome Mycolicibacterium
+due to [('GCF_010726085.1', 'Mycolicibacter', 'Mycolicibacterium moriokaense strain JCM 6375 chromosome complete genome')]
+the following cannot not be added: GCF_010726645.1 Mycolicibacterium duvalii strain JCM 6396 chromosome complete genome Mycolicibacterium
+due to [('GCF_010726645.1', 'Mycolicibacter', 'Mycolicibacterium duvalii strain JCM 6396 chromosome complete genome')]
+the following cannot not be added: GCF_010728325.1 Mycolicibacterium poriferae strain JCM 12603 chromosome complete genome Mycolicibacterium
+due to [('GCF_010728325.1', 'Mycolicibacter', 'Mycolicibacterium poriferae strain JCM 12603 chromosome complete genome')]
+the following cannot not be added: GCF_010727725.1 Mycolicibacterium chitae strain JCM 12403 chromosome Mycolicibacterium
+due to [('GCF_010727725.1', 'Mycolicibacter', 'Mycolicibacterium chitae strain JCM 12403 chromosome')]
+the following cannot not be added: GCF_010728925.1 Mycolicibacterium gadium strain JCM 12688 chromosome Mycolicibacterium
+due to [('GCF_010728925.1', 'Mycolicibacter', 'Mycolicibacterium gadium strain JCM 12688 chromosome')]
+the following cannot not be added: GCF_010729895.1 Mycolicibacterium confluentis strain JCM 13671 chromosome Mycolicibacterium
+due to [('GCF_010729895.1', 'Mycolicibacter', 'Mycolicibacterium confluentis strain JCM 13671 chromosome')]
+the following cannot not be added: GCF_010729665.1 Mycolicibacterium madagascariense strain JCM 13574 chromosome Mycolicibacterium
+due to [('GCF_010729665.1', 'Mycolicibacter', 'Mycolicibacterium madagascariense strain JCM 13574 chromosome')]
+the following cannot not be added: GCF_010731295.1 Mycolicibacterium boenickei strain JCM 15653 chromosome complete genome Mycolicibacterium
+due to [('GCF_010731295.1', 'Mycolicibacter', 'Mycolicibacterium boenickei strain JCM 15653 chromosome complete genome')]
+the following cannot not be added: GCF_010731115.1 Mycolicibacterium phocaicum strain JCM 15301 chromosome Mycolicibacterium
+due to [('GCF_010731115.1', 'Mycolicibacter', 'Mycolicibacterium phocaicum strain JCM 15301 chromosome')]
+the following cannot not be added: GCF_010731575.1 Mycolicibacterium monacense strain JCM 15658 chromosome Mycolicibacterium
+due to [('GCF_010731575.1', 'Mycolicibacter', 'Mycolicibacterium monacense strain JCM 15658 chromosome')]
+the following cannot not be added: GCF_010731615.1 Mycolicibacterium insubricum strain JCM 16366 chromosome Mycolicibacterium
+due to [('GCF_010731615.1', 'Mycolicibacter', 'Mycolicibacterium insubricum strain JCM 16366 chromosome')]
+the following cannot not be added: GCF_010731695.1 Mycolicibacterium litorale strain JCM 17423 chromosome complete genome Mycolicibacterium
+due to [('GCF_010731695.1', 'Mycolicibacter', 'Mycolicibacterium litorale strain JCM 17423 chromosome complete genome')]
+the following cannot not be added: GCF_010731735.1 Mycolicibacterium sediminis strain JCM 17899 chromosome complete genome Mycolicibacterium
+due to [('GCF_010731735.1', 'Mycolicibacter', 'Mycolicibacterium sediminis strain JCM 17899 chromosome complete genome')]
+the following cannot not be added: GCF_010731795.1 Mycolicibacterium celeriflavum strain JCM 18439 chromosome complete genome Mycolicibacterium
+due to [('GCF_010731795.1', 'Mycolicibacter', 'Mycolicibacterium celeriflavum strain JCM 18439 chromosome complete genome')]
+the following cannot not be added: GCF_016919325.1 Mycolicibacterium boenickei strain PDNC014 chromosome complete genome Mycolicibacterium
+due to [('GCF_016919325.1', 'Mycolicibacter', 'Mycolicibacterium boenickei strain PDNC014 chromosome complete genome')]
+the following cannot not be added: GCF_010731815.2 Mycolicibacterium arabiense strain JCM 18538 chromosome complete genome Mycolicibacterium
+due to [('GCF_010731815.2', 'Mycolicibacter', 'Mycolicibacterium arabiense strain JCM 18538 chromosome complete genome')]
+the following cannot not be added: GCF_019739075.1 Mycolicibacterium farcinogenes strain BKKCU-MFGFA-001 chromosome complete genome Mycolicibacterium
+due to [('GCF_019739075.1', 'Mycolicibacter', 'Mycolicibacterium farcinogenes strain BKKCU-MFGFA-001 chromosome complete genome')]
+the following cannot not be added: GCF_010731855.1 Mycolicibacterium anyangense strain JCM 30275 chromosome Mycolicibacterium
+due to [('GCF_010731855.1', 'Mycolicibacter', 'Mycolicibacterium anyangense strain JCM 30275 chromosome')]
+the following cannot not be added: GCF_018363015.1 Mycolicibacterium neoaurum strain MN2019 chromosome complete genome Mycolicibacterium
+due to [('GCF_018363015.1', 'Mycolicibacter', 'Mycolicibacterium neoaurum strain MN2019 chromosome complete genome')]
+the following cannot not be added: GCF_010731895.1 Mycolicibacterium helvum strain JCM 30396 chromosome complete genome Mycolicibacterium
+due to [('GCF_010731895.1', 'Mycolicibacter', 'Mycolicibacterium helvum strain JCM 30396 chromosome complete genome')]
+the following cannot not be added: GCF_010731875.1 Mycolicibacterium sarraceniae strain JCM 30395 chromosome complete genome Mycolicibacterium
+due to [('GCF_010731875.1', 'Mycolicibacter', 'Mycolicibacterium sarraceniae strain JCM 30395 chromosome complete genome')]
+the following cannot not be added: GCF_016313185.1 Mycolicibacterium baixiangningiae strain LJ126 chromosome complete genome Mycolicibacterium
+due to [('GCF_016313185.1', 'Mycolicibacter', 'Mycolicibacterium baixiangningiae strain LJ126 chromosome complete genome')]
+the following cannot not be added: GCF_014218295.1 Mycolicibacterium litorale strain NIIDNTM18 chromosome complete genome Mycolicibacterium
+due to [('GCF_014218295.1', 'Mycolicibacter', 'Mycolicibacterium litorale strain NIIDNTM18 chromosome complete genome')]
+the following cannot not be added: GCF_015710575.1 Mycolicibacterium mengxianglii strain Z-34 chromosome complete genome Mycolicibacterium
+due to [('GCF_015710575.1', 'Mycolicibacter', 'Mycolicibacterium mengxianglii strain Z-34 chromosome complete genome')]
+the following cannot not be added: GCF_018326285.1 Mycolicibacterium sp. TY81 chromosome complete genome Mycolicibacterium
+due to [('GCF_018326285.1', 'Mycolicibacter', 'Mycolicibacterium sp. TY81 chromosome complete genome')]
+the following cannot not be added: GCF_018326145.1 Mycolicibacterium sp. TY66 chromosome complete genome Mycolicibacterium
+due to [('GCF_018326145.1', 'Mycolicibacter', 'Mycolicibacterium sp. TY66 chromosome complete genome')]
+the following cannot not be added: GCF_019930745.1 Mycolicibacterium smegmatis strain FDAARGOS 1484 chromosome complete genome Mycolicibacterium
+due to [('GCF_019930745.1', 'Mycolicibacter', 'Mycolicibacterium smegmatis strain FDAARGOS 1484 chromosome complete genome')]
+the following cannot not be added: GCF_019739095.1 Mycolicibacterium farcinogenes strain BKKCU-MFGLA-001 chromosome complete genome Mycolicibacterium
+due to [('GCF_019739095.1', 'Mycolicibacter', 'Mycolicibacterium farcinogenes strain BKKCU-MFGLA-001 chromosome complete genome')]
+the following cannot not be added: GCF_020520165.1 Mycolicibacterium phocaicum strain RL-HY01 chromosome complete genome Mycolicibacterium
+due to [('GCF_020520165.1', 'Mycolicibacter', 'Mycolicibacterium phocaicum strain RL-HY01 chromosome complete genome')]
+the following cannot not be added: GCF_021183665.1 Mycolicibacterium smegmatis strain FDAARGOS 1618 chromosome complete genome Mycolicibacterium
+due to [('GCF_021183665.1', 'Mycolicibacter', 'Mycolicibacterium smegmatis strain FDAARGOS 1618 chromosome complete genome')]
+the following cannot not be added: GCF_022179545.1 Mycolicibacterium fortuitum subsp. fortuitum strain JCM 6387 chromosome complete genome Mycolicibacterium
+due to [('GCF_022179545.1', 'Mycolicibacter', 'Mycolicibacterium fortuitum subsp. fortuitum strain JCM 6387 chromosome complete genome')]
+the following cannot not be added: GCF_022370375.1 Mycolicibacterium smegmatis strain Rabinowitchi chromosome complete genome Mycolicibacterium
+due to [('GCF_022370375.1', 'Mycolicibacter', 'Mycolicibacterium smegmatis strain Rabinowitchi chromosome complete genome')]
+the following cannot not be added: GCF_022558525.1 Mycolicibacterium boenickei strain DSM 44677 chromosome complete genome Mycolicibacterium
+due to [('GCF_022558525.1', 'Mycolicibacter', 'Mycolicibacterium boenickei strain DSM 44677 chromosome complete genome')]
+the following cannot not be added: GCF_022370395.1 Mycolicibacterium smegmatis strain Nishi chromosome complete genome Mycolicibacterium
+due to [('GCF_022370395.1', 'Mycolicibacter', 'Mycolicibacterium smegmatis strain Nishi chromosome complete genome')]
+the following cannot not be added: GCF_900603025.1 Mycolicibacterium hassiacum DSM 44199 isolate Mhassiacum chromosome 1 complete sequence Mycolicibacterium
+due to [('GCF_900603025.1', 'Mycolicibacter', 'Mycolicibacterium hassiacum DSM 44199 isolate Mhassiacum chromosome 1 complete sequence')]
+the following cannot not be added: GCF_022370415.1 Mycolicibacterium smegmatis strain Jucho chromosome complete genome Mycolicibacterium
+due to [('GCF_022370415.1', 'Mycolicibacter', 'Mycolicibacterium smegmatis strain Jucho chromosome complete genome')]
+the following cannot not be added: GCF_024600315.1 Mycolicibacterium smegmatis strain LM12 chromosome complete genome Mycolicibacterium
+due to [('GCF_024600315.1', 'Mycolicibacter', 'Mycolicibacterium smegmatis strain LM12 chromosome complete genome')]
+the following cannot not be added: GCF_022557175.1 Mycolicibacterium sp. YH-1 chromosome complete genome Mycolicibacterium
+due to [('GCF_022557175.1', 'Mycolicibacter', 'Mycolicibacterium sp. YH-1 chromosome complete genome')]
+the following cannot not be added: GCF_024600015.1 Mycolicibacterium smegmatis strain LM13 chromosome complete genome Mycolicibacterium
+due to [('GCF_024600015.1', 'Mycolicibacter', 'Mycolicibacterium smegmatis strain LM13 chromosome complete genome')]
+the following cannot not be added: GCF_024600175.1 Mycolicibacterium smegmatis strain LM15 chromosome complete genome Mycolicibacterium
+due to [('GCF_024600175.1', 'Mycolicibacter', 'Mycolicibacterium smegmatis strain LM15 chromosome complete genome')]
+the following cannot not be added: GCF_025215495.1 Mycolicibacterium brumae strain ATCC 51384 chromosome complete genome Mycolicibacterium
+due to [('GCF_025215495.1', 'Mycolicibacter', 'Mycolicibacterium brumae strain ATCC 51384 chromosome complete genome')]
+the following cannot not be added: GCF_024600455.1 Mycolicibacterium smegmatis strain LMN chromosome complete genome Mycolicibacterium
+due to [('GCF_024600455.1', 'Mycolicibacter', 'Mycolicibacterium smegmatis strain LMN chromosome complete genome')]
+the following cannot not be added: GCF_024600035.1 Mycolicibacterium smegmatis strain LM14 chromosome complete genome Mycolicibacterium
+due to [('GCF_024600035.1', 'Mycolicibacter', 'Mycolicibacterium smegmatis strain LM14 chromosome complete genome')]
+the following cannot not be added: GCF_024599995.1 Mycolicibacterium smegmatis strain LM11 chromosome complete genome Mycolicibacterium
+due to [('GCF_024599995.1', 'Mycolicibacter', 'Mycolicibacterium smegmatis strain LM11 chromosome complete genome')]
+the following cannot not be added: GCF_027570695.1 Mycolicibacterium fortuitum strain MF GZ001 chromosome complete genome Mycolicibacterium
+due to [('GCF_027570695.1', 'Mycolicibacter', 'Mycolicibacterium fortuitum strain MF GZ001 chromosome complete genome')]
+the following cannot not be added: GCF_900187065.1 Mycolicibacterium thermoresistibile strain NCTC10409 chromosome 1 complete sequence Mycolicibacterium
+due to [('GCF_900187065.1', 'Mycolicibacter', 'Mycolicibacterium thermoresistibile strain NCTC10409 chromosome 1 complete sequence')]
+the following cannot not be added: GCF_900637205.1 Mycolicibacterium chitae strain NCTC10485 chromosome 1 complete sequence Mycolicibacterium
+due to [('GCF_900637205.1', 'Mycolicibacter', 'Mycolicibacterium chitae strain NCTC10485 chromosome 1 complete sequence')]
+the following cannot not be added: GCF_900637195.1 Mycolicibacterium aurum strain NCTC10437 chromosome 1 complete sequence Mycolicibacterium
+due to [('GCF_900637195.1', 'Mycolicibacter', 'Mycolicibacterium aurum strain NCTC10437 chromosome 1 complete sequence')]
+the following cannot not be added: GCF_001974985.1 Microbacterium aurum strain KACC 15219 chromosome complete genome Microbacterium
+due to [('GCF_001974985.1', 'Microbacter', 'Microbacterium aurum strain KACC 15219 chromosome complete genome')]
+the following cannot not be added: GCF_003850245.1 Microbacterium sp. ABRD 28 chromosome complete genome Microbacterium
+due to [('GCF_003850245.1', 'Microbacter', 'Microbacterium sp. ABRD 28 chromosome complete genome')]
+the following cannot not be added: GCF_003931875.1 Microbacterium sp. 10M-3C3 chromosome complete genome Microbacterium
+due to [('GCF_003931875.1', 'Microbacter', 'Microbacterium sp. 10M-3C3 chromosome complete genome')]
+the following cannot not be added: GCF_001513675.1 Microbacterium sp. XT11 chromosome complete genome Microbacterium
+due to [('GCF_001513675.1', 'Microbacter', 'Microbacterium sp. XT11 chromosome complete genome')]
+the following cannot not be added: GCF_002843965.1 Microbacterium hominis strain SJTG1 chromosome complete genome Microbacterium
+due to [('GCF_002843965.1', 'Microbacter', 'Microbacterium hominis strain SJTG1 chromosome complete genome')]
+the following cannot not be added: GCF_001889265.1 Microbacterium sp. 1.5R chromosome complete genome Microbacterium
+due to [('GCF_001889265.1', 'Microbacter', 'Microbacterium sp. 1.5R chromosome complete genome')]
+the following cannot not be added: GCF_003367705.1 Microbacterium foliorum strain NRRL B-24224 chromosome complete genome Microbacterium
+due to [('GCF_003367705.1', 'Microbacter', 'Microbacterium foliorum strain NRRL B-24224 chromosome complete genome')]
+the following cannot not be added: GCF_000202635.1 Microbacterium testaceum StLB037 complete sequence Microbacterium
+due to [('GCF_000202635.1', 'Microbacter', 'Microbacterium testaceum StLB037 complete sequence')]
+the following cannot not be added: GCF_001792815.1 Microbacterium sp. BH-3-3-3 chromosome complete genome Microbacterium
+due to [('GCF_001792815.1', 'Microbacter', 'Microbacterium sp. BH-3-3-3 chromosome complete genome')]
+the following cannot not be added: GCF_001266755.1 Microbacterium sp. CGR1 chromosome complete genome Microbacterium
+due to [('GCF_001266755.1', 'Microbacter', 'Microbacterium sp. CGR1 chromosome complete genome')]
+the following cannot not be added: GCF_003856715.1 Microbacterium sp. Y-01 chromosome complete genome Microbacterium
+due to [('GCF_003856715.1', 'Microbacter', 'Microbacterium sp. Y-01 chromosome complete genome')]
+the following cannot not be added: GCF_002356155.1 Microbacterium sp. TPU 3598 chromosome complete genome Microbacterium
+due to [('GCF_002356155.1', 'Microbacter', 'Microbacterium sp. TPU 3598 chromosome complete genome')]
+the following cannot not be added: GCF_001558975.1 Microbacterium sp. PAMC 28756 strain HSR44 chromosome complete genome Microbacterium
+due to [('GCF_001558975.1', 'Microbacter', 'Microbacterium sp. PAMC 28756 strain HSR44 chromosome complete genome')]
+the following cannot not be added: GCF_001887285.1 Microbacterium paludicola strain CC3 chromosome complete genome Microbacterium
+due to [('GCF_001887285.1', 'Microbacter', 'Microbacterium paludicola strain CC3 chromosome complete genome')]
+the following cannot not be added: GCF_001314225.1 Microbacterium sp. No. 7 chromosome complete genome Microbacterium
+due to [('GCF_001314225.1', 'Microbacter', 'Microbacterium sp. No. 7 chromosome complete genome')]
+the following cannot not be added: GCF_001652465.1 Microbacterium chocolatum strain SIT 101 chromosome complete genome Microbacterium
+due to [('GCF_001652465.1', 'Microbacter', 'Microbacterium chocolatum strain SIT 101 chromosome complete genome')]
+the following cannot not be added: GCF_002993305.1 Microbacterium sp. str. China chromosome complete genome Microbacterium
+due to [('GCF_002993305.1', 'Microbacter', 'Microbacterium sp. str. China chromosome complete genome')]
+the following cannot not be added: GCF_001975955.2 Microbacterium oleivorans strain A9 chromosome complete genome Microbacterium
+due to [('GCF_001975955.2', 'Microbacter', 'Microbacterium oleivorans strain A9 chromosome complete genome')]
+the following cannot not be added: GCF_003991855.1 Microbacterium oxydans strain HG3 chromosome complete genome Microbacterium
+due to [('GCF_003991855.1', 'Microbacter', 'Microbacterium oxydans strain HG3 chromosome complete genome')]
+the following cannot not be added: GCF_004000565.1 Microbacterium oxydans strain VIU2A chromosome complete genome Microbacterium
+due to [('GCF_004000565.1', 'Microbacter', 'Microbacterium oxydans strain VIU2A chromosome complete genome')]
+the following cannot not be added: GCF_003991875.1 Microbacterium lemovicicum strain Viu22 chromosome complete genome Microbacterium
+due to [('GCF_003991875.1', 'Microbacter', 'Microbacterium lemovicicum strain Viu22 chromosome complete genome')]
+the following cannot not be added: GCF_004564075.1 Microbacterium sediminis strain YLB-01 chromosome complete genome Microbacterium
+due to [('GCF_004564075.1', 'Microbacter', 'Microbacterium sediminis strain YLB-01 chromosome complete genome')]
+the following cannot not be added: GCF_004135285.1 Microbacterium protaetiae strain DFW100M-13 chromosome complete genome Microbacterium
+due to [('GCF_004135285.1', 'Microbacter', 'Microbacterium protaetiae strain DFW100M-13 chromosome complete genome')]
+the following cannot not be added: GCF_008727775.1 Microbacterium lushaniae strain L-031 chromosome complete genome Microbacterium
+due to [('GCF_008727775.1', 'Microbacter', 'Microbacterium lushaniae strain L-031 chromosome complete genome')]
+the following cannot not be added: GCF_008727755.1 Microbacterium caowuchunii strain ST-M6 chromosome complete genome Microbacterium
+due to [('GCF_008727755.1', 'Microbacter', 'Microbacterium caowuchunii strain ST-M6 chromosome complete genome')]
+the following cannot not be added: GCF_005347485.1 Microbacterium sp. RG1 chromosome complete genome Microbacterium
+due to [('GCF_005347485.1', 'Microbacter', 'Microbacterium sp. RG1 chromosome complete genome')]
+the following cannot not be added: GCF_011047135.1 Microbacterium endophyticum strain DSM 27099 chromosome complete genome Microbacterium
+due to [('GCF_011047135.1', 'Microbacter', 'Microbacterium endophyticum strain DSM 27099 chromosome complete genome')]
+the following cannot not be added: GCF_013282805.1 Microbacterium hominis strain PA2F3 chromosome complete genome Microbacterium
+due to [('GCF_013282805.1', 'Microbacter', 'Microbacterium hominis strain PA2F3 chromosome complete genome')]
+the following cannot not be added: GCF_004564355.1 Microbacterium wangchenii strain dk512 chromosome complete genome Microbacterium
+due to [('GCF_004564355.1', 'Microbacter', 'Microbacterium wangchenii strain dk512 chromosome complete genome')]
+the following cannot not be added: GCF_005491085.2 Microbacterium sp. SGAir0570 chromosome complete genome Microbacterium
+due to [('GCF_005491085.2', 'Microbacter', 'Microbacterium sp. SGAir0570 chromosome complete genome')]
+the following cannot not be added: GCF_011751745.2 Microbacterium fandaimingii strain HY82 chromosome complete genome Microbacterium
+due to [('GCF_011751745.2', 'Microbacter', 'Microbacterium fandaimingii strain HY82 chromosome complete genome')]
+the following cannot not be added: GCF_006385575.1 Microbacterium foliorum strain M2 chromosome complete genome Microbacterium
+due to [('GCF_006385575.1', 'Microbacter', 'Microbacterium foliorum strain M2 chromosome complete genome')]
+the following cannot not be added: GCF_008271365.1 Microbacterium sp. 1S1 chromosome complete genome Microbacterium
+due to [('GCF_008271365.1', 'Microbacter', 'Microbacterium sp. 1S1 chromosome complete genome')]
+the following cannot not be added: GCF_011046975.1 Microbacterium amylolyticum strain DSM 24221 chromosome complete genome Microbacterium
+due to [('GCF_011046975.1', 'Microbacter', 'Microbacterium amylolyticum strain DSM 24221 chromosome complete genome')]
+the following cannot not be added: GCF_011046485.1 Microbacterium sp. 4R-513 chromosome complete genome Microbacterium
+due to [('GCF_011046485.1', 'Microbacter', 'Microbacterium sp. 4R-513 chromosome complete genome')]
+the following cannot not be added: GCF_011751765.2 Microbacterium chengjingii strain HY60 chromosome complete genome Microbacterium
+due to [('GCF_011751765.2', 'Microbacter', 'Microbacterium chengjingii strain HY60 chromosome complete genome')]
+the following cannot not be added: GCF_013389665.1 Microbacterium oleivorans strain I46 chromosome complete genome Microbacterium
+due to [('GCF_013389665.1', 'Microbacter', 'Microbacterium oleivorans strain I46 chromosome complete genome')]
+the following cannot not be added: GCF_015565955.1 Microbacterium schleiferi strain A32-1 chromosome complete genome Microbacterium
+due to [('GCF_015565955.1', 'Microbacter', 'Microbacterium schleiferi strain A32-1 chromosome complete genome')]
+the following cannot not be added: GCF_017968845.1 Microbacterium sp. NIBRBAC000506063 chromosome complete genome Microbacterium
+due to [('GCF_017968845.1', 'Microbacter', 'Microbacterium sp. NIBRBAC000506063 chromosome complete genome')]
+the following cannot not be added: GCF_014171575.1 Microbacterium sp. Se63.02b chromosome complete genome Microbacterium
+due to [('GCF_014171575.1', 'Microbacter', 'Microbacterium sp. Se63.02b chromosome complete genome')]
+the following cannot not be added: GCF_014725695.1 Microbacterium hominis strain 01094 chromosome complete genome Microbacterium
+due to [('GCF_014725695.1', 'Microbacter', 'Microbacterium hominis strain 01094 chromosome complete genome')]
+the following cannot not be added: GCF_014725715.1 Microbacterium hominis strain 01094 chromosome complete genome Microbacterium
+due to [('GCF_014725715.1', 'Microbacter', 'Microbacterium hominis strain 01094 chromosome complete genome')]
+the following cannot not be added: GCF_015277815.1 Microbacterium atlanticum strain WY121 chromosome complete genome Microbacterium
+due to [('GCF_015277815.1', 'Microbacter', 'Microbacterium atlanticum strain WY121 chromosome complete genome')]
+the following cannot not be added: GCF_015040615.1 Microbacterium sp. YJN-G chromosome complete genome Microbacterium
+due to [('GCF_015040615.1', 'Microbacter', 'Microbacterium sp. YJN-G chromosome complete genome')]
+the following cannot not be added: GCF_015277895.1 Microbacterium sp. A18JL241 chromosome complete genome Microbacterium
+due to [('GCF_015277895.1', 'Microbacter', 'Microbacterium sp. A18JL241 chromosome complete genome')]
+the following cannot not be added: GCF_015277855.1 Microbacterium cremeum strain NY27 chromosome complete genome Microbacterium
+due to [('GCF_015277855.1', 'Microbacter', 'Microbacterium cremeum strain NY27 chromosome complete genome')]
+the following cannot not be added: GCF_015277875.1 Microbacterium luteum strain A18JL200 chromosome complete genome Microbacterium
+due to [('GCF_015277875.1', 'Microbacter', 'Microbacterium luteum strain A18JL200 chromosome complete genome')]
+the following cannot not be added: GCF_019464375.1 Microbacterium sp. Se5.02b chromosome complete genome Microbacterium
+due to [('GCF_019464375.1', 'Microbacter', 'Microbacterium sp. Se5.02b chromosome complete genome')]
+the following cannot not be added: GCF_016919305.1 Microbacterium hominis strain PDNC016 chromosome complete genome Microbacterium
+due to [('GCF_016919305.1', 'Microbacter', 'Microbacterium hominis strain PDNC016 chromosome complete genome')]
+the following cannot not be added: GCF_019056515.1 Microbacterium paraoxydans strain 70447 chromosome complete genome Microbacterium
+due to [('GCF_019056515.1', 'Microbacter', 'Microbacterium paraoxydans strain 70447 chromosome complete genome')]
+the following cannot not be added: GCF_019443525.1 Microbacterium sp. PAMC22086 chromosome complete genome Microbacterium
+due to [('GCF_019443525.1', 'Microbacter', 'Microbacterium sp. PAMC22086 chromosome complete genome')]
+the following cannot not be added: GCF_016805985.1 Microbacterium sp. JZ31 chromosome complete genome Microbacterium
+due to [('GCF_016805985.1', 'Microbacter', 'Microbacterium sp. JZ31 chromosome complete genome')]
+the following cannot not be added: GCF_019443465.1 Microbacterium sp. PAMC21962 chromosome complete genome Microbacterium
+due to [('GCF_019443465.1', 'Microbacter', 'Microbacterium sp. PAMC21962 chromosome complete genome')]
+the following cannot not be added: GCF_021117345.1 Microbacterium sp. cx-55 chromosome complete genome Microbacterium
+due to [('GCF_021117345.1', 'Microbacter', 'Microbacterium sp. cx-55 chromosome complete genome')]
+the following cannot not be added: GCF_021398715.1 Microbacterium binotii strain Au-Mic3 chromosome complete genome Microbacterium
+due to [('GCF_021398715.1', 'Microbacter', 'Microbacterium binotii strain Au-Mic3 chromosome complete genome')]
+the following cannot not be added: GCF_021582875.1 Microbacterium sp. KUDC0406 chromosome complete genome Microbacterium
+due to [('GCF_021582875.1', 'Microbacter', 'Microbacterium sp. KUDC0406 chromosome complete genome')]
+the following cannot not be added: GCF_021582895.2 Microbacterium sp. KUDC0405 chromosome complete genome Microbacterium
+due to [('GCF_021582895.2', 'Microbacter', 'Microbacterium sp. KUDC0405 chromosome complete genome')]
+the following cannot not be added: GCF_025758395.1 Microbacterium terricola strain JCM 14903 chromosome complete genome Microbacterium
+due to [('GCF_025758395.1', 'Microbacter', 'Microbacterium terricola strain JCM 14903 chromosome complete genome')]
+the following cannot not be added: GCF_024971095.1 Microbacterium sp. EF45044 chromosome complete genome Microbacterium
+due to [('GCF_024971095.1', 'Microbacter', 'Microbacterium sp. EF45044 chromosome complete genome')]
+the following cannot not be added: GCF_021172025.1 Microbacterium resistens strain MZT7 chromosome complete genome Microbacterium
+due to [('GCF_021172025.1', 'Microbacter', 'Microbacterium resistens strain MZT7 chromosome complete genome')]
+the following cannot not be added: GCF_022637555.1 Microbacterium sp. H1-D42 chromosome complete genome Microbacterium
+due to [('GCF_022637555.1', 'Microbacter', 'Microbacterium sp. H1-D42 chromosome complete genome')]
+the following cannot not be added: GCF_024362265.1 Microbacterium liquefaciens strain DND4 chromosome complete genome Microbacterium
+due to [('GCF_024362265.1', 'Microbacter', 'Microbacterium liquefaciens strain DND4 chromosome complete genome')]
+the following cannot not be added: GCF_904831005.1 Microbacterium hydrocarbonoxydans strain Marseille-P2596 chromosome contig00001 Microbacterium
+due to [('GCF_904831005.1', 'Microbacter', 'Microbacterium hydrocarbonoxydans strain Marseille-P2596 chromosome contig00001')]
+the following cannot not be added: GCF_024498615.1 Microbacterium sp. J1-1 chromosome complete genome Microbacterium
+due to [('GCF_024498615.1', 'Microbacter', 'Microbacterium sp. J1-1 chromosome complete genome')]
+the following cannot not be added: GCF_025583665.1 Microbacterium azadirachtae strain CNUC13 chromosome complete genome Microbacterium
+due to [('GCF_025583665.1', 'Microbacter', 'Microbacterium azadirachtae strain CNUC13 chromosome complete genome')]
+the following cannot not be added: GCF_025836995.1 Microbacterium sp. M28 chromosome complete genome Microbacterium
+due to [('GCF_025836995.1', 'Microbacter', 'Microbacterium sp. M28 chromosome complete genome')]
+the following cannot not be added: GCF_026559675.1 Microbacterium oxydans strain ML-6 chromosome complete genome Microbacterium
+due to [('GCF_026559675.1', 'Microbacter', 'Microbacterium oxydans strain ML-6 chromosome complete genome')]
+the following cannot not be added: GCF_904066215.1 Microbacterium sp. Nx66 isolate Microbacterium sp. Nx66 chromosome Nx66 complete sequence Microbacterium
+due to [('GCF_904066215.1', 'Microbacter', 'Microbacterium sp. Nx66 isolate Microbacterium sp. Nx66 chromosome Nx66 complete sequence')]
+the following cannot not be added: GCF_028198145.1 Microbacterium sp. nov. GSS16 chromosome complete genome Microbacterium
+due to [('GCF_028198145.1', 'Microbacter', 'Microbacterium sp. nov. GSS16 chromosome complete genome')]
+the following cannot not be added: GCF_003065485.1 Salinibacterium hongtaonis strain CGMCC 1.16371 chromosome complete genome Salinibacterium
+due to [('GCF_003065485.1', 'Salinibacter', 'Salinibacterium hongtaonis strain CGMCC 1.16371 chromosome complete genome')]
+the following cannot not be added: GCF_008001035.1 Salinibacterium sp. dk2585 chromosome complete genome Salinibacterium
+due to [('GCF_008001035.1', 'Salinibacter', 'Salinibacterium sp. dk2585 chromosome complete genome')]
+the following cannot not be added: GCF_004118935.1 Salinibacterium sp. UTAS2018 chromosome complete genome Salinibacterium
+due to [('GCF_004118935.1', 'Salinibacter', 'Salinibacterium sp. UTAS2018 chromosome complete genome')]
+the following cannot not be added: GCF_011751865.2 Salinibacterium sp. ZJ70 chromosome complete genome Salinibacterium
+due to [('GCF_011751865.2', 'Salinibacter', 'Salinibacterium sp. ZJ70 chromosome complete genome')]
+the following cannot not be added: GCF_011751885.2 Salinibacterium sp. ZJ450 chromosome complete genome Salinibacterium
+due to [('GCF_011751885.2', 'Salinibacter', 'Salinibacterium sp. ZJ450 chromosome complete genome')]
+the following cannot not be added: GCF_019443965.1 Salinibacterium sp. M195 chromosome complete genome Salinibacterium
+due to [('GCF_019443965.1', 'Salinibacter', 'Salinibacterium sp. M195 chromosome complete genome')]
+the following cannot not be added: 23S_rRNA::GCF CP031131.1 Staphylococcus aureus strain E16SA093 chromosome complete Staphylococcus
+due to [('23S_rRNA::GCF', 'Campylobacter', 'CP038868.1 Campylobacter coli strain 16SHKX65C chromosome complete')]
+the following cannot not be added: GCF_000247605.1 Acetobacterium woodii DSM 1030 complete sequence Acetobacterium
+due to [('GCF_000247605.1', 'Acetobacter', 'Acetobacterium woodii DSM 1030 complete sequence')]
+the following cannot not be added: GCF_023700225.1 Acetobacterium wieringae strain CH1 chromosome complete genome Acetobacterium
+due to [('GCF_023700225.1', 'Acetobacter', 'Acetobacterium wieringae strain CH1 chromosome complete genome')]
+the following cannot not be added: GCF_025813735.1 Acetobacterium wieringae strain Y chromosome complete genome Acetobacterium
+due to [('GCF_025813735.1', 'Acetobacter', 'Acetobacterium wieringae strain Y chromosome complete genome')]
+the following cannot not be added: GCF_000209675.1 Gallibacterium anatis UMN179 complete sequence Gallibacter
+due to [('GCF_000209675.1', 'Gallibacterium', 'Gallibacterium anatis UMN179 complete sequence')]
+the following cannot not be added: GCF_002263255.2 Gallibacterium anatis strain ESV200 chromosome complete genome Gallibacter
+due to [('GCF_002263255.2', 'Gallibacterium', 'Gallibacterium anatis strain ESV200 chromosome complete genome')]
+the following cannot not be added: GCF_026013665.1 Gallibacterium anatis strain IMT49310 chromosome complete genome Gallibacter
+due to [('GCF_026013665.1', 'Gallibacterium', 'Gallibacterium anatis strain IMT49310 chromosome complete genome')]
+the following cannot not be added: GCF_013315815.1 Caproicibacterium lactatifermentans strain LBM19010 chromosome complete genome Caproicibacterium
+due to [('GCF_013315815.1', 'Caproicibacter', 'Caproicibacterium lactatifermentans strain LBM19010 chromosome complete genome')]
+the following cannot not be added: GCF_013340725.1 Caproicibacterium lactatifermentans strain JNU-WLY1368 chromosome complete genome Caproicibacterium
+due to [('GCF_013340725.1', 'Caproicibacter', 'Caproicibacterium lactatifermentans strain JNU-WLY1368 chromosome complete genome')]
+the following cannot not be added: GCF_014467055.1 Caproicibacterium amylolyticum strain LBM18003 chromosome complete genome Caproicibacterium
+due to [('GCF_014467055.1', 'Caproicibacter', 'Caproicibacterium amylolyticum strain LBM18003 chromosome complete genome')]
+the following cannot not be added: GCF_026314295.1 Caproicibacterium sp. BJN0003 chromosome complete genome Caproicibacterium
+due to [('GCF_026314295.1', 'Caproicibacter', 'Caproicibacterium sp. BJN0003 chromosome complete genome')]
+the following cannot not be added: GCF_023347295.1 Faecalibacterium sp. I3-3-33 chromosome complete genome Faecalibacterium
+due to [('GCF_023347295.1', 'Faecalibacter', 'Faecalibacterium sp. I3-3-33 chromosome complete genome')]
+the following cannot not be added: GCF_019967975.1 Faecalibacterium prausnitzii strain Fp360 chromosome complete genome Faecalibacterium
+due to [('GCF_019967975.1', 'Faecalibacter', 'Faecalibacterium prausnitzii strain Fp360 chromosome complete genome')]
+the following cannot not be added: GCF_019967995.1 Faecalibacterium prausnitzii strain Fp77 chromosome complete genome Faecalibacterium
+due to [('GCF_019967995.1', 'Faecalibacter', 'Faecalibacterium prausnitzii strain Fp77 chromosome complete genome')]
+the following cannot not be added: GCF_019968015.1 Faecalibacterium prausnitzii strain Fp45 chromosome complete genome Faecalibacterium
+due to [('GCF_019968015.1', 'Faecalibacter', 'Faecalibacterium prausnitzii strain Fp45 chromosome complete genome')]
+the following cannot not be added: GCF_002586945.1 Faecalibacterium prausnitzii strain Indica chromosome complete genome Faecalibacterium
+due to [('GCF_002586945.1', 'Faecalibacter', 'Faecalibacterium prausnitzii strain Indica chromosome complete genome')]
+the following cannot not be added: GCF_002734145.1 Faecalibacterium prausnitzii strain A2165 chromosome complete genome Faecalibacterium
+due to [('GCF_002734145.1', 'Faecalibacter', 'Faecalibacterium prausnitzii strain A2165 chromosome complete genome')]
+the following cannot not be added: GCF_003293635.1 Faecalibacterium prausnitzii strain 94230-2 chromosome complete genome Faecalibacterium
+due to [('GCF_003293635.1', 'Faecalibacter', 'Faecalibacterium prausnitzii strain 94230-2 chromosome complete genome')]
+the following cannot not be added: GCF_019967955.1 Faecalibacterium prausnitzii strain Fp944 chromosome complete genome Faecalibacterium
+due to [('GCF_019967955.1', 'Faecalibacter', 'Faecalibacterium prausnitzii strain Fp944 chromosome complete genome')]
+the following cannot not be added: GCF_003312465.1 Faecalibacterium prausnitzii strain APC91895b chromosome complete genome Faecalibacterium
+due to [('GCF_003312465.1', 'Faecalibacter', 'Faecalibacterium prausnitzii strain APC91895b chromosome complete genome')]
+the following cannot not be added: GCF_010509575.1 Faecalibacterium duncaniae strain JCM 31915 chromosome complete genome Faecalibacterium
+due to [('GCF_010509575.1', 'Faecalibacter', 'Faecalibacterium duncaniae strain JCM 31915 chromosome complete genome')]
+the following cannot not be added: GCF_023347255.1 Faecalibacterium sp. I4-3-84 chromosome complete genome Faecalibacterium
+due to [('GCF_023347255.1', 'Faecalibacter', 'Faecalibacterium sp. I4-3-84 chromosome complete genome')]
+the following cannot not be added: GCF_023347275.1 Faecalibacterium sp. I3-3-89 chromosome complete genome Faecalibacterium
+due to [('GCF_023347275.1', 'Faecalibacter', 'Faecalibacterium sp. I3-3-89 chromosome complete genome')]
+the following cannot not be added: GCF_019968055.1 Faecalibacterium prausnitzii strain Fp28 chromosome complete genome Faecalibacterium
+due to [('GCF_019968055.1', 'Faecalibacter', 'Faecalibacterium prausnitzii strain Fp28 chromosome complete genome')]
+the following cannot not be added: GCF_019968035.1 Faecalibacterium prausnitzii strain Fp40 chromosome complete genome Faecalibacterium
+due to [('GCF_019968035.1', 'Faecalibacter', 'Faecalibacterium prausnitzii strain Fp40 chromosome complete genome')]
+the following cannot not be added: GCF_023347335.1 Faecalibacterium sp. IP-3-29 chromosome complete genome Faecalibacterium
+due to [('GCF_023347335.1', 'Faecalibacter', 'Faecalibacterium sp. IP-3-29 chromosome complete genome')]
+the following cannot not be added: GCF_019968075.1 Faecalibacterium prausnitzii strain Fp1 chromosome complete genome Faecalibacterium
+due to [('GCF_019968075.1', 'Faecalibacter', 'Faecalibacterium prausnitzii strain Fp1 chromosome complete genome')]
+the following cannot not be added: GCF_023347315.1 Faecalibacterium sp. I2-3-92 chromosome complete genome Faecalibacterium
+due to [('GCF_023347315.1', 'Faecalibacter', 'Faecalibacterium sp. I2-3-92 chromosome complete genome')]
+the following cannot not be added: GCF_023347235.1 Faecalibacterium sp. I4-1-79 chromosome complete genome Faecalibacterium
+due to [('GCF_023347235.1', 'Faecalibacter', 'Faecalibacterium sp. I4-1-79 chromosome complete genome')]
+the following cannot not be added: GCF_023347535.1 Faecalibacterium sp. HTF-F chromosome complete genome Faecalibacterium
+due to [('GCF_023347535.1', 'Faecalibacter', 'Faecalibacterium sp. HTF-F chromosome complete genome')]
+the following cannot not be added: GCF_023347355.1 Faecalibacterium sp. IP-1-18 chromosome complete genome Faecalibacterium
+due to [('GCF_023347355.1', 'Faecalibacter', 'Faecalibacterium sp. IP-1-18 chromosome complete genome')]
+the following cannot not be added: GCF_902388275.1 Faecalibacterium prausnitzii isolate MGYG-HGUT-02545 chromosome 1 Faecalibacterium
+due to [('GCF_902388275.1', 'Faecalibacter', 'Faecalibacterium prausnitzii isolate MGYG-HGUT-02545 chromosome 1')]
+the following cannot not be added: GCF_002224645.1 Dehalobacterium formicoaceticum strain DMC chromosome complete genome Dehalobacterium
+due to [('GCF_002224645.1', 'Dehalobacter', 'Dehalobacterium formicoaceticum strain DMC chromosome complete genome')]
+the following cannot not be added: GCF_000328545.1 Thermoanaerobacterium thermosaccharolyticum M0795 complete sequence Thermoanaerobacterium
+due to [('GCF_000328545.1', 'Thermoanaerobacter', 'Thermoanaerobacterium thermosaccharolyticum M0795 complete sequence')]
+the following cannot not be added: GCF_000189775.2 Thermoanaerobacterium xylanolyticum LX-11 complete sequence Thermoanaerobacterium
+due to [('GCF_000189775.2', 'Thermoanaerobacter', 'Thermoanaerobacterium xylanolyticum LX-11 complete sequence')]
+the following cannot not be added: GCF_002250075.1 Thermoanaerobacterium thermosaccharolyticum strain TG57 chromosome complete genome Thermoanaerobacterium
+due to [('GCF_002250075.1', 'Thermoanaerobacter', 'Thermoanaerobacterium thermosaccharolyticum strain TG57 chromosome complete genome')]
+the following cannot not be added: GCF_000145615.1 Thermoanaerobacterium thermosaccharolyticum DSM 571 complete sequence Thermoanaerobacterium
+due to [('GCF_000145615.1', 'Thermoanaerobacter', 'Thermoanaerobacterium thermosaccharolyticum DSM 571 complete sequence')]
+the following cannot not be added: GCF_000307585.2 Thermoanaerobacterium saccharolyticum JWSL-YS485 complete sequence Thermoanaerobacterium
+due to [('GCF_000307585.2', 'Thermoanaerobacter', 'Thermoanaerobacterium saccharolyticum JWSL-YS485 complete sequence')]
+the following cannot not be added: GCF_009905255.1 Thermoanaerobacterium aotearoense strain SCUT27 chromosome complete genome Thermoanaerobacterium
+due to [('GCF_009905255.1', 'Thermoanaerobacter', 'Thermoanaerobacterium aotearoense strain SCUT27 chromosome complete genome')]
