@@ -1,1 +1,0 @@
-RibDif.sh --genus Ruegeria --primers /mnt/c/Users/lasse/Desktop/GitStuff/bachelor/main/MakingAndProccesingData2Database/make_the_db/scripts/RibDif/default.primers --clobber false --ANI false --frag false --msa false --id 1 --threads 6

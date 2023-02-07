@@ -1,4 +1,4 @@
 #!/usr/bin/bash
-rm test.db
-sqlite3 test.db < createDbStructure.sql
+rm /mnt/raid2/s203512/bachelor/s16.db
+sqlite3 /mnt/raid2/s203512/bachelor/s16.db < createDbStructure.sql
 
