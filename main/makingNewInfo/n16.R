@@ -26,7 +26,14 @@ hist(D_small$number_16s)
 Dbygenus = filter(D, n_species > 5)
 Dbygenus = group_by(Dbygenus, genus)
 D_sampled = slice_sample(Dbygenus, n=5, replace=T)
-hist(D_sampled$number_16s)
+par(mfrow=c(2,2))
+hist(D_sampled$number_16s,breaks = 10)
+hist(D$number_16s,breaks = 20)
+hist(log(D_sampled$number_16s),breaks = 10)
+hist(log(D$number_16s),breaks = 10)
+
+
+
 # Here it looks a lot better
 # Can you log transform discrete?
 hist(log(D_sampled$number_16s))
