@@ -2,7 +2,7 @@
 <!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
 <node TEXT="Plan" FOLDED="false" ID="ID_696401721" CREATED="1610381621824" MODIFIED="1675947328414" STYLE="oval">
 <font SIZE="18"/>
-<hook NAME="MapStyle" zoom="1.69">
+<hook NAME="MapStyle">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" associatedTemplateLocation="template:/standard-1.6.mm" fit_to_viewport="false"/>
 
 <map_styles>
