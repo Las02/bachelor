@@ -1,0 +1,331 @@
+<map version="freeplane 1.9.13">
+<!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
+<node TEXT="Plan" FOLDED="false" ID="ID_696401721" CREATED="1610381621824" MODIFIED="1675947328414" STYLE="oval">
+<font SIZE="18"/>
+<hook NAME="MapStyle">
+    <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" associatedTemplateLocation="template:/standard-1.6.mm" fit_to_viewport="false"/>
+
+<map_styles>
+<stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
+<font SIZE="24"/>
+<stylenode LOCALIZED_TEXT="styles.predefined" POSITION="right" STYLE="bubble">
+<stylenode LOCALIZED_TEXT="default" ID="ID_271890427" ICON_SIZE="12 pt" COLOR="#000000" STYLE="fork">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_271890427" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false" ITALIC="false"/>
+<richcontent CONTENT-TYPE="plain/auto" TYPE="DETAILS"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="plain/auto"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="defaultstyle.details"/>
+<stylenode LOCALIZED_TEXT="defaultstyle.attributes">
+<font SIZE="9"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="defaultstyle.note" COLOR="#000000" BACKGROUND_COLOR="#ffffff" TEXT_ALIGN="LEFT"/>
+<stylenode LOCALIZED_TEXT="defaultstyle.floating">
+<edge STYLE="hide_edge"/>
+<cloud COLOR="#f0f0f0" SHAPE="ROUND_RECT"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="defaultstyle.selection" BACKGROUND_COLOR="#afd3f7" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#afd3f7"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.user-defined" POSITION="right" STYLE="bubble">
+<stylenode LOCALIZED_TEXT="styles.topic" COLOR="#18898b" STYLE="fork">
+<font NAME="Liberation Sans" SIZE="10" BOLD="true"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.subtopic" COLOR="#cc3300" STYLE="fork">
+<font NAME="Liberation Sans" SIZE="10" BOLD="true"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.subsubtopic" COLOR="#669900">
+<font NAME="Liberation Sans" SIZE="10" BOLD="true"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.important" ID="ID_67550811">
+<icon BUILTIN="yes"/>
+<arrowlink COLOR="#003399" TRANSPARENCY="255" DESTINATION="ID_67550811"/>
+</stylenode>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.AutomaticLayout" POSITION="right" STYLE="bubble">
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level.root" COLOR="#000000" STYLE="oval" SHAPE_HORIZONTAL_MARGIN="10 pt" SHAPE_VERTICAL_MARGIN="10 pt">
+<font SIZE="18"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,1" COLOR="#0033ff">
+<font SIZE="16"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,2" COLOR="#00b439">
+<font SIZE="14"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,3" COLOR="#990000">
+<font SIZE="12"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,4" COLOR="#111111">
+<font SIZE="10"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,5"/>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,6"/>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,7"/>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,8"/>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,9"/>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,10"/>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,11"/>
+</stylenode>
+</stylenode>
+</map_styles>
+</hook>
+<hook NAME="AutomaticEdgeColor" COUNTER="46" RULE="ON_BRANCH_CREATION"/>
+<node TEXT="Uge:" POSITION="right" ID="ID_419818376" CREATED="1675947328635" MODIFIED="1675947347080">
+<edge COLOR="#ff0000"/>
+<node TEXT="Den kommende uge: 1&#xa;(Quick ones)" ID="ID_145426964" CREATED="1675948081127" MODIFIED="1675948141429">
+<node TEXT="idag" ID="ID_671622928" CREATED="1675948305624" MODIFIED="1675948307019">
+<node TEXT="Clean up data" ID="ID_1631137055" CREATED="1675948309079" MODIFIED="1675948324054">
+<arrowlink DESTINATION="ID_1991305793"/>
+</node>
+<node TEXT="tree?" ID="ID_600831007" CREATED="1675950072486" MODIFIED="1675950073952"/>
+</node>
+<node TEXT="fre" ID="ID_100808295" CREATED="1675948097020" MODIFIED="1675948106518">
+<node TEXT="Clean up data" ID="ID_1991305793" CREATED="1675946749152" MODIFIED="1675946751506"/>
+<node TEXT="dnd" ID="ID_442198198" CREATED="1675948214579" MODIFIED="1675948215291"/>
+</node>
+<node TEXT="man" ID="ID_852795354" CREATED="1675948100332" MODIFIED="1675948101642">
+<node TEXT="Genome size V 16s copy number + var" FOLDED="true" ID="ID_465914966" CREATED="1675882880068" MODIFIED="1675882916979">
+<node TEXT="seqTK" ID="ID_1829200213" CREATED="1675935289679" MODIFIED="1675935297947"/>
+<node TEXT="seqKIT" ID="ID_390720977" CREATED="1675935298371" MODIFIED="1675935300877">
+<node TEXT="" ID="ID_1670104691" CREATED="1675935309466" MODIFIED="1675935309466"/>
+</node>
+</node>
+<node TEXT="Læs ML + anki old" ID="ID_667462914" CREATED="1675948189823" MODIFIED="1675948203096"/>
+</node>
+<node TEXT="tir" ID="ID_27207574" CREATED="1675948101896" MODIFIED="1675948108692">
+<node TEXT="Videnskabsteori" ID="ID_1241280504" CREATED="1675948204834" MODIFIED="1675948209040"/>
+<node TEXT="ML" ID="ID_1055505375" CREATED="1675948210182" MODIFIED="1675948224556"/>
+</node>
+<node TEXT="ons" ID="ID_175952733" CREATED="1675948109005" MODIFIED="1675948115072">
+<node TEXT="Does var ~ #rRNA" ID="ID_392053095" CREATED="1675890117993" MODIFIED="1675890128733"/>
+</node>
+<node TEXT="tors" ID="ID_262738334" CREATED="1675948110606" MODIFIED="1675948120213">
+<node TEXT="Møde" ID="ID_1458855036" CREATED="1675948228330" MODIFIED="1675948229436"/>
+<node TEXT="How many % species has one or more identical 16s?" FOLDED="true" ID="ID_1169000660" CREATED="1675945114798" MODIFIED="1675948286375">
+<arrowlink DESTINATION="ID_270290850"/>
+<node TEXT="Using different primers" FOLDED="true" ID="ID_1001332474" CREATED="1675945565883" MODIFIED="1675945578247">
+<node TEXT="Does it make sense to use v1-v9 and when?" ID="ID_1479948634" CREATED="1675946108150" MODIFIED="1675946118573"/>
+</node>
+<node TEXT="in total" ID="ID_357625376" CREATED="1675945693446" MODIFIED="1675945711905"/>
+<node TEXT="for each genus (large enough)" ID="ID_656820061" CREATED="1675945712185" MODIFIED="1675945719860"/>
+<node TEXT="for different environments" ID="ID_273232722" CREATED="1675945580555" MODIFIED="1675945630707"/>
+</node>
+</node>
+<node TEXT="fre" ID="ID_62175052" CREATED="1675948120508" MODIFIED="1675948121417">
+<node TEXT="How many % species has one or more identical 16s?" FOLDED="true" ID="ID_270290850" CREATED="1675945114798" MODIFIED="1675947232716">
+<node TEXT="Using different primers" FOLDED="true" ID="ID_1087907623" CREATED="1675945565883" MODIFIED="1675945578247">
+<node TEXT="Does it make sense to use v1-v9 and when?" ID="ID_1241379174" CREATED="1675946108150" MODIFIED="1675946118573"/>
+</node>
+<node TEXT="in total" ID="ID_1494903307" CREATED="1675945693446" MODIFIED="1675945711905"/>
+<node TEXT="for each genus (large enough)" ID="ID_1031982040" CREATED="1675945712185" MODIFIED="1675945719860"/>
+<node TEXT="for different environments" ID="ID_866823101" CREATED="1675945580555" MODIFIED="1675945630707"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_1747016049" CREATED="1675947441701" MODIFIED="1675947441701">
+<hook NAME="FirstGroupNode"/>
+<edge COLOR="#007c7c"/>
+</node>
+<node TEXT="1" OBJECT="java.lang.Long|1" POSITION="right" ID="ID_1839351698" CREATED="1675947341579" MODIFIED="1675947352889">
+<edge COLOR="#00ffff"/>
+</node>
+<node TEXT="" POSITION="right" ID="ID_431578474" CREATED="1675947441699" MODIFIED="1675947441701">
+<edge COLOR="#7c007c"/>
+<hook NAME="SummaryNode"/>
+<hook NAME="AlwaysUnfoldedNode"/>
+<node TEXT="Quick ones" FOLDED="true" ID="ID_1724963218" CREATED="1675947555432" MODIFIED="1675947557912">
+<node TEXT="Clean up data" ID="ID_1744844675" CREATED="1675946749152" MODIFIED="1675946751506"/>
+<node TEXT="Genome size V 16s copy number + var" FOLDED="true" ID="ID_86504341" CREATED="1675882880068" MODIFIED="1675882916979">
+<node TEXT="seqTK" ID="ID_84677403" CREATED="1675935289679" MODIFIED="1675935297947"/>
+<node TEXT="seqKIT" ID="ID_773198224" CREATED="1675935298371" MODIFIED="1675935300877">
+<node TEXT="" ID="ID_829172863" CREATED="1675935309466" MODIFIED="1675935309466"/>
+</node>
+</node>
+<node TEXT="Does var ~ #rRNA" ID="ID_1843825002" CREATED="1675890117993" MODIFIED="1675890128733"/>
+<node TEXT="How many % species has one or more identical 16s?" FOLDED="true" ID="ID_1484386817" CREATED="1675945114798" MODIFIED="1675947232716">
+<node TEXT="Using different primers" FOLDED="true" ID="ID_1970671356" CREATED="1675945565883" MODIFIED="1675945578247">
+<node TEXT="Does it make sense to use v1-v9 and when?" ID="ID_701508354" CREATED="1675946108150" MODIFIED="1675946118573"/>
+</node>
+<node TEXT="in total" ID="ID_1756398070" CREATED="1675945693446" MODIFIED="1675945711905"/>
+<node TEXT="for each genus (large enough)" ID="ID_1415905178" CREATED="1675945712185" MODIFIED="1675945719860"/>
+<node TEXT="for different environments" ID="ID_948456546" CREATED="1675945580555" MODIFIED="1675945630707"/>
+</node>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_188718961" CREATED="1675947610009" MODIFIED="1675947610009">
+<hook NAME="FirstGroupNode"/>
+<edge COLOR="#00007c"/>
+</node>
+<node TEXT="2" OBJECT="java.lang.Long|2" POSITION="right" ID="ID_673031639" CREATED="1675947353275" MODIFIED="1675947353902">
+<edge COLOR="#7c0000"/>
+</node>
+<node TEXT="" POSITION="right" ID="ID_71566147" CREATED="1675947610006" MODIFIED="1675947610009">
+<edge COLOR="#7c0000"/>
+<hook NAME="SummaryNode"/>
+<hook NAME="AlwaysUnfoldedNode"/>
+<node TEXT="Environment I" FOLDED="true" ID="ID_155983649" CREATED="1675945065810" MODIFIED="1675947613367">
+<node TEXT="Other enviromental factors" ID="ID_293275548" CREATED="1675885125279" MODIFIED="1675890776447">
+<node TEXT="Optimum pH" ID="ID_669935387" CREATED="1675888163962" MODIFIED="1675888167676"/>
+<node TEXT="Marine/soil/aqua" ID="ID_1170011860" CREATED="1675888171733" MODIFIED="1675888182174">
+<node TEXT="Proberly not as place is not important but life style" ID="ID_367600083" CREATED="1675888182352" MODIFIED="1675888195335"/>
+<node TEXT="Anoix/Anarobic/arobic" ID="ID_1772213298" CREATED="1675888195672" MODIFIED="1675888201398"/>
+</node>
+<node TEXT="Maximal growth rate V rrna copy number&#xa;(Study which found it is from 2016 (176 bacteria)-&gt; we have more data)" ID="ID_2337942" CREATED="1675880302273" MODIFIED="1675881927370" HGAP_QUANTITY="14.6 pt"/>
+<node TEXT="Genome CG% V rna CG% V temp" ID="ID_393216928" CREATED="1675883082312" MODIFIED="1675883098649"/>
+</node>
+<node TEXT="lifestyle" ID="ID_966419985" CREATED="1675947695073" MODIFIED="1675947697558"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_1464249528" CREATED="1675947778418" MODIFIED="1675947778418">
+<hook NAME="FirstGroupNode"/>
+<edge COLOR="#0000ff"/>
+</node>
+<node TEXT="3" OBJECT="java.lang.Long|3" POSITION="right" ID="ID_1558050051" CREATED="1675947354201" MODIFIED="1675947354657">
+<edge COLOR="#00007c"/>
+</node>
+<node TEXT="" POSITION="right" ID="ID_96271078" CREATED="1675947778415" MODIFIED="1675947778417">
+<edge COLOR="#ff0000"/>
+<hook NAME="SummaryNode"/>
+<hook NAME="AlwaysUnfoldedNode"/>
+<node TEXT="Environment II&#xa;(not indepht)" FOLDED="true" ID="ID_682775481" CREATED="1675946520286" MODIFIED="1675947828135">
+<node TEXT="Secondary metabolites" FOLDED="true" ID="ID_49297053" CREATED="1675887855782" MODIFIED="1675887860123">
+<node TEXT="AR" ID="ID_1671084088" CREATED="1675884989729" MODIFIED="1675885007961">
+<node TEXT="Are some specific mutations in rrna&#xa;eg at some positons synominus with AR Resistence?" ID="ID_1919424283" CREATED="1675888079928" MODIFIED="1675888104164"/>
+<node TEXT="Run methods looking for AR genes" ID="ID_1907405131" CREATED="1675887819839" MODIFIED="1675887839001"/>
+<node TEXT="Annotation" ID="ID_1878989169" CREATED="1675887826471" MODIFIED="1675887828475"/>
+<node TEXT="Keeg/GO annotations" ID="ID_1867141682" CREATED="1675887945610" MODIFIED="1675887953715"/>
+<node TEXT="Does it make sense with the way AR&#xa;react with ribosomes" ID="ID_735276263" CREATED="1675888065068" MODIFIED="1675888079442"/>
+</node>
+<node TEXT="Virulence" ID="ID_1081398188" CREATED="1675936196042" MODIFIED="1675936202826">
+<node TEXT="Abricate" ID="ID_641766799" CREATED="1675936202958" MODIFIED="1675936212635">
+<node TEXT="AR" ID="ID_1646110533" CREATED="1675936254303" MODIFIED="1675936255462">
+<node TEXT="Kan være man skal fokusere på dem som targeter ribosomer" ID="ID_278031426" CREATED="1675936295031" MODIFIED="1675936303614"/>
+</node>
+<node TEXT="Virulence" ID="ID_698416533" CREATED="1675936255715" MODIFIED="1675936260091"/>
+</node>
+</node>
+</node>
+<node TEXT="GeneTransfor" ID="ID_1021458283" CREATED="1675888212964" MODIFIED="1675888216668">
+<node TEXT="Annotation" FOLDED="true" ID="ID_280518410" CREATED="1675888216875" MODIFIED="1675888219197">
+<node TEXT="GC / Var between genomic element as indication of gene transfer" ID="ID_939382762" CREATED="1675888021544" MODIFIED="1675888049628"/>
+<node TEXT="Eg biofilm/not biofilm" ID="ID_524732006" CREATED="1675888219397" MODIFIED="1675888226198"/>
+</node>
+<node TEXT="Idea" FOLDED="true" ID="ID_1500635159" CREATED="1675890696532" MODIFIED="1675890701860">
+<node TEXT="Gene transfer would give different 16s rRNA" ID="ID_320000479" CREATED="1675890701992" MODIFIED="1675890715294"/>
+</node>
+<node TEXT="Genome variance V 16s variance" FOLDED="true" ID="ID_264262070" CREATED="1675882869327" MODIFIED="1675882879641">
+<node TEXT="How to estimate Genome variance" ID="ID_292730019" CREATED="1675890339176" MODIFIED="1675890355702">
+<node TEXT="Tetra nucleotide sequence" ID="ID_693180172" CREATED="1675935030870" MODIFIED="1675935043927"/>
+<node TEXT="GC indhold" ID="ID_189803464" CREATED="1675935044192" MODIFIED="1675935053866"/>
+<node TEXT="/gene transfer / profage ect" ID="ID_585792215" CREATED="1675935070832" MODIFIED="1675935080405"/>
+</node>
+<node TEXT="Var eller shannon index? Er ribdif output de to?" ID="ID_676520394" CREATED="1675890372816" MODIFIED="1675890396677"/>
+<node TEXT="evt efter PCA når du har stort df" ID="ID_1742503771" CREATED="1675936406586" MODIFIED="1675936435343"/>
+</node>
+<node TEXT="Mange profage insertion elements ect." ID="ID_1263069005" CREATED="1675935183167" MODIFIED="1675935194609"/>
+<node TEXT="gene transfer agents" ID="ID_585893045" CREATED="1675935229566" MODIFIED="1675935233727"/>
+</node>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_1826631628" CREATED="1675947771603" MODIFIED="1675947771604">
+<hook NAME="FirstGroupNode"/>
+<edge COLOR="#7c7c00"/>
+</node>
+<node TEXT="4" OBJECT="java.lang.Long|4" POSITION="right" ID="ID_32969467" CREATED="1675947355063" MODIFIED="1675947355502">
+<edge COLOR="#007c00"/>
+</node>
+<node TEXT="5" OBJECT="java.lang.Long|5" POSITION="right" ID="ID_53463175" CREATED="1675947355906" MODIFIED="1675947356320">
+<edge COLOR="#7c007c"/>
+</node>
+<node TEXT="" POSITION="right" ID="ID_1629945004" CREATED="1675947771601" MODIFIED="1675947771603">
+<edge COLOR="#007c7c"/>
+<hook NAME="SummaryNode"/>
+<hook NAME="AlwaysUnfoldedNode"/>
+<node TEXT="How much do you overestimate diversity" FOLDED="true" ID="ID_493853395" CREATED="1675945106364" MODIFIED="1675947776680">
+<node TEXT="for specific environments" ID="ID_506414687" CREATED="1675945753375" MODIFIED="1675945759296">
+<node TEXT="m. fake samples" ID="ID_349059266" CREATED="1675946668573" MODIFIED="1675946674591"/>
+<node TEXT="eg. her burde vi få:" ID="ID_991317100" CREATED="1675946675127" MODIFIED="1675946682390"/>
+<node TEXT="men vi får istedet" ID="ID_481611729" CREATED="1675946682659" MODIFIED="1675946685931"/>
+</node>
+<node TEXT="for large enough genera" ID="ID_1213108110" CREATED="1675945781302" MODIFIED="1675945787350"/>
+<node TEXT="with different primers" ID="ID_921182947" CREATED="1675946704822" MODIFIED="1675946709495"/>
+<node TEXT="How to normalize for this" ID="ID_44688137" CREATED="1675945811590" MODIFIED="1675945818061"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_1654580284" CREATED="1675947908474" MODIFIED="1675947908474">
+<hook NAME="FirstGroupNode"/>
+<edge COLOR="#7c007c"/>
+</node>
+<node TEXT="6" OBJECT="java.lang.Long|6" POSITION="right" ID="ID_1123511246" CREATED="1675947356723" MODIFIED="1675947357147">
+<edge COLOR="#007c7c"/>
+</node>
+<node TEXT="" POSITION="right" ID="ID_232228790" CREATED="1675947908469" MODIFIED="1675947908474">
+<edge COLOR="#007c00"/>
+<hook NAME="SummaryNode"/>
+<hook NAME="AlwaysUnfoldedNode"/>
+<node TEXT="PCA" ID="ID_651404083" CREATED="1675947908476" MODIFIED="1675947916195">
+<node TEXT="ift environmental annotations" ID="ID_1345519616" CREATED="1675947953332" MODIFIED="1675947960385"/>
+</node>
+<node TEXT="phylotree" ID="ID_339008923" CREATED="1675947916616" MODIFIED="1675947920895"/>
+</node>
+<node TEXT="" POSITION="right" ID="ID_980887975" CREATED="1675947937601" MODIFIED="1675947937601">
+<hook NAME="FirstGroupNode"/>
+<edge COLOR="#ff0000"/>
+</node>
+<node TEXT="7" OBJECT="java.lang.Long|7" POSITION="right" ID="ID_1939495791" CREATED="1675947357585" MODIFIED="1675947357918">
+<edge COLOR="#7c7c00"/>
+</node>
+<node TEXT="8" OBJECT="java.lang.Long|8" POSITION="right" ID="ID_1518863962" CREATED="1675947358909" MODIFIED="1675947359274">
+<edge COLOR="#ff0000"/>
+</node>
+<node TEXT="9" OBJECT="java.lang.Long|9" POSITION="right" ID="ID_461091553" CREATED="1675947361750" MODIFIED="1675947362227">
+<edge COLOR="#0000ff"/>
+</node>
+<node TEXT="10" OBJECT="java.lang.Long|10" POSITION="right" ID="ID_1035191371" CREATED="1675947362867" MODIFIED="1675947364144">
+<edge COLOR="#00ff00"/>
+</node>
+<node TEXT="11" OBJECT="java.lang.Long|11" POSITION="right" ID="ID_1670993901" CREATED="1675947364399" MODIFIED="1675947365887">
+<edge COLOR="#ff00ff"/>
+</node>
+<node TEXT="12" OBJECT="java.lang.Long|12" POSITION="right" ID="ID_1198713024" CREATED="1675947366250" MODIFIED="1675947366776">
+<edge COLOR="#00ffff"/>
+<node TEXT="Deadline now" ID="ID_1740464709" CREATED="1675947871356" MODIFIED="1675947875067"/>
+</node>
+<node TEXT="" POSITION="right" ID="ID_1548964154" CREATED="1675947937599" MODIFIED="1675947937601">
+<edge COLOR="#7c7c00"/>
+<hook NAME="SummaryNode"/>
+<hook NAME="AlwaysUnfoldedNode"/>
+<node TEXT="writing + extra work" ID="ID_1283251845" CREATED="1675947937602" MODIFIED="1675947944753"/>
+</node>
+<node TEXT="13" OBJECT="java.lang.Long|13" POSITION="right" ID="ID_842702814" CREATED="1675947864434" MODIFIED="1675947865507">
+<edge COLOR="#00ff00"/>
+</node>
+<node TEXT="14" OBJECT="java.lang.Long|14" POSITION="right" ID="ID_1742437079" CREATED="1675947865872" MODIFIED="1675947866393">
+<edge COLOR="#ff00ff"/>
+</node>
+<node TEXT="15" OBJECT="java.lang.Long|15" POSITION="right" ID="ID_245785995" CREATED="1675947866693" MODIFIED="1675947867131">
+<edge COLOR="#00ffff"/>
+</node>
+<node TEXT="16" OBJECT="java.lang.Long|16" POSITION="right" ID="ID_419842175" CREATED="1675947867398" MODIFIED="1675947868096">
+<edge COLOR="#7c0000"/>
+<node TEXT="Burde være deadline" ID="ID_80644197" CREATED="1675947885340" MODIFIED="1675947889228"/>
+</node>
+<node TEXT="extra" POSITION="left" ID="ID_1547337248" CREATED="1675948015587" MODIFIED="1675948017803">
+<edge COLOR="#0000ff"/>
+<node TEXT="Programs and predictions (if time)" FOLDED="true" ID="ID_627055910" CREATED="1675945895488" MODIFIED="1675948028700">
+<node TEXT="Normalize for diversity overestimation" ID="ID_1944597152" CREATED="1675896852837" MODIFIED="1675945929384">
+<node TEXT="Takes each 16s" ID="ID_1231652990" CREATED="1675896873418" MODIFIED="1675896877112"/>
+<node TEXT="And environment" ID="ID_1187151249" CREATED="1675945986329" MODIFIED="1675945992343"/>
+<node TEXT="And C/S/R selected" ID="ID_1538576542" CREATED="1675946319645" MODIFIED="1675946333379"/>
+<node TEXT="estimates genus" ID="ID_94106932" CREATED="1675896877398" MODIFIED="1675896880284"/>
+<node TEXT="then takes genus normalisation&#xa;Into consideration ect." ID="ID_283261478" CREATED="1675896880623" MODIFIED="1675896894443"/>
+</node>
+<node TEXT="Predict species based on 16s present" FOLDED="true" ID="ID_1551740083" CREATED="1675946004848" MODIFIED="1675946028138">
+<node TEXT="Eg std ribdif these overlap" ID="ID_259270445" CREATED="1675946028449" MODIFIED="1675946058416"/>
+<node TEXT="But for one all other 16s is also seen" ID="ID_1230391450" CREATED="1675946058638" MODIFIED="1675946079563"/>
+<node TEXT="And for this sample type this is more likely to be seen" ID="ID_1875909127" CREATED="1675946081886" MODIFIED="1675946090895"/>
+</node>
+</node>
+</node>
+</node>
+</map>
