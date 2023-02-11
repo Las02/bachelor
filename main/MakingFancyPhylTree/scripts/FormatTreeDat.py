@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-df_in = pd.read_csv("../data/tax_info.csv")
+df_in = pd.read_csv("../data/hpc_tax_info_full.csv")
 
 
 parents_tax = ["parent","node","PHYLUM","ORDER","GENUS"]

@@ -21,18 +21,21 @@ treedat <- left_join(tree, ribdif_genus_info, "GENUS" )
 # Drop all that is genus and does not have mean_n16
 treedat <- filter(treedat, !is.na(mean_n16) | is.na(GENUS) )
 
+treedat
+
 # convert to treedata format
 tr <- as.treedata(treedat)
 as_tibble(tr)
 
 
 ggtree(tr) +
-  geom_label(aes(x=branch, label=label), fill='lightgreen')
+  geom_label(aes(x=branch, label=label), fill='lightgreen') +
+  geom_tippoint(aes(color=mean_div), size=10, alpha=.75) 
 
 as_tibble(tr)
-s
+
 
 
 #ggtree(tr) +
 #  geom_label(aes(x=branch, label=label), fill='lightgreen') +
-#  geom_tippoint(aes(color=mean), size=10, alpha=.75) 
+# 
