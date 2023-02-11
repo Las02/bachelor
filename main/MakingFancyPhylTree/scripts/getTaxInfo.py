@@ -24,10 +24,10 @@ def TaxIdToScientificName(taxid: str) -> str:
     return data["taxonomy_nodes"][0]["taxonomy"]["organism_name"]
 
 # Define the taxonomy for the genus to get
-parents_tax = ["PHYLUM","ORDER","FAMILY"]
+parents_tax = ["PHYLUM","ORDER"]
 df = pd.DataFrame(columns=parents_tax.append("GENUS"))
 
-all_genus = open("smallGenus.txt")
+all_genus = open("../data/all_genus.txt")
 
 # Get the sci name for all chosen parents tax in parents_tax
 # Read them to a pd dataframe called df
@@ -36,10 +36,14 @@ for genus in all_genus:
     parents_gotten = dict()
     parents_gotten["GENUS"] = genus
     for tax_to_get in parents_tax:
-        taxid = getParentTaxID(genus, tax_to_get)
-        sci_name = TaxIdToScientificName(taxid)
-        parents_gotten[tax_to_get] = sci_name
+        try:
+            taxid = getParentTaxID(genus, tax_to_get)
+            sci_name = TaxIdToScientificName(taxid)
+            parents_gotten[tax_to_get] = sci_name
+        except KeyError as e:
+            print("failed on", genus,"error:", e)
+            
 
     df = df.append(parents_gotten, ignore_index=True)
 
-df.to_csv("")
+df.to_csv("../data/tax_info_full.csv", index=False)
