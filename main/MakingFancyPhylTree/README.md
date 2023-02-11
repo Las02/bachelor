@@ -7,7 +7,7 @@ Lastly the data is visualized using the ggtree package with "MakeGGtree.R". Here
 
 \
 "getTaxInfo.py" -> "FormatTreeDat.py" -> "MakeGGtree.R"
-\
+
 
 
 ### Data
