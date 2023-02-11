@@ -1,4 +1,6 @@
 
+import warnings
+warnings.simplefilter(action='ignore', category=FutureWarning)
 import requests
 import pandas as pd
 
@@ -27,7 +29,7 @@ def TaxIdToScientificName(taxid: str) -> str:
 parents_tax = ["PHYLUM","ORDER"]
 df = pd.DataFrame(columns=parents_tax.append("GENUS"))
 
-all_genus = open("../data/all_genus.txt")
+all_genus = open("../data/all_genus_found.txt")
 
 # Get the sci name for all chosen parents tax in parents_tax
 # Read them to a pd dataframe called df

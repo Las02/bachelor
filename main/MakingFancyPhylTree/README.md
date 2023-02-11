@@ -1,27 +1,30 @@
-Working from this: https://guangchuangyu.github.io/ggtree-book/chapter-ggtree.html#methods-and-materials-1
+## Purpose
+This directory makes a phylogenetic tree \
+Since the data taxonomy data above "genus" is allready there
+it is downloaded from NCBI's taxonomy api. This is done with : "getTaxInfo.py" \
+Thereafter the data is formatted to indicate the relationship between the taxonomy. This is done with "FormatTreeDat.py" \
+Lastly the data is visualized using the ggtree package with "MakeGGtree.R". Here the data is merged with data from the database indicating variance and 16s gene numbers.
+
+---
+"getTaxInfo.py" -> "FormatTreeDat.py" -> "MakeGGtree.R"
+---
+
+
+## Data
+The data was downloaded from NCBI's API:
+11-02-2023
+
+### Errors
+It had the following errors:
+---
+failed on Cyclonatronum error: 'edges'
+failed on Cyclonatronum error: 'edges'
+failed on Cyclonatronum error: 'edges'
+---
+
+### Extra
+The the book about the ggpackage can be found here: https://guangchuangyu.github.io/ggtree-book/chapter-ggtree.html#methods-and-materials-1
 
 # TODO
 Write the tax data to the database
 
-
-# Errors
-Failed on: 
-failed on Cyclonatronum error: 'edges'
-failed on Cyclonatronum error: 'edges'
-failed on Cyclonatronum error: 'edges'
-/mnt/c/Users/Bruger/Documents/GitHub/bachelor/main/MakingFancyPhylTree/scripts/getTaxInfo.py:47: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
-  df = df.append(parents_gotten, ignore_index=True)
-failed on Natronogracilivirga error: 'edges'
-failed on Natronogracilivirga error: 'edges'
-failed on Natronogracilivirga error: 'edges'
-failed on Flammeovirga error: 'edges'
-
-e.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
-  df = df.append(parents_gotten, ignore_index=True)
-failed on Cognataquiflexum error: 'edges'
-failed on Cognataquiflexum error: 'edges'
-failed on Cognataquiflexum error: 'edges'
-
-failed on Faunimonas error: 'edges'
-failed on Faunimonas error: 'edges'
-failed on Faunimonas error: 'edges'
