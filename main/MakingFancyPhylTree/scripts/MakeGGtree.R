@@ -21,16 +21,33 @@ treedat <- left_join(tree, ribdif_genus_info, "GENUS" )
 # Drop all that is genus and does not have mean_n16
 treedat <- filter(treedat, !is.na(mean_n16) | is.na(GENUS) )
 
-treedat
+# VERY IMPORTANT!
+treedat <- filter(treedat, !is.na(parent), !is.na(node))
+summary(treedat)
 
 # convert to treedata format
 tr <- as.treedata(treedat)
 as_tibble(tr)
 
+ggtree(tr,layout="circular") +
+  geom_range(range=tr$mean_n16)
 
-ggtree(tr) +
-  geom_label(aes(x=branch, label=label), fill='lightgreen') +
-  geom_tippoint(aes(color=mean_div), size=10, alpha=.75) 
+
+ggtree(tr,layout="circular") +
+  geom_tippoint(aes(color=mean_n16),shape=15, size=2, alpha=.75)
+
+  
+df <- data.frame(n16=(as.integer(treedat$mean_n16)))
+
+rownames(df) <- treedat$node
+
+df <- na.omit(df)
+p <- ggtree(tr, layout="circular")
+gheatmap(p,data = df,offset=.01, width=.2) +
+  scale_fill_viridis_b(option="D",breaks=c(5,10,15,20,30),values = c(0, 0.1, 1))
+  
+  
+  #scale_fill_viridis_d(option="D", name="Number of 16s genes",guide = guide_legend(reverse = TRUE))
 
 as_tibble(tr)
 
