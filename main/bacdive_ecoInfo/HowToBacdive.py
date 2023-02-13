@@ -2,6 +2,7 @@
 import sys
 import bacdive
 import numpy as np
+import pandas as pd
 
 class nandict():
     """Quick class to return nan instead of Keyerror when trying to get a key which is not present
@@ -27,6 +28,12 @@ client = bacdive.BacdiveClient("lasse101010@gmail.com", password)
 # Get various information
 client.search(taxonomy="Lysobacter tolerans")
 for strain in client.retrieve():
+    dat = pd.DataFrame.from_dict(strain)
+    head(dat)
+    """
+    with open("json.html","w") as outfile:
+        print(strain, file=outfile)
+    
     strain = nandict(strain)
     
     # Get the temperature
@@ -52,4 +59,4 @@ for strain in client.retrieve():
     
     GC = strain["GC-content"]
     print(GC)
-    
+    """

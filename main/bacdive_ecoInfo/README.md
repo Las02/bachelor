@@ -1,0 +1,516 @@
+
+The data was found through the BacDive API
+
+
+## Handeling of data
+For some entries more than one refrence was given.
+This is how they were handled: \
+
+#### Continious Ratio Values: Temp/pH: 
+Sometimes a range was given and sometimes a number
+The range was saved as Max and Min value. If just a number was given then it was used as a Normal value. If several values for either type were given then the avg. was used. eg for temp:
+´´´
+Data (temp):
+8-10
+9
+10
+Becomes ----->
+Temperature
+Min Normal Max
+9  (9+10)/2  10
+
+´´´
+#### Nominal values with only one "possible" eg. Morphology
+For each datapoint the mode was used.
+In the case of a multimodal datapoint (ie. two factors having an equal frequency) a random point was picked
+
+### Nominal values with several "possible" eg. antibiotic resistence/isolation source
+Here they were added additativly eg. 
+´´´
+         {
+            "@ref":43676,
+            "ChEBI":28971,
+            "metabolite":"ampicillin",
+            "is antibiotic":"yes",
+            "is resistant":"yes"
+         },
+         {
+            "@ref":43676,
+            "ChEBI":28077,
+            "metabolite":"rifampicin",
+            "is antibiotic":"yes",
+            "is resistant":"yes"
+
+----->
+[ampicillin, rifampicin]
+´´´
+
+
+## Example of data
+This is an example of the data given from the Bacdive API:
+´´´
+{
+   "General":{
+      "@ref":24274,
+      "BacDive-ID":132485,
+      "DSM-Number":28473,
+      "keywords":[
+         "genome sequence",
+         "16S sequence",
+         "Bacteria",
+         "aerobe",
+         "Gram-negative",
+         "rod-shaped",
+         "colony-forming"
+      ],
+      "description":"Lysobacter tolerans UM1 is an aerobe, Gram-negative, rod-shaped bacterium that forms circular colonies and was isolated from soil from hexachlorocyclohexane-contaminated dumpsite.",
+      "NCBI tax id":{
+         "NCBI tax id":1604334,
+         "Matching level":"species"
+      },
+      "strain history":"<- R. Lal, Univ. Delhi, Dept. Zoology; UM <- U. Mukherjee, Univ. Delhi, Dept. Zoology, India",
+      "doi":"10.13145/bacdive132485.20221219.7.1"
+   },
+   "Name and taxonomic classification":{
+      "LPSN":{
+         "@ref":20215,
+         "description":"domain/bacteria",
+         "keyword":"phylum/pseudomonadota",
+         "domain":"Bacteria",
+         "phylum":"Pseudomonadota",
+         "class":"Gammaproteobacteria",
+         "order":"Lysobacterales",
+         "family":"Lysobacteraceae",
+         "genus":"Lysobacter",
+         "species":"Lysobacter tolerans",
+         "full scientific name":"Lysobacter tolerans (Rani et al. 2016) Margesin et al. 2018",
+         "synonyms":{
+            "@ref":20215,
+            "synonym":"Luteimonas tolerans"
+         }
+      },
+      "@ref":24274,
+      "domain":"Bacteria",
+      "phylum":"Proteobacteria",
+      "class":"Gammaproteobacteria",
+      "order":"Pseudomonadales",
+      "family":"Lysobacteraceae",
+      "genus":"Lysobacter",
+      "species":"Lysobacter tolerans",
+      "full scientific name":"Luteimonas tolerans Rani et al. 2016",
+      "strain designation":"UM1",
+      "type strain":"yes"
+   },
+   "Morphology":{
+      "cell morphology":{
+         "@ref":43676,
+         "gram stain":"negative",
+         "cell shape":"rod-shaped",
+         "motility":"no"
+      },
+      "colony morphology":{
+         "@ref":43676,
+         "colony color":"Yellow",
+         "colony shape":"circular",
+         "medium used":"Luria Bertani agar"
+      },
+      "multimedia":{
+         "@ref":24274,
+         "multimedia content":"https://www.dsmz.de/microorganisms/photos/DSM_28473.jpg",
+         "intellectual property rights":"© Leibniz-Institut DSMZ"
+      }
+   },
+   "Culture and growth conditions":{
+      "culture medium":{
+         "@ref":43676,
+         "name":"LB (Luria-Bertani) MEDIUM",
+         "growth":"yes"
+      },
+      "culture temp":[
+         {
+            "@ref":43676,
+            "growth":"positive",
+            "type":"growth",
+            "temperature":"25-40"
+         },
+         {
+            "@ref":43676,
+            "growth":"positive",
+            "type":"optimum",
+            "temperature":"28",
+            "range":"mesophilic"
+         }
+      ],
+      "culture pH":[
+         {
+            "@ref":43676,
+            "ability":"positive",
+            "type":"growth",
+            "pH":"3-10",
+            "PH range":"alkaliphile"
+         },
+         {
+            "@ref":43676,
+            "ability":"positive",
+            "type":"optimum",
+            "pH":"8"
+         }
+      ]
+   },
+   "Physiology and metabolism":{
+      "oxygen tolerance":{
+         "@ref":43676,
+         "oxygen tolerance":"aerobe"
+      },
+      "spore formation":{
+         "@ref":43676,
+         "spore formation":"no"
+      },
+      "halophily":{
+         "@ref":43676,
+         "salt":"NaCl",
+         "growth":"positive",
+         "tested relation":"growth",
+         "concentration":"0-1 %(w/v)"
+      },
+      "metabolite utilization":[
+         {
+            "@ref":43676,
+            "Chebi-ID":12936,
+            "metabolite":"D-galactose",
+            "utilization activity":"-",
+            "kind of utilization tested":"carbon source"
+         },
+         {
+            "@ref":43676,
+            "Chebi-ID":4853,
+            "metabolite":"esculin",
+            "utilization activity":"-",
+            "kind of utilization tested":"hydrolysis"
+         },
+         {
+            "@ref":43676,
+            "Chebi-ID":5291,
+            "metabolite":"gelatin",
+            "utilization activity":"-",
+            "kind of utilization tested":"hydrolysis"
+         },
+         {
+            "@ref":43676,
+            "Chebi-ID":16199,
+            "metabolite":"urea",
+            "utilization activity":"-",
+            "kind of utilization tested":"hydrolysis"
+         },
+         {
+            "@ref":43676,
+            "Chebi-ID":17632,
+            "metabolite":"nitrate",
+            "utilization activity":"-",
+            "kind of utilization tested":"reduction"
+         },
+         {
+            "@ref":43676,
+            "Chebi-ID":15824,
+            "metabolite":"D-fructose",
+            "utilization activity":"+",
+            "kind of utilization tested":"assimilation"
+         },
+         {
+            "@ref":43676,
+            "Chebi-ID":17634,
+            "metabolite":"D-glucose",
+            "utilization activity":"+",
+            "kind of utilization tested":"assimilation"
+         },
+         {
+            "@ref":43676,
+            "Chebi-ID":15824,
+            "metabolite":"D-fructose",
+            "utilization activity":"+",
+            "kind of utilization tested":"carbon source"
+         },
+         {
+            "@ref":43676,
+            "Chebi-ID":17634,
+            "metabolite":"D-glucose",
+            "utilization activity":"+",
+            "kind of utilization tested":"carbon source"
+         }
+      ],
+      "antibiotic resistance":[
+         {
+            "@ref":43676,
+            "ChEBI":28971,
+            "metabolite":"ampicillin",
+            "is antibiotic":"yes",
+            "is resistant":"yes"
+         },
+         {
+            "@ref":43676,
+            "ChEBI":28077,
+            "metabolite":"rifampicin",
+            "is antibiotic":"yes",
+            "is resistant":"yes"
+         },
+         {
+            "@ref":43676,
+            "ChEBI":17334,
+            "metabolite":"penicillin",
+            "is antibiotic":"yes",
+            "is resistant":"yes"
+         }
+      ],
+      "enzymes":[
+         {
+            "@ref":43676,
+            "value":"catalase",
+            "activity":"+",
+            "ec":"1.11.1.6"
+         },
+         {
+            "@ref":43676,
+            "value":"cytochrome oxidase",
+            "activity":"+",
+            "ec":"1.9.3.1"
+         },
+         {
+            "@ref":43676,
+            "value":"beta-galactosidase",
+            "activity":"-",
+            "ec":"3.2.1.23"
+         }
+      ],
+      "fatty acid profile":{
+         "fatty acids":[
+            {
+               "@ref":43676,
+               "fatty acid":"C15:0 anteiso",
+               "percentage":1
+            },
+            {
+               "@ref":43676,
+               "fatty acid":"C14:0",
+               "percentage":1
+            },
+            {
+               "@ref":43676,
+               "fatty acid":"C16:0",
+               "percentage":1.6
+            },
+            {
+               "@ref":43676,
+               "fatty acid":"C16:0-10-methyl / iso-C17:1ω9c",
+               "percentage":9.2
+            },
+            {
+               "@ref":43676,
+               "fatty acid":"C16:1ω7c / C16:1ω6c",
+               "percentage":12.1
+            },
+            {
+               "@ref":43676,
+               "fatty acid":"C15:0 iso",
+               "percentage":36
+            },
+            {
+               "@ref":43676,
+               "fatty acid":"C15:0 iso 3OH",
+               "percentage":4.4
+            },
+            {
+               "@ref":43676,
+               "fatty acid":"C15:1 iso G",
+               "percentage":14.9
+            },
+            {
+               "@ref":43676,
+               "fatty acid":"C17:0 iso 3OH",
+               "percentage":15
+            },
+            {
+               "@ref":43676,
+               "fatty acid":"C17:1 iso I / C17:1 anteiso B",
+               "percentage":1.6
+            }
+         ],
+         "type of FA analysis":"whole cell analysis",
+         "incubation medium":"Tryptic Soy Agar",
+         "agar/liquid":"agar",
+         "incubation temperature":"28",
+         "incubation time":"2",
+         "incubation_oxygen":"aerobic",
+         "library/peak naming table":"RTSBA6.0B",
+         "system":"MIS MIDI",
+         "cutoff value":"None"
+      }
+   },
+   "Isolation, sampling and environmental information":{
+      "isolation":[
+         {
+            "@ref":24274,
+            "sample type":"soil from hexachlorocyclohexane-contaminated dumpsite",
+            "geographic location":"Lucknow, Ummari village",
+            "country":"India",
+            "origin.country":"IND",
+            "continent":"Asia"
+         },
+         {
+            "@ref":43676,
+            "sample type":"hexachlorocyclohexane-contaminated dumpsite in Ummari village",
+            "geographic location":"Lucknow",
+            "country":"India",
+            "origin.country":"IND",
+            "continent":"Asia"
+         }
+      ],
+      "isolation source categories":[
+         {
+            "Cat1":"#Environmental",
+            "Cat2":"#Terrestrial",
+            "Cat3":"#Soil"
+         },
+         {
+            "Cat1":"#Engineered",
+            "Cat2":"#Contamination"
+         },
+         {
+            "Cat1":"#Engineered",
+            "Cat2":"#Waste"
+         }
+      ],
+      "taxonmaps":{
+         "@ref":69479,
+         "File name":"preview.99_5950.png",
+         "url":"https://microbeatlas.org/index.html?action=taxon&taxon_id=90_17;96_2841;97_3495;98_4421;99_5950&stattab=map",
+         "Last taxonomy":"Lysobacter tolerans subclade",
+         "16S sequence":"KM888877",
+         "Sequence Identity":"None",
+         "Total samples":1473,
+         "soil counts":139,
+         "aquatic counts":686,
+         "animal counts":601,
+         "plant counts":47
+      }
+   },
+   "Safety information":{
+      
+   },
+   "Sequence information":{
+      "16S sequences":{
+         "@ref":24274,
+         "description":"Luteimonas tolerans strain UM1 16S ribosomal RNA gene, partial sequence",
+         "accession":"KM888877",
+         "length":1419,
+         "database":"ena",
+         "NCBI tax ID":1604334
+      },
+      "Genome sequences":[
+         {
+            "@ref":66792,
+            "description":"Lysobacter tolerans UM1",
+            "accession":"GCA_900155935",
+            "assembly level":"contig",
+            "database":"ncbi",
+            "NCBI tax ID":1604334
+         },
+         {
+            "@ref":66792,
+            "description":"Lysobacter tolerans UM1",
+            "accession":"2681812867",
+            "assembly level":"draft",
+            "database":"img",
+            "NCBI tax ID":1604334
+         }
+      ],
+      "GC content":[
+         {
+            "@ref":43676,
+            "GC-content":"64.3",
+            "method":"thermal denaturation, midpoint method (Tm)"
+         },
+         {
+            "@ref":24274,
+            "GC-content":"64.3",
+            "method":"fluorimetric"
+         }
+      ]
+   },
+   "External links":{
+      "@ref":24274,
+      "culture collection no.":"DSM 28473, KCTC 42936, MCC 2572",
+      "literature":[
+         {
+            "topic":"Phylogeny",
+            "Pubmed-ID":"26869334",
+            "title":"Luteimonas tolerans sp. nov., isolated from hexachlorocyclohexane-contaminated soil.",
+            "authors":"Rani P, Mukherjee U, Verma H, Kamra K, Lal R",
+            "journal":"Int J Syst Evol Microbiol",
+            "DOI":"10.1099/ijsem.0.000956",
+            "year":2016,
+            "mesh":"Bacterial Typing Techniques, Base Composition, DNA, Bacterial/genetics, Fatty Acids/chemistry, *Hexachlorocyclohexane, India, Molecular Sequence Data, Nucleic Acid Hybridization, *Phylogeny, RNA, Ribosomal, 16S/genetics, Sequence Analysis, DNA, *Soil Microbiology, *Soil Pollutants, Spermidine/chemistry, Ubiquinone/chemistry, Xanthomonadaceae/*classification/genetics/isolation & purification",
+            "topic2":"Genetics"
+         },
+         {
+            "topic":"Phylogeny",
+            "Pubmed-ID":"30826139",
+            "title":"Proposal of Lysobacter pythonis sp. nov. isolated from royal pythons (Python regius).",
+            "authors":"Busse HJ, Huptas C, Baumgardt S, Loncaric I, Spergser J, Scherer S, Wenning M, Kampfer P",
+            "journal":"Syst Appl Microbiol",
+            "DOI":"10.1016/j.syapm.2019.02.002",
+            "year":2019,
+            "mesh":"Animals, Boidae/*microbiology, DNA, Bacterial/genetics, DNA, Ribosomal Spacer/genetics, Fatty Acids/analysis, Genes, Bacterial/genetics, Genome, Bacterial/genetics, Lipids/analysis, Lysobacter/chemistry/*classification/genetics, Nucleic Acid Hybridization, *Phylogeny, Polyamines/analysis, Quinones/analysis, Sequence Analysis, DNA",
+            "topic2":"Genetics"
+         }
+      ]
+   },
+   "Reference":[
+      {
+         "@id":20215,
+         "authors":"Parte, A.C., Sardà Carbasse, J., Meier-Kolthoff, J.P., Reimer, L.C. and Göker, M.",
+         "title":"List of Prokaryotic names with Standing in Nomenclature (LPSN) moves to the DSMZ",
+         "doi/url":"10.1099/ijsem.0.004332"
+      },
+      {
+         "@id":24274,
+         "authors":"Curators of the DSMZ",
+         "catalogue":"Leibniz Institut DSMZ-Deutsche Sammlung von Mikroorganismen und Zellkulturen GmbH (DSM 28473)",
+         "doi/url":"https://www.dsmz.de/collection/catalogue/details/culture/DSM-28473"
+      },
+      {
+         "@id":43676,
+         "authors":"Pooja Rani, Udita Mukherjee, Helianthous Verma, Komal Kamra, Rup Lal",
+         "title":"Luteimonas tolerans sp. nov., isolated from hexachlorocyclohexane-contaminated soil",
+         "journal":"IJSEM 66: 1851-1856 2016",
+         "doi/url":"10.1099/ijsem.0.000956",
+         "pubmed":26869334
+      },
+      {
+         "@id":66792,
+         "authors":"Julia Koblitz, Joaquim Sardà, Lorenz Christian Reimer, Boyke Bunk, Jörg Overmann",
+         "title":"Automatically annotated for the DiASPora project (Digital Approaches for the Synthesis of Poorly Accessible Biodiversity Information)",
+         "doi/url":"https://diaspora-project.de/progress.html#genomes"
+      },
+      {
+         "@id":66794,
+         "authors":"Antje Chang, Lisa Jeske, Sandra Ulbrich, Julia Hofmann, Julia Koblitz, Ida Schomburg, Meina Neumann-Schaal, Dieter Jahn, Dietmar Schomburg",
+         "title":"BRENDA, the ELIXIR core data resource in 2021: new developments and updates",
+         "journal":"Nucleic Acids Res. 49: D498-D508 2020",
+         "doi/url":"10.1093/nar/gkaa1025",
+         "pubmed":33211880
+      },
+      {
+         "@id":69479,
+         "authors":"João F Matias Rodrigues, Janko Tackmann,Gregor Rot, Thomas SB Schmidt, Lukas Malfertheiner, Mihai Danaila,Marija Dmitrijeva, Daniela Gaio, Nicolas Näpflin and Christian von Mering. University of Zurich.",
+         "title":"MicrobeAtlas 1.0 beta",
+         "doi/url":"https://microbeatlas.org/"
+      },
+      {
+         "@id":69480,
+         "authors":"Julia Koblitz, Joaquim Sardà, Lorenz Christian Reimer, Boyke Bunk, Jörg Overmann",
+         "title":"Predictions based on genome sequence made in the Diaspora project (Digital Approaches for the Synthesis of Poorly Accessible Biodiversity Information)",
+         "doi/url":"https://diaspora-project.de/progress.html#genomes"
+      }
+   ]
+}
+´´´

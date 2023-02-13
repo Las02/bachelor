@@ -25,7 +25,11 @@ treedat <- filter(treedat, !is.na(mean_n16) | is.na(GENUS) )
 treedat <- filter(treedat, !is.na(parent), !is.na(node))
 summary(treedat)
 
-treedat2 <- filter(treedat, nspecies > 2 | is.na(GENUS))
+#treedat2 <- filter(treedat, nspecies > 2 | is.na(GENUS))
+
+# convert to treedata format
+tr <- as.treedata(treedat)
+
 
 ggtree(tr,layout="circular")
 
