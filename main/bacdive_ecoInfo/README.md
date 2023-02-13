@@ -9,11 +9,29 @@ This is how they were handled: \
 #### Continious Ratio Values: Temp/pH: 
 Sometimes a range was given and sometimes a number
 The range was saved as Max and Min value. If just a number was given then it was used as a Normal value. If several values for either type were given then the avg. was used. eg for temp:
-```
+```json
 Data (temp):
-8-10
-9
-10
+"culture temp":[
+         {
+            "@ref":43676,
+            "growth":"positive",
+            "type":"growth",
+            "temperature":"9-10"
+         },
+         {
+            "@ref":43676,
+            "growth":"positive",
+            "type":"optimum",
+            "temperature":"9",
+            "range":"mesophilic"
+         }
+         {
+            "@ref":43676,
+            "growth":"positive",
+            "type":"optimum",
+            "temperature":"10",
+            "range":"mesophilic"
+         }
 Becomes ----->
 Temperature
 Min Normal Max
@@ -26,7 +44,7 @@ In the case of a multimodal datapoint (ie. two factors having an equal frequency
 
 ### Nominal values with several "possible" eg. antibiotic resistence/isolation source
 Here they were added additativly eg. 
-```
+```json
          {
             "@ref":43676,
             "ChEBI":28971,
