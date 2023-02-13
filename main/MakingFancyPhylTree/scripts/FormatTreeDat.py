@@ -1,7 +1,9 @@
 import pandas as pd
 import numpy as np
 
-df_in = pd.read_csv("../data/hpc_tax_info_full.csv")
+df_in = pd.read_csv("../data/mini.csv")
+
+
 
 
 parents_tax = ["parent","node","PHYLUM","ORDER","GENUS"]
@@ -44,6 +46,8 @@ for nrow, dat in df_in.iterrows():
     add_dict["GENUS"] = genus
     if genus not in df_out["node"].values:
         df_out = df_out.append(add_dict, ignore_index = True)
+
+
 
 df_out.to_csv("../data/phyloinfo.csv", index=False)
 

@@ -23,14 +23,15 @@ treedat <- filter(treedat, !is.na(mean_n16) | is.na(GENUS) )
 
 treedat
 
-# convert to treedata format
-tr <- as.treedata(treedat)
-as_tibble(tr)
+treedat2 <- filter(treedat, nspecies > 2 | is.na(GENUS))
 
+# convert to treedata format
+tr <- as.treedata(treedat2)
+as_tibble(tr)
 
 ggtree(tr) +
   geom_label(aes(x=branch, label=label), fill='lightgreen') +
-  geom_tippoint(aes(color=mean_div), size=10, alpha=.75) 
+  geom_tippoint(aes(color=mean_n16), size=10, alpha=.75) 
 
 as_tibble(tr)
 
@@ -39,3 +40,11 @@ as_tibble(tr)
 #ggtree(tr) +
 #  geom_label(aes(x=branch, label=label), fill='lightgreen') +
 # 
+
+
+
+
+
+
+
+
