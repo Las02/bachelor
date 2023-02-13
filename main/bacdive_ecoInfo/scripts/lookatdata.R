@@ -22,11 +22,30 @@ ribdif_dat <- read.csv("../../makingNewInfo/gcf_n16s_genus.csv")
 # TODO maybe not mean but for each but needs more work
 ribdif_genus_info= group_by(ribdif_dat, genus) %>% 
   summarise(mean_n16 = mean(number_16s), mean_div = mean(total_div), nspecies = mean(n_species))
+
 ribdif_genus_info <- rename(ribdif_genus_info)
 
 # Join the two datasets
 D_joined <- left_join(D_small, ribdif_genus_info, by="genus")
 D_joined <- filter(D_joined, mean_n16 > 0)
+
+D_joined <- mutate(D_joined, AR = factor(ifelse(is.na(is.resistant), "no","yes")))
+ggplot(D_joined) +
+  geom_boxplot(aes(x=AR, y=mean_div)) 
+
+ggplot(D_joined) +
+  geom_boxplot(aes(x=AR, y=mean_n16))
+
+# could be something
+ggplot(D_joined) +
+  geom_boxplot(aes(y=oxygen.tolerance, x=mean_n16))
+# Sig
+fit <- lm(mean_div ~ AR, data=D_joined)
+anova(fit)
+
+# Not sig
+fit <- lm(mean_n16 ~ AR, data=D_joined)
+anova(fit)
 
 # It seems to be kinda genus specific. BUT THATS BEcause we took mean n16
 ggplot(D_joined) + 
