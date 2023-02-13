@@ -1,5 +1,20 @@
+##### ECTS
+Center variables before computing interaction
+--https://bookdown.org/ndphillips/YaRrr/linear-regression-with-lm.htmls
+standadize data?
 
+
+### Data
 The data was found through the BacDive API
+
+### Look at
+Some have no motility data but flagella data
+Add Oxygen tolerance	aerobe + spore formation
+
+
+
+### Notes
+Optimum can be a range: eg https://bacdive.dsmz.de/strain/158751
 
 
 ## Handeling of data
@@ -7,6 +22,10 @@ For some entries more than one refrence was given.
 This is how they were handled: \
 
 #### Continious Ratio Values: Temp/pH: 
+
+Temp: Here we have both growth and optimum
+
+#### NOT CORRECT
 Sometimes a range was given and sometimes a number
 The range was saved as Max and Min value. If just a number was given then it was used as a Normal value. If several values for either type were given then the avg. was used. eg for temp:
 ```

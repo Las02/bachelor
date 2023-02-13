@@ -1,0 +1,21 @@
+---
+title: "Untitled"
+output: html_document
+date: "2023-02-13"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+D <- read.csv("../data/EnvInfooutput500.csv")
+D <- replace(D, D == "", NA)
+D <- filter(D, !is.na(optimum))
+D_small <- mutate(D, temp_opt=as.integer(range)) %>% 
+  select(!c(X,optimum,range))
+
+ggplot(D_small) +
+  geom_histogram(aes(x=temp_opt))
+```
+
