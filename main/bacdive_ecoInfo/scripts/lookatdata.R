@@ -2,7 +2,8 @@
 library("tidyverse")
 
 # Read in the output format
-D <- read.csv("../data/EnvInfooutput500.csv")
+D <- read.csv("../data/EnvInfooutput.csv")
+
 D <- replace(D, D == "", NA)
 D <- filter(D, !is.na(optimum))
 D_small <- mutate(D, temp_opt=as.integer(range)) %>% 
