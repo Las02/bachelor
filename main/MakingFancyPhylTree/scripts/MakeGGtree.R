@@ -27,8 +27,7 @@ summary(treedat)
 
 treedat2 <- filter(treedat, nspecies > 2 | is.na(GENUS))
 
-ggtree(tr,layout="circular") +
-  geom_range(range=tr$mean_n16)
+ggtree(tr,layout="circular")
 
 
 ggtree(tr,layout="circular") +
