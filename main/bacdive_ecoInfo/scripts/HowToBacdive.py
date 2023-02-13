@@ -104,7 +104,7 @@ with open("../data/all_genus_found.txt") as genus_file:
     all_genus=[genus.strip() for genus in all_genus]
 
 # Work with a subset for testing
-all_genus = all_genus[0:100]
+all_genus = all_genus[0:2500]
 print(all_genus)
 
 
@@ -121,11 +121,12 @@ client = bacdive.BacdiveClient("lasse101010@gmail.com", password)
 
 
 #genus = "Lysobacter"
-for genus in all_genus:
+for pos, genus in enumerate(all_genus):
+    print("Finished:",pos,"of:", len(all_genus),"at genus:",genus)
     df = retrive_tax_info(genus, df)
 
 df.to_csv("../data/EnvInfooutput.csv")
-#print(df)
+#print(df)s
 
 
 

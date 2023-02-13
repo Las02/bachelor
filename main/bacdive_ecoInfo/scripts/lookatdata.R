@@ -30,9 +30,12 @@ D_joined <- left_join(D_small, ribdif_genus_info, by="genus")
 D_joined <- filter(D_joined, mean_n16 > 0)
 
 D_joined <- mutate(D_joined, AR = factor(ifelse(is.na(is.resistant), "no","yes")))
+# Less div -> needs selected AR ribosomes
 ggplot(D_joined) +
-  geom_boxplot(aes(x=AR, y=mean_div)) 
+  geom_boxplot(aes(x=AR, y=log(mean_div+1)))
 
+# Lower 16s ribosome -> often C-selected: do not change much in terms of conditons.. 
+# AKA do not need large amount of changebility
 ggplot(D_joined) +
   geom_boxplot(aes(x=AR, y=mean_n16))
 
@@ -40,12 +43,51 @@ ggplot(D_joined) +
 ggplot(D_joined) +
   geom_boxplot(aes(y=oxygen.tolerance, x=mean_n16))
 # Sig
-fit <- lm(mean_div ~ AR, data=D_joined)
+fit <- lm(log10(mean_div+1) ~ AR, data=D_joined)
 anova(fit)
 
-# Not sig
-fit <- lm(mean_n16 ~ AR, data=D_joined)
+#sig
+fit <- lm(log(mean_n16+1) ~ AR, data=D_joined)
 anova(fit)
+
+D_test <- D_joined %>% filter(!is.na(soil.counts), !is.na(aquatic.counts),!is.na(plant.counts)) 
+
+# What is
+which_sample <- function(soil,aquatic,plant){
+  if (soil > aquatic && soil > plant){
+    return("soil")
+    }
+  else if (aquatic > soil && aquatic > plant){
+    return("aquatic")
+    }
+  else if (plant > aquatic && plant > soil){
+    return("plant")}
+  else {
+    return("none")
+
+    }
+  }
+
+# Does work
+tst <- mutate(D_test, sample = pmap_chr(list(soil.counts, aquatic.counts,plant.counts),which_sample))
+
+tst <- filter(tst, sample != "none")
+
+ggplot(tst) +
+  geom_boxplot(aes(y=log(mean_n16), x=sample))
+
+ggplot(tst) +
+  geom_boxplot(aes(y=log(mean_div+1), x=sample))
+# Sig !! between types of sample
+fit <- lm(mean_div ~ sample, data=tst)
+anova(fit)
+
+# BIG sig
+fit <- lm(mean_n16 ~ sample, data=tst)
+anova(fit)
+
+
+
 
 # It seems to be kinda genus specific. BUT THATS BEcause we took mean n16
 ggplot(D_joined) + 
@@ -62,18 +104,19 @@ ggplot(D_joined) +
   theme(legend.position="none")
 
 ggplot(D_joined) + 
-  geom_point(aes(x=(temp_opt),y=(mean_div), col = mean_n16)) +
-  geom_smooth(aes(x=temp_opt, y=mean_div))
+  geom_point(aes(x=(temp_opt),y=log(mean_div), col = mean_n16)) 
+
 
 
 D_motil <- mutate(D_joined, motility = factor(motility)) %>% 
   filter(motility %in% c("no","yes"))
 
 
-# Motility seems to have no effect'
+# Motility seems to have no effect' But with big it might
 ggplot(D_motil) +
   geom_boxplot(aes(x=motility, y=log(mean_n16)))
 
+# sig
 fit <- lm(log(mean_n16) ~ motility, data=D_motil)
 anova(fit)
 par(mfrow=c(2,2))
@@ -89,6 +132,7 @@ str(D_gram)
 ggplot(D_gram) +
   geom_boxplot(aes(x=gram, y=log(mean_n16)))
 fit <- lm(log(mean_n16) ~ gram, data=D_gram)
+# it also has
 anova(fit)
 #par(mfrow=c(2,2))
 #plot(fit)
@@ -129,6 +173,9 @@ ggplot(sml) +
 ggplot(D_joined) +
   geom_point(aes(x=log(nspecies), y=log(mean_div)))
 
+ggplot(D_joined) +
+  geom_point(aes(x=log(mean_div+1), y=log(mean_n16+1))) +
+  geom_smooth(aes(x=log(mean_div+1), y=log(mean_n16+1)),method = lm)
 
 
 
