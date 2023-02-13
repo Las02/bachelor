@@ -9,7 +9,7 @@ This is how they were handled: \
 #### Continious Ratio Values: Temp/pH: 
 Sometimes a range was given and sometimes a number
 The range was saved as Max and Min value. If just a number was given then it was used as a Normal value. If several values for either type were given then the avg. was used. eg for temp:
-´´´
+```
 Data (temp):
 8-10
 9
@@ -19,14 +19,14 @@ Temperature
 Min Normal Max
 9  (9+10)/2  10
 
-´´´
+```
 #### Nominal values with only one "possible" eg. Morphology
 For each datapoint the mode was used.
 In the case of a multimodal datapoint (ie. two factors having an equal frequency) a random point was picked
 
 ### Nominal values with several "possible" eg. antibiotic resistence/isolation source
 Here they were added additativly eg. 
-´´´
+```
          {
             "@ref":43676,
             "ChEBI":28971,
@@ -43,12 +43,12 @@ Here they were added additativly eg.
 
 ----->
 [ampicillin, rifampicin]
-´´´
+```
 
 
 ## Example of data
 This is an example of the data given from the Bacdive API:
-´´´
+```json
 {
    "General":{
       "@ref":24274,
@@ -513,4 +513,4 @@ This is an example of the data given from the Bacdive API:
       }
    ]
 }
-´´´
+```
