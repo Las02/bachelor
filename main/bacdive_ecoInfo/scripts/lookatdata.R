@@ -9,6 +9,14 @@ D <- filter(D, !is.na(optimum))
 D_small <- mutate(D, temp_opt=as.integer(range)) %>% 
   select(!c(X,optimum,range))
 
+
+# find species seen twice
+group_by(D, species) %>% 
+  summarise(number=n()) %>% 
+  filter(number > 1)
+  
+
+
 ggplot(D_small) +
   geom_histogram(aes(x=temp_opt))
 

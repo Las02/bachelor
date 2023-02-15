@@ -1,0 +1,17 @@
+---
+title: "Untitled"
+output: html_document
+date: "2023-02-15"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+D <- read.csv("../data/speciesinfo.csv")
+
+plot(D)
+```
+

@@ -5,6 +5,8 @@ import numpy as np
 import pandas as pd
 import random
 from Bacdivefunctions import *
+# Set random seed to date
+random.seed(1502)
 
 def retrive_tax_info(genus, df):
     # Get various information
@@ -95,7 +97,6 @@ def retrive_tax_info(genus, df):
         #df = df.append(bacDat,ignore_index=True)
     return df
         
-random.seed(13022023)
 
 # Read in the genus list
 with open("../data/all_genus_found.txt") as genus_file:
