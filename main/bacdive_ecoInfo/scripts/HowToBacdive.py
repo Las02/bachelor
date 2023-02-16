@@ -94,6 +94,15 @@ def retrive_tax_info(genus, df):
         if data is not None:
             tmp_dict = get_bacDat(["oxygen tolerance"],data, "nominal")
             bacDat.update(tmp_dict)
+            
+        # Strain 
+        try:
+            data=strain["Name and taxonomic classification"]
+        except KeyError:
+            data=None
+        if data is not None:
+            tmp_dict = get_bacDat(["strain designation"],data, "nominal")
+            bacDat.update(tmp_dict)
         
         # Antibiotics
         try:

@@ -1,24 +1,73 @@
 
 library(tidyverse)
-Sys.setenv(LANG = "en")
 
-#### Reading in the data ####
+# Define function to calculate mode
+mode <- function(factors, if_empty) {
+  factors <- factors[factors != ""]
+  # If it does not have any factors but only " " set it to specific value
+  if (length(factors) == 0) {
+    return(factor(if_empty))
+  }
+  # Else find the mode
+  max <- factors %>%
+    table() %>%
+      which.max() %>%
+        as.data.frame() %>%
+          rownames() %>%
+            factor()
+  return(max)
+}
 
-
+#### Reading in the data + cleaning####
+setwd("/mnt/raid2/s203512/bachelor/main/bacdive_ecoInfo/scripts")
 # Read in environment data from bacdive
 EnvD <- read.csv("../data/EnvInfooutput_15_02_2023.csv")
-# Replace empty columns with NA
-EnvD <- replace(EnvD, EnvD == "", NA)
 
-# Read in the data from NCBI about species/strains ects
+# For antibiotic comuns replace "" with "NR" for each species
+# If several are defined, find the mode
+# For the other columns if they are nominal find the mode, else the mean
+EnvD_by_species <- group_by(EnvD, species)
+EnvD_summarised <- EnvD_by_species %>%
+  summarise(
+    across(antibiotics:spiramycin.II, ~mode(.x, "NR")),
+    across(family:growth, ~mode(.x, NA)),
+    across(c(genus, oxygen.tolerance, PH.range), ~mode(.x, NA)),
+    across(c(GC.content, Total.samples, soil.counts, aquatic.counts, plant.counts, optimum),
+    ~mean(as.numeric(.x), na.rm = TRUE))
+  )
+
+# Read in the data from NCBI about specsies/strains ects
 ncbiD <- read.csv("../data/speciesinfo.csv")
 
 # Read in the data from ribdif
 ribdifD <- read.csv("../data/ribdif_info.csv")
 
 # Joining the datasets
-ncbiD <- dplyr::rename(ncbiD, gcf = gc)
-left_join(ribdifD, ncbiD, by="gcf")
+ncbiD <- rename(ncbiD, gcf = gc)
+rib_ncbi_D <- left_join(ribdifD, ncbiD, by="gcf")
+rib_ncbi_D <- replace(rib_ncbi_D, rib_ncbi_D == "", NA)
+
+# Get the mean of relevant data and group by species
+rib_ncbi_D_by_species <- group_by(rib_ncbi_D, species) %>%
+  summarise(
+    n16 = mean(number_16s, na.rm = TRUE),
+    div = mean(total_div, na.rm = TRUE),
+    gc_percent = mean(gc_percent, na.rm = TRUE),
+    genome_components = mean(genome_components, na.rm = TRUE),
+    chromosomes = mean(chromosomes, na.rm = TRUE),
+    total_seq_length = mean(total_seq_length, na.rm = TRUE),
+    genes_nc = mean(genes_nc, na.rm = TRUE),
+    genes_coding = mean(genes_coding, na.rm = TRUE),
+    pseudogenes = mean(pseudogenes, na.rm = TRUE),
+    total_genes = mean(total_genes, na.rm = TRUE)
+    )
+
+dat <- inner_join(EnvD_summarised, rib_ncbi_D_by_species, by = "species")
+
+
+
+
+
 
 
 #### OLD ####
