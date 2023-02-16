@@ -1,10 +1,27 @@
 
-library("tidyverse")
+library(tidyverse)
+Sys.setenv(LANG = "en")
 
-# Read in the output format
-D <- read.csv("../data/EnvInfooutput.csv")
+#### Reading in the data ####
 
-D <- replace(D, D == "", NA)
+
+# Read in environment data from bacdive
+EnvD <- read.csv("../data/EnvInfooutput_15_02_2023.csv")
+# Replace empty columns with NA
+EnvD <- replace(EnvD, EnvD == "", NA)
+
+# Read in the data from NCBI about species/strains ects
+ncbiD <- read.csv("../data/speciesinfo.csv")
+
+# Read in the data from ribdif
+ribdifD <- read.csv("../data/ribdif_info.csv")
+
+# Joining the datasets
+ncbiD <- dplyr::rename(ncbiD, gcf = gc)
+left_join(ribdifD, ncbiD, by="gcf")
+
+
+#### OLD ####
 D <- filter(D, !is.na(optimum))
 D_small <- mutate(D, temp_opt=as.integer(range)) %>% 
   select(!c(X,optimum,range))

@@ -1,6 +1,8 @@
 #### GetStrain.py
 https://www.ncbi.nlm.nih.gov/assembly/help/ 
 
+IFT database: https://www.ncbi.nlm.nih.gov/data-hub/genome/?taxon=2&annotated_only=true&refseq_annotation=true&typical_only=true&assembly_level=3%3A3
+32.970 :&
 
 ##### ECTS
 Center variables before computing interaction
@@ -10,7 +12,8 @@ standadize data?
 Since we are testing for different attributes alone we might need some bonforonni correction?
 
 ### Data
-The data was found through the BacDive API
+The data was found through the BacDive API -16-02-2023
+And the data from the ncbi was found 16-02-2023
 
 ### Look at
 Some have no motility data but flagella data
