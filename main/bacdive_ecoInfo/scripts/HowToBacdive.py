@@ -139,13 +139,29 @@ if len(sys.argv) != 2:
 password = sys.argv[1]
 client = bacdive.BacdiveClient("lasse101010@gmail.com", password)
 
+all_genus = all_genus
+# Run the method in chunks
 
-#genus = "Lysobacter"
-for pos, genus in enumerate(all_genus):
-    print("Finished:",pos,"of:", len(all_genus),"at genus:",genus)
-    df = retrive_tax_info(genus, df)
-
-df.to_csv("../data/EnvInfooutput_15_02_2023.csv")
+chunk_size = 100
+i = 0
+for all_genus_subset in divide_chunks(all_genus, chunk_size):
+    i += 1
+    # ignore selected chunks, if some failed
+    if i in list(range(1,15)):
+        continue
+    
+    #genus = "Lysobacter"
+    for pos, genus in enumerate(all_genus_subset):
+        print("Finished:",pos+i*chunk_size,"of:", len(all_genus),"at genus:",genus)
+        df = retrive_tax_info(genus, df)
+    # write to .csv file. Only add header to first line
+    if i == 1:
+        df.to_csv(f"../data/EnvInfooutput_15_02_2023.csv", index = False)
+    else:
+        df.to_csv(f"../data/EnvInfooutput_15_02_2023.csv", mode="a", index = False, header=False)
+    print("*"*15)
+    print("Finished chunk:", i, "of:", len(all_genus)/chunk_size, "chunksize:", chunk_size)
+    print("*"*15)
 #print(df)
 #df.to_csv("delme.csv")
 

@@ -3,6 +3,15 @@ import random
 from statistics import multimode, mean
 import re
 
+def divide_chunks(l, n):
+    """Divide list into chunks
+       source: https://www.geeksforgeeks.org/break-list-chunks-size-n-python/
+    """
+    # looping till length l
+    for i in range(0, len(l), n):
+        yield l[i:i + n]
+
+
 def avg_from_interval(interval):
         """Finds the avg of interval, return none if not interval"""
         found = re.search(r"\d+-\d+",interval)
