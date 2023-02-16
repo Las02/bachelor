@@ -40,6 +40,8 @@ EnvD_summarised <- EnvD_by_species %>%
 ncbiD <- read.csv("../data/speciesinfo.csv")
 
 # Read in the data from ribdif
+# TODO also need to add nsamples -> to know how much we can believe values
+# SHOULD be able to get with n() in summarise for species
 ribdifD <- read.csv("../data/ribdif_info.csv")
 
 # Joining the datasets
@@ -64,6 +66,8 @@ rib_ncbi_D_by_species <- group_by(rib_ncbi_D, species) %>%
 
 dat <- inner_join(EnvD_summarised, rib_ncbi_D_by_species, by = "species")
 
+write.csv(dat, "../data/dataset_joined.csv")
+write.csv(EnvD_summarised, "../data/EnvD_summarised.csv")
 
 
 
