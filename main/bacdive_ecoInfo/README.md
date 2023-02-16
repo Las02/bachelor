@@ -1,3 +1,7 @@
+#### GetStrain.py
+https://www.ncbi.nlm.nih.gov/assembly/help/ 
+
+
 ##### ECTS
 Center variables before computing interaction
 --https://bookdown.org/ndphillips/YaRrr/linear-regression-with-lm.htmls
