@@ -1,3 +1,4 @@
 all_genus_ribdif-ed/*
 *.sqlite
 main/MakingAndProccesingData2Database/make_the_db/all_genus_ribdif-ed
+main/bacdive_ecoInfo/data/EnvInfooutput_15_02_2023.csv
