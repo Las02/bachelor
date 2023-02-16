@@ -24,7 +24,7 @@ def retrive_tax_info(genus, df):
         
         # Taxonomy
         try:
-            tmp_dict = get_bacDat(["species"],strain["Name and taxonomic classification"]["LPSN"], "continuous")
+            tmp_dict = get_bacDat(["species","genus","family","order","class","phylum","domain"],strain["Name and taxonomic classification"]["LPSN"], "nominal")
             bacDat.update(tmp_dict)
         except KeyError:
             pass
@@ -36,25 +36,36 @@ def retrive_tax_info(genus, df):
         except KeyError:
             data=None
         if data is not None:
-            tmp_dict = get_bacDat(["motility","gram stain"],data, "continuous")
+            tmp_dict = get_bacDat(["motility","gram stain"],data, "nominal")
             bacDat.update(tmp_dict)
-            
+        
+        
         # Temperature
         try:
             data=strain["Culture and growth conditions"]["culture temp"]
         except KeyError:
             data=None
         if data is not None:
-            tmp_dict = GetPH_or_Temp("temperature", data, "continuous")
+            tmp_dict = GetPH_or_Temp("temperature", data)
             bacDat.update(tmp_dict)
-            
+    
+        # pH type
+        try:
+            data=strain["Culture and growth conditions"]["culture pH"]
+        except KeyError:
+            data=None
+        if data is not None:
+            tmp_dict = get_bacDat(["PH range"],data, "nominal")
+            bacDat.update(tmp_dict)
+
+
         # Get environmental information
         try:
             data=strain["Isolation, sampling and environmental information"]["taxonmaps"]
         except KeyError:
             data=None
         if data is not None:
-            tmp_dict = get_bacDat(["Total samples", "soil counts", "aquatic counts","plant counts"],data, "continuous")
+            tmp_dict = get_bacDat(["Total samples", "soil counts", "aquatic counts","plant counts"],data, "nominal")
             bacDat.update(tmp_dict)
             
         # Get GC content
@@ -72,7 +83,7 @@ def retrive_tax_info(genus, df):
         except KeyError:
             data=None
         if data is not None:
-            tmp_dict = get_bacDat(["NCBI tax ID"],data, "continuous")
+            tmp_dict = get_bacDat(["NCBI tax ID"],data, "nominal")
             bacDat.update(tmp_dict)
 
         # Is it aerobe?
@@ -81,7 +92,7 @@ def retrive_tax_info(genus, df):
         except KeyError:
             data=None
         if data is not None:
-            tmp_dict = get_bacDat(["oxygen tolerance"],data, "continuous")
+            tmp_dict = get_bacDat(["oxygen tolerance"],data, "nominal")
             bacDat.update(tmp_dict)
         
         # Antibiotics
@@ -90,7 +101,15 @@ def retrive_tax_info(genus, df):
         except KeyError:
             data=None
         if data is not None:
-            tmp_dict = get_bacDat(["is resistant", "metabolite","is antibiotic"],data, "continuous")
+            tmp_dict = get_bacDat(["metabolite"],data, "ignore")
+            # Save all antibiotics as seperate columns
+            all_antibiotics = tmp_dict["metabolite"]
+            tmp_dict = dict()
+            tmp_dict["antibiotics"] = "R"
+            if type(all_antibiotics) is not list:
+                all_antibiotics = [all_antibiotics]
+            for metabolite in all_antibiotics:
+                tmp_dict[metabolite] = "R"
             bacDat.update(tmp_dict)
 
         df = pd.concat([df, pd.DataFrame.from_records([bacDat])])
@@ -105,8 +124,8 @@ with open("../data/all_genus_found.txt") as genus_file:
     all_genus=[genus.strip() for genus in all_genus]
 
 # Work with a subset for testing
-all_genus = all_genus[0:2500]
-print(all_genus)
+all_genus = all_genus
+#print(all_genus)
 
 
 df = pd.DataFrame()
@@ -126,9 +145,9 @@ for pos, genus in enumerate(all_genus):
     print("Finished:",pos,"of:", len(all_genus),"at genus:",genus)
     df = retrive_tax_info(genus, df)
 
-df.to_csv("../data/EnvInfooutput.csv")
-#print(df)s
-
+df.to_csv("../data/EnvInfooutput_15_02_2023.csv")
+#print(df)
+#df.to_csv("delme.csv")
 
 
 """

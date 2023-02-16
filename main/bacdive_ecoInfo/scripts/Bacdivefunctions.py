@@ -3,12 +3,7 @@ import random
 from statistics import multimode, mean
 import re
 
-def HandleMultiVariables(entry, dat_type):
-    """Take dict with list of multiple variables and 
-        return dict with only one for each. Choose values
-        based on various parameters"""
-   
-    def avg_from_interval(interval):
+def avg_from_interval(interval):
         """Finds the avg of interval, return none if not interval"""
         found = re.search(r"\d+-\d+",interval)
         if found is not None:
@@ -16,7 +11,14 @@ def HandleMultiVariables(entry, dat_type):
             interval = [float(x) for x in interval]
             return mean(interval)
         return found
+
+def HandleMultiVariables(entry, dat_type):
+    """Take dict with list of multiple variables and 
+        return dict with only one for each. Choose values
+        based on various parameters"""
+   
     
+
     # If there is only one value return it
     if type(entry) is not list:
         # Check for intervals and find avg if any
@@ -28,25 +30,30 @@ def HandleMultiVariables(entry, dat_type):
     
     # If its cont list of numbers find mean of all non-intervals
     # If all are intervals return mean of them
-    if dat_type == "continuous":
-        tmp_list = list()
-        # Add all numbers which are not intervals to list
-        for num in entry:
-            found = avg_from_interval(num)
-            if found is None:
-                tmp_list.append(num)
-        # If all numbers are intervals use the intervals
-        if len(tmp_list) == 0:
+    # If it cannot be converted to cont, treat it as nominal
+    try:
+        if dat_type == "continuous":
+            tmp_list = list()
+            # Add all numbers which are not intervals to list
             for num in entry:
                 found = avg_from_interval(num)
-                if found is not None:
-                    tmp_list.append(found)
-        tmp_list = [float(x) for x in tmp_list]
-        return mean(tmp_list)    
+                if found is None:
+                    tmp_list.append(num)
+            # If all numbers are intervals use the intervals
+            if len(tmp_list) == 0:
+                for num in entry:
+                    found = avg_from_interval(num)
+                    if found is not None:
+                        tmp_list.append(found)
+            tmp_list = [float(x) for x in tmp_list]
+            return mean(tmp_list)    
+    except ValueError:
+        dat_type = "nominal"
+
     
     # If its nominal values return the mode
     # If several have same count return "random"
-    elif dat_type == "nominal":
+    if dat_type == "nominal":
         modes = multimode(entry)
         random_mode = random.choice(modes)
         return random_mode
@@ -111,32 +118,42 @@ def get_bacDat(to_get: list, strain_dat:dict, dat_type) -> dict:
                     
             except KeyError:
                 pass
-        
-        # Handle several values
-        new_dict = dict()
-        for entry in tmp_dict.values()
-            HandleMultiVariables(entry, new_dict, dat_type )
+
+     
+    # Ignore handeling of several values if set
+    if dat_type == "ignore":
+        return tmp_dict
+
+    # Handle several values
+    new_dict = dict()
+    for key, value in tmp_dict.items():
+        cleanValue = HandleMultiVariables(value, dat_type)
+        new_dict[key] = cleanValue
+    
             
-    return tmp_dict
+    return new_dict
     
-def GetPH_or_Temp(to_get: str, strain_dat:dict, dat_type):
-    
-    opt  = get_bacDat([to_get, "type"], strain_dat, dat_type)
-    
+ 
+def GetPH_or_Temp(to_get: str, strain_dat:dict):
+    ## NOT WORKING
+    opt  = get_bacDat([to_get, "type"], strain_dat, "ignore")
+
     tmp_dict = dict()
     
+
     try:
-        for entry in zip(opt["temperature"],opt["type"]):
-            if entry[1] == "growth":
-                temp_range = entry[0]
+        for temp, type in zip((opt["temperature"],),opt["type"]):
+            if type == "growth":
+                temp_range = HandleMultiVariables(temp, "continuous")
                 #temp_range.split("-")
                 #tmp_dict["min"] = temp_range[0]
                 #tmp_dict["max"] = temp_range[1]
-                tmp_dict["range"] = temp_range
-            elif entry[1] == "optimum":
-                tmp_dict["optimum"] = entry[0]
+                tmp_dict["growth"] = temp_range
+            elif type == "optimum":
+                tmp_dict["optimum"] = HandleMultiVariables(temp, "continuous")
     except KeyError:
         pass
+
     
     return tmp_dict
     
