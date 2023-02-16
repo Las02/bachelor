@@ -135,7 +135,7 @@ def get_bacDat(to_get: list, strain_dat:dict, dat_type) -> dict:
     
  
 def GetPH_or_Temp(to_get: str, strain_dat:dict):
-    ## NOT WORKING
+    # Get temp and PH values
     opt  = get_bacDat([to_get, "type"], strain_dat, "ignore")
 
     tmp_dict = dict()
