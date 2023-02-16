@@ -25,7 +25,7 @@ filter(D_small, temp_opt > 60)
 
 
 # Read in the data from ribdif
-ribdif_dat <- read.csv("../../makingNewInfo/gcf_n16s_genus.csv")
+ribdif_dat <- read.csv("../../PrelimitaryAnalysis/gcf_n16s_genus.csv")
 # find mean of number of 16s and total dif
 # TODO maybe not mean but for each but needs more work
 ribdif_genus_info= group_by(ribdif_dat, genus) %>% 
@@ -86,6 +86,7 @@ ggplot(tst) +
 
 ggplot(tst) +
   geom_boxplot(aes(y=log(mean_div+1), x=sample))
+
 # Sig !! between types of sample
 fit <- lm(mean_div ~ sample, data=tst)
 anova(fit)
@@ -115,14 +116,13 @@ ggplot(D_joined) +
   geom_point(aes(x=(temp_opt),y=log(mean_div), col = mean_n16)) 
 
 
-
 D_motil <- mutate(D_joined, motility = factor(motility)) %>% 
   filter(motility %in% c("no","yes"))
 
 
 # Motility seems to have no effect' But with big it might
 ggplot(D_motil) +
-  geom_boxplot(aes(x=motility, y=log(mean_n16)))
+  geom_boxplot(aes(x=motility, y=(mean_n16)))
 
 # sig
 fit <- lm(log(mean_n16) ~ motility, data=D_motil)
@@ -138,7 +138,7 @@ str(D_gram)
 # There is sig but it might just be due to taxonomy relationship
 # would be good idea to take more tax data into consideration
 ggplot(D_gram) +
-  geom_boxplot(aes(x=gram, y=log(mean_n16)))
+  geom_boxplot(aes(x=gram, y=(mean_n16)))
 fit <- lm(log(mean_n16) ~ gram, data=D_gram)
 # it also has
 anova(fit)
@@ -153,9 +153,12 @@ D_gram_mortil <- mutate(D_motil, gram = factor(gram.stain)) %>%
   mutate(mean_n16 = as.numeric(mean_n16),
          temp_opt = as.numeric(temp_opt))
 
+
 str(D_gram_mortil)
 
 fit <- lm(log(mean_n16) ~ temp_opt + gram + motility + gram:temp_opt , data=D_gram_mortil)
+
+
 anova(fit)
 fit2 <- step(fit, k=log(nrow(D_gram_mortil)))
 library(car)
@@ -179,11 +182,12 @@ ggplot(sml) +
 
 ### Does nspecies have effect:: NO
 ggplot(D_joined) +
-  geom_point(aes(x=log(nspecies), y=log(mean_div)))
+  geom_point(aes(x=(nspecies), y=(mean_div)))
 
 ggplot(D_joined) +
   geom_point(aes(x=log(mean_div+1), y=log(mean_n16+1))) +
   geom_smooth(aes(x=log(mean_div+1), y=log(mean_n16+1)),method = lm)
 
 
-
+ggplot(D_joined) +
+  geom_point(aes(x=(mean_div),y =(mean_n16))) 
