@@ -1,0 +1,49 @@
+---
+title: "Untitled"
+output: html_document
+date: "2023-02-17"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+### Genome components
+
+```{r}
+ggplot(D, aes(x=genome_components, y=chromosomes, label=species)) + 
+  geom_text(size=1.5)
+
+```
+Lets look at some of the outliers
+```{r}
+D %>% 
+  filter(species %in% c("Photobacterium profundum","Rhodopirellula baltica"))
+
+```
+
+```{r}
+nonchromosomes <- transmute(D, genome_components - chromosomes)
+summary(nonchromosomes)
+
+```
+
+## Plots
+
+```{r}
+tax_all = c("family","order")
+for (i in seq_along(tax_all)){
+  tax = tax_all[i]
+  D_by_fam <- group_by(D, .data[[tax]]) 
+  D_by_fam <- summarise(D_by_fam, n=n())
+  D_by_fam <- mutate(D_by_fam, fam_ordered = fct_reorder(.data[[tax]],desc(n)))  
+  plot <- ggplot(D_by_fam) +
+    geom_segment(aes(x=fam_ordered, xend = fam_ordered,y=0, yend=n)) +
+    xlab(glue("taxonomic {tax}")) + ylab("Number of entries") +
+    theme(axis.text.x=element_blank(),axis.ticks.x=element_blank()) +
+    ggtitle(glue("Number of entries for each taxonomic {tax}"))
+  print(plot)
+}
+
+plot_grid(c(plot,plot))
+```
+

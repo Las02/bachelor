@@ -1,0 +1,13 @@
+Summary:
+
+Genomes: 5
+	Named: 3
+	Non-named: 2
+
+Named species: 2
+
+5 of 5 (100%) genomes have multiple alleles.
+
+0 of 2 (0%) species have at least one overlap.
+
+No species overlap.

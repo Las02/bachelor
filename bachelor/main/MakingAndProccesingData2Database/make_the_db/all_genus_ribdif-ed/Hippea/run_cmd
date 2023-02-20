@@ -1,0 +1,1 @@
+RibDif.sh --genus Hippea --primers /mnt/raid2/s203512/bachelor/main/MakingAndProccesingData2Database/make_the_db/scripts/RibDif/default.primers --clobber false --ANI true --frag false --msa false --id 1 --threads 18
