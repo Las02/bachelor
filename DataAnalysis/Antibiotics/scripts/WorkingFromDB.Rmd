@@ -1,0 +1,66 @@
+---
+title: "Antibiotics"
+output: html_document
+date: "2023-02-20"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(RSQLite)
+library(tidyverse)
+```
+
+## Reading in the data
+
+```{r}
+# Connect to the DB
+conn <- dbConnect(SQLite(),"../../../s16.sqlite")
+# List of all the tables
+dbListTables(conn)
+# query the DB
+joinD <- dbGetQuery(conn, "SELECT * FROM species2s16full_sequence")
+ribdifD <- dbGetQuery(conn, "SELECT * FROM ribdif_info LEFT JOIN species ON species.gcf = ribdif_info.gcf")
+```
+
+```{r}
+colnames(joinD)
+countD <- group_by(joinD, gcf) %>% 
+  mutate(sequence_id, total = n(),) %>% 
+  ungroup()
+countD <- group_by(countD, gcf) %>% 
+  mutate(distinct = n_distinct(sequence_id)) %>% 
+  summarise(distinct = first(distinct), total=first(total))
+countD
+
+ggplot(countD, aes(x=total, y=distinct)) +
+  geom_bin2d()
+
+ggplot(countD, ) +
+  geom_histogram(aes(x=distinct), col="blue",alpha=0.2)+
+  geom_histogram(aes(x=total),col="red",alpha=0.5) 
+
+# There is some differences
+ggplot(countD, ) +
+  geom_histogram(aes(x=total),col="red",alpha=0.5) +
+  geom_histogram(aes(x=number_16s), data=ribdifD, alpha=0.5, col="green")
+
+
+# There is something not mathcing up
+ribdifD <- select(ribdifD,number_16s, 2, genus,species) 
+inner_join(ribdifD, countD, by="gcf") %>% 
+  select(genus,species,gcf, number_16s, total) %>% 
+  mutate(diff = number_16s - total) %>% 
+  filter(diff > 0) %>% 
+  arrange(desc(diff))
+
+# But it is not a problem .. yet
+
+nrow(countD)
+
+# Places where i'm incorrect and places where ribdif is:
+# Ribdif is incorrect at : GCF_018361065.1, Dickeya
+# And Salmonella GCF_901457615.1 Same bug
+# Seems to only happen ~times
+```
+
+

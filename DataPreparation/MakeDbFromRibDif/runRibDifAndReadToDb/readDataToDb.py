@@ -105,22 +105,26 @@ def read_ani2db(genus_info, conn):
                     if_exists="append", index=False)
     conn.commit()
  
-conn = sqlite3.connect("/mnt/raid2/s203512/bachelor/s16_2.sqlite")
+conn = sqlite3.connect("/mnt/raid2/s203512/bachelor/s16.sqlite")
 c = conn.cursor()
 
-inpath = "/mnt/raid2/s203512/bachelor/main/MakeDbFromRibDif/get_list_of_all_genus/data/"
-infile = open(inpath + "all_genus_TORUN2.dat")
+inpath = "/mnt/raid2/s203512/bachelor/DataPreparation/makeDbFromRibDif/getListOfAllGenera/out/"
+infile = open(inpath + "all_genus_names.dat")
 
 bacteria_not_ribdifed = open("./bacteria_not_ribdifed_2.txt","w")
 
+# Make sure gcf annotated under several genera does not get added twice
+gcf_seen = list()
+
 for genus in infile:
+    print("done with:", genus)
     genus = genus.strip()
     genus = "-".join(genus.split())
     
     ### Read the data into the database
     # read summary.tsv file from ribdiff into pandas df
-    #path = "../all_genus_ribdif-ed/"
-    path = "./scripts/"
+    path = "./all_genus_ribdif-ed/"
+    #path = "./scripts/"
     
     try:
         genus_info = pd.read_csv(path + f"{genus}/{genus}-summary.tsv", sep="\t", index_col=False)
@@ -144,27 +148,34 @@ for genus in infile:
         
     # Read "genus", "species", "gcf" into the table "species"
     problem_gcf = read_species2db_insertmethod(genus_info, conn, genus)
-
+    problem_gcf = problem_gcf +gcf_seen
+    
     # insert ANI data into ribdif_info table for genus    
     read_ani2db(genus_info, conn)
    
+    
     # Read the full 16s genes in the db
     filepath = path + f"{genus}/full/{genus}.16S"
     table = "s16full_sequence"
     jointable = "species2s16full_sequence"
     read_seq_to_db(filepath, conn, table, jointable, problem_gcf)
     
+    # Update the gcf which are seen
+    gcf_seen += genus_info["gcf"].values.tolist()
+    
     # Read in the v1v9 amplicons in the db
-    filepath = path + f"{genus}/amplicons/{genus}-v1v9.amplicons"
-    table = "v1v9sequence"
-    jointable = "species2V1V9sequence"
-    read_seq_to_db(filepath, conn, table, jointable, problem_gcf)
+    #filepath = path + f"{genus}/amplicons/{genus}-v1v9.amplicons"
+    #table = "v1v9sequence"
+    #jointable = "species2V1V9sequence"
+    #read_seq_to_db(filepath, conn, table, jointable, problem_gcf)
     
     # Read in the v3v4 amplicons in the db
-    filepath = path + f"{genus}/amplicons/{genus}-v3v4.amplicons"
-    table = "v3v4sequence"
-    jointable = "species2V3V4sequence"
-    read_seq_to_db(filepath, conn, table, jointable, problem_gcf)
+    #filepath = path + f"{genus}/amplicons/{genus}-v3v4.amplicons"
+    #table = "v3v4sequence"
+    #jointable = "species2V3V4sequence"
+    #read_seq_to_db(filepath, conn, table, jointable, problem_gcf)
+    
+    #print(problem_gcf)
 
 # Hardcoding removing 23S wrongly formatted entryes with wierd values aswell
 c.execute("""DELETE FROM species WHERE GCF LIKE '23S%'""")
