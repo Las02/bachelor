@@ -1,3 +1,9 @@
+
+### RUN2
+-> run genus find stuff again and check if there are more
+
+## General
+
 This folder stores the files which makes the database which stores the 16s genes ect.
 The structure of the database can be seen in scripts/createDbStructure.sql
 The main file is scripts/runRibDifANDmakeDB.py

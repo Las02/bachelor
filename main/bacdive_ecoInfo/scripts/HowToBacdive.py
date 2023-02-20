@@ -8,6 +8,7 @@ from Bacdivefunctions import *
 # Set random seed to date
 random.seed(1502)
 
+
 def retrive_tax_info(genus, df):
     # Get various information
     number_found = client.search(taxonomy=genus)
@@ -110,16 +111,52 @@ def retrive_tax_info(genus, df):
         except KeyError:
             data=None
         if data is not None:
-            tmp_dict = get_bacDat(["metabolite"],data, "ignore")
+            ar_dict = dict()
+            #tmp_dict = get_bacDat(["metabolite","is antibiotic","is resistant","is sensitive"],data, "ignore")
+            #tmp_dict = get_bacDat(["antibiotic resistance"],data, "ignore")
+            # Parse antibiotic information
+            has_AR = False
+            
+            if type(data) is not list:
+                metabolite = data
+                name = metabolite.get("metabolite")
+                ar_or_not = metabolite.get("is antibiotic")
+                resistent = metabolite.get("is resistant") 
+                sens = metabolite.get("is sensitive")
+                
+                is_resistent = ar_or_not != "no" and resistent == "yes" and sens != "yes"
+                if is_resistent:
+                    ar_dict[name] = "R"
+                    has_AR = True
+                is_sensitive = ar_or_not != "no" and resistent != "yes" and sens == "yes"
+                if is_sensitive:
+                    ar_dict[name] = "S"
+            else:
+                for metabolite in data:
+                    name = metabolite.get("metabolite")
+                    ar_or_not = metabolite.get("is antibiotic")
+                    resistent = metabolite.get("is resistant") 
+                    sens = metabolite.get("is sensitive")
+                    is_resistent = ar_or_not != "no" and resistent == "yes" and sens != "yes"
+                    if is_resistent:
+                        ar_dict[name] = "R"
+                        has_AR = True
+                    is_sensitive = ar_or_not != "no" and resistent != "yes" and sens == "yes"
+                    if is_sensitive:
+                        ar_dict[name] = "S"
+            
             # Save all antibiotics as seperate columns
-            all_antibiotics = tmp_dict["metabolite"]
             tmp_dict = dict()
-            tmp_dict["antibiotics"] = "R"
-            if type(all_antibiotics) is not list:
-                all_antibiotics = [all_antibiotics]
-            for metabolite in all_antibiotics:
-                tmp_dict[metabolite] = "R"
+            if has_AR:
+                tmp_dict["antibiotics"] = "R"
+            tmp_dict.update(ar_dict)
+            #print(tmp_dict)
             bacDat.update(tmp_dict)
+                    
+            #print(tmp_dict)
+            #print("*"*15,"\n",bacDat)
+            
+            
 
         df = pd.concat([df, pd.DataFrame.from_records([bacDat])])
         #df = df.append(bacDat,ignore_index=True)
@@ -151,23 +188,24 @@ client = bacdive.BacdiveClient("lasse101010@gmail.com", password)
 all_genus = all_genus
 # Run the method in chunks
 
+out_file = "BacdiveOut.csv"
 chunk_size = 100
 i = 0
 for all_genus_subset in divide_chunks(all_genus, chunk_size):
     i += 1
     # ignore selected chunks, if some failed
-    if i in list(range(1,15)):
-        continue
+    #if i in list(range(1,15)):
+    #    continue
     
     #genus = "Lysobacter"
     for pos, genus in enumerate(all_genus_subset):
-        print("Finished:",pos+i*chunk_size,"of:", len(all_genus),"at genus:",genus)
+        print("Finished:",pos,"of", len(all_genus_subset),"chunk:",i,"totalsize:", len(all_genus),"at genus:",genus)
         df = retrive_tax_info(genus, df)
     # write to .csv file. Only add header to first line
     if i == 1:
-        df.to_csv(f"../data/EnvInfooutput_15_02_2023.csv", index = False)
+        df.to_csv(f"../data/{out_file}", index = False)
     else:
-        df.to_csv(f"../data/EnvInfooutput_15_02_2023.csv", mode="a", index = False, header=False)
+        df.to_csv(f"../data/{out_file}", mode="a", index = False, header=False)
     print("*"*15)
     print("Finished chunk:", i, "of:", len(all_genus)/chunk_size, "chunksize:", chunk_size)
     print("*"*15)

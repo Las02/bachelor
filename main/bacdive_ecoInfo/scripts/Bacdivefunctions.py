@@ -2,7 +2,18 @@ import numpy as np
 import random
 from statistics import multimode, mean
 import re
-
+def get_key_path_value(key_path, obj, default=None):
+    """Safely extract several keys for dict
+    source: https://stackoverflow.com/questions/45016931/how-to-use-get-multiple-times-pythonically
+    """
+    if not key_path:
+        return obj
+    try:
+        for key in key_path:
+            obj = obj[key]
+    except (KeyError, IndexError):
+        return default
+    return obj
 def divide_chunks(l, n):
     """Divide list into chunks
        source: https://www.geeksforgeeks.org/break-list-chunks-size-n-python/

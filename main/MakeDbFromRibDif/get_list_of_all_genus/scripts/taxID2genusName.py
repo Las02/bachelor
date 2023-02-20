@@ -4,10 +4,10 @@ import requests
 count = 0
 base_url = "https://api.ncbi.nlm.nih.gov/datasets/v2alpha/taxonomy/taxon/"
 
-outfile = open("../data/all_genus.dat","w")
+outfile = open("../data/all_genus_TORUN2.dat","w")
 
 errors = []
-with open("../data/all_genus_taxid.dat") as file:
+with open("../data/tonewrun.txt") as file:
     for tax_id in file:
         endpoint = tax_id.strip()
         data = requests.get(base_url + endpoint).json()
