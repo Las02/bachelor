@@ -1,0 +1,126 @@
+ERROR: No downloads matched your filter. Please check your options.
+ls: cannot access 'Candidatus_Guanabacterium/refseq/bacteria/': No such file or directory
+
+ERROR: No downloads matched your filter. Please check your options.
+ls: cannot access 'Acidicapsa/refseq/bacteria/': No such file or directory
+
+ERROR: No downloads matched your filter. Please check your options.
+ls: cannot access 'Acidipila/refseq/bacteria/': No such file or directory
+
+Error in apply(str_split_fixed(ucFile$V9, "_", 8)[, 1:2], 1, paste, collapse = "_") : 
+  dim(X) must have a positive length
+Execution halted
+Error in apply(str_split_fixed(ucFile$V9, "_", 8)[, 1:2], 1, paste, collapse = "_") : 
+  dim(X) must have a positive length
+Execution halted
+rm: cannot remove 'Rplots.pdf': No such file or directory
+
+find: ‘Acidobacterium/refseq/bacteria/’: No such file or directory
+find: ‘Acidobacterium/refseq/bacteria/’: No such file or directory
+mkdir: cannot create directory ‘Acidobacterium/refseq/bacteria/*/indiv_16S_dir/’: No such file or directory
+../RibDif/RibDif.sh: line 181: cd: Acidobacterium/refseq/bacteria/*/indiv_16S_dir/: No such file or directory
+awk: fatal: cannot open file `../*.16S' for reading (No such file or directory)
+ls: cannot access 'Acidobacterium/refseq/bacteria/*/indiv_16S_dir/': No such file or directory
+find: ‘Acidobacterium/refseq/bacteria/’: No such file or directory
+../RibDif/RibDif.sh: line 204: Acidobacterium/Acidobacterium-summary.tsv: No such file or directory
+../RibDif/RibDif.sh: line 205: Acidobacterium/Acidobacterium-summary.tsv: No such file or directory
+ls: cannot access 'Acidobacterium/refseq/bacteria/*': No such file or directory
+mkdir: cannot create directory ‘Acidobacterium/full’: No such file or directory
+../RibDif/RibDif.sh: line 212: Acidobacterium/full/Acidobacterium.16S: No such file or directory
+mkdir: cannot create directory ‘Acidobacterium/amplicons/’: No such file or directory
+../RibDif/RibDif.sh: line 273: Acidobacterium/amplicons/Acidobacterium-v3v4.summary: No such file or directory
+../RibDif/RibDif.sh: line 278: Acidobacterium/amplicons/Acidobacterium-v3v4.amplicons: No such file or directory
+rm: cannot remove 'Acidobacterium/amplicons/Acidobacterium-v3v4.temp.amplicons': No such file or directory
+rm: cannot remove 'Acidobacterium/amplicons/Acidobacterium-v3v4.summary': No such file or directory
+mkdir: cannot create directory ‘Acidobacterium/amplicons/v3v4-clusters’: No such file or directory
+
+
+Fatal error: Unable to open uc file for writing
+Error in file(file, "rt") : cannot open the connection
+Calls: read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'Acidobacterium/amplicons/Acidobacterium-v3v4.uc': No such file or directory
+Execution halted
+../RibDif/RibDif.sh: line 273: Acidobacterium/amplicons/Acidobacterium-v1v9.summary: No such file or directory
+../RibDif/RibDif.sh: line 278: Acidobacterium/amplicons/Acidobacterium-v1v9.amplicons: No such file or directory
+rm: cannot remove 'Acidobacterium/amplicons/Acidobacterium-v1v9.temp.amplicons': No such file or directory
+rm: cannot remove 'Acidobacterium/amplicons/Acidobacterium-v1v9.summary': No such file or directory
+mkdir: cannot create directory ‘Acidobacterium/amplicons/v1v9-clusters’: No such file or directory
+
+
+Fatal error: Unable to open uc file for writing
+Error in file(file, "rt") : cannot open the connection
+Calls: read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'Acidobacterium/amplicons/Acidobacterium-v1v9.uc': No such file or directory
+Execution halted
+rm: cannot remove 'Rplots.pdf': No such file or directory
+rm: cannot remove 'barrnap.log': No such file or directory
+
+Error in apply(str_split_fixed(ucFile$V9, "_", 8)[, 1:2], 1, paste, collapse = "_") : 
+  dim(X) must have a positive length
+Execution halted
+Error in apply(str_split_fixed(ucFile$V9, "_", 8)[, 1:2], 1, paste, collapse = "_") : 
+  dim(X) must have a positive length
+Execution halted
+rm: cannot remove 'Rplots.pdf': No such file or directory
+
+ERROR: No downloads matched your filter. Please check your options.
+ls: cannot access 'Bryocella/refseq/bacteria/': No such file or directory
+
+Error in apply(str_split_fixed(ucFile$V9, "_", 8)[, 1:2], 1, paste, collapse = "_") : 
+  dim(X) must have a positive length
+Execution halted
+Error in apply(str_split_fixed(ucFile$V9, "_", 8)[, 1:2], 1, paste, collapse = "_") : 
+  dim(X) must have a positive length
+Execution halted
+rm: cannot remove 'Rplots.pdf': No such file or directory
+
+ERROR: No downloads matched your filter. Please check your options.
+ls: cannot access 'Candidatus_Sulfotelmatobacter/refseq/bacteria/': No such file or directory
+
+ERROR: No downloads matched your filter. Please check your options.
+ls: cannot access 'Candidatus_Sulfotelmatomonas/refseq/bacteria/': No such file or directory
+
+rm: cannot remove 'Rplots.pdf': No such file or directory
+
+rm: cannot remove 'Rplots.pdf': No such file or directory
+
+Error in apply(str_split_fixed(ucFile$V9, "_", 8)[, 1:2], 1, paste, collapse = "_") : 
+  dim(X) must have a positive length
+Execution halted
+Error in apply(str_split_fixed(ucFile$V9, "_", 8)[, 1:2], 1, paste, collapse = "_") : 
+  dim(X) must have a positive length
+Execution halted
+rm: cannot remove 'Rplots.pdf': No such file or directory
+
+ERROR: No downloads matched your filter. Please check your options.
+ls: cannot access 'Paracidobacterium/refseq/bacteria/': No such file or directory
+
+ERROR: No downloads matched your filter. Please check your options.
+ls: cannot access 'Pseudacidobacterium/refseq/bacteria/': No such file or directory
+
+ERROR: No downloads matched your filter. Please check your options.
+ls: cannot access 'Silvibacterium/refseq/bacteria/': No such file or directory
+
+ERROR: No downloads matched your filter. Please check your options.
+ls: cannot access 'Telmatobacter/refseq/bacteria/': No such file or directory
+
+ERROR: No downloads matched your filter. Please check your options.
+ls: cannot access 'Terracidiphilus/refseq/bacteria/': No such file or directory
+
+rm: cannot remove 'Rplots.pdf': No such file or directory
+
+ERROR: No downloads matched your filter. Please check your options.
+ls: cannot access 'Bryobacter/refseq/bacteria/': No such file or directory
+
+Error in hclust(dist(binClusterMat), "ward.D2") : 
+  must have n >= 2 objects to cluster
+Execution halted
+Error in hclust(dist(binClusterMat), "ward.D2") : 
+  must have n >= 2 objects to cluster
+Execution halted
+rm: cannot remove 'Rplots.pdf': No such file or directory
+

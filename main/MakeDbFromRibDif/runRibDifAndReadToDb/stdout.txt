@@ -1,0 +1,1032 @@
+
+***RibDif running on Candidatus Guanabacterium***
+
+
+Detected species.
+
+
+Downloading all strains of Candidatus_Guanabacterium into Candidatus_Guanabacterium/refseq/bacteria/ with ncbi-genome-download.
+
+	0 genomes downloaded.
+
+
+
+	Download failed, is Candidatus Guanabacterium a correct genus?
+
+
+
+
+***RibDif running on Acidicapsa***
+
+
+Downloading all strains of Acidicapsa into Acidicapsa/refseq/bacteria/ with ncbi-genome-download.
+
+	0 genomes downloaded.
+
+
+
+	Download failed, is Acidicapsa a correct genus?
+
+
+
+
+***RibDif running on Acidipila***
+
+
+Downloading all strains of Acidipila into Acidipila/refseq/bacteria/ with ncbi-genome-download.
+
+	0 genomes downloaded.
+
+
+
+	Download failed, is Acidipila a correct genus?
+
+
+
+
+***RibDif running on Acidisarcina***
+
+
+Downloading all strains of Acidisarcina into Acidisarcina/refseq/bacteria/ with ncbi-genome-download.
+
+	1 genomes downloaded.
+
+
+Gunzipping all files.
+
+
+Renaming fastas and adding GCF (for genomes with multiple chromosomes).
+
+
+Finding all rRNA genes longer than 90% of expected length with barrnap.
+
+
+Fishing out 16S genes.
+
+
+Renaming 16S headers.
+
+
+Splitting 16S.
+
+
+Calculating intra-genomic mismatches and ANI for each genome.
+
+
+Alligning full-length 16S genes within genomes with muscle and building trees with fastree.
+
+
+Summarizing data into Acidisarcina/Acidisarcina-summary.csv.
+
+
+Skipping alignments and trees (if needed, use -m/--msa).
+
+
+
+Running amplicon analysis with default primers.
+
+
+-------------------------------------
+
+Working on v3v4-primers:
+
+
+Making amplicons with in_silico_pcr.
+
+
+Skipping alignments and trees (if needed, use -m/--msa).
+
+
+Making unique clusters with vsearch.
+
+
+Making amplicon cluster membership heatmaps.
+
+
+
+-------------------------------------
+
+Working on v1v9-primers:
+
+
+Making amplicons with in_silico_pcr.
+
+
+Skipping alignments and trees (if needed, use -m/--msa).
+
+
+Making unique clusters with vsearch.
+
+
+Making amplicon cluster membership heatmaps.
+
+
+
+-------------------------------------
+
+
+Done.
+
+
+
+
+***RibDif running on Acidobacterium***
+
+
+Downloading all strains of Acidobacterium into Acidobacterium/refseq/bacteria/ with ncbi-genome-download.
+
+	1 genomes downloaded.
+
+
+Gunzipping all files.
+
+
+Renaming fastas and adding GCF (for genomes with multiple chromosomes).
+
+
+Finding all rRNA genes longer than 90% of expected length with barrnap.
+
+
+Fishing out 16S genes.
+
+
+Renaming 16S headers.
+
+
+Splitting 16S.
+
+
+Calculating intra-genomic mismatches and ANI for each genome.
+
+
+Alligning full-length 16S genes within genomes with muscle and building trees with fastree.
+
+
+Summarizing data into Acidobacterium/Acidobacterium-summary.csv.
+
+
+Skipping alignments and trees (if needed, use -m/--msa).
+
+
+
+Running amplicon analysis with default primers.
+
+
+-------------------------------------
+
+Working on v3v4-primers:
+
+
+Making amplicons with in_silico_pcr.
+
+
+Skipping alignments and trees (if needed, use -m/--msa).
+
+
+Making unique clusters with vsearch.
+
+
+Making amplicon cluster membership heatmaps.
+
+
+
+-------------------------------------
+
+Working on v1v9-primers:
+
+
+Making amplicons with in_silico_pcr.
+
+
+Skipping alignments and trees (if needed, use -m/--msa).
+
+
+Making unique clusters with vsearch.
+
+
+Making amplicon cluster membership heatmaps.
+
+
+
+-------------------------------------
+
+
+Done.
+
+
+
+
+***RibDif running on Alloacidobacterium***
+
+
+Downloading all strains of Alloacidobacterium into Alloacidobacterium/refseq/bacteria/ with ncbi-genome-download.
+
+	1 genomes downloaded.
+
+
+Gunzipping all files.
+
+
+Renaming fastas and adding GCF (for genomes with multiple chromosomes).
+
+
+Finding all rRNA genes longer than 90% of expected length with barrnap.
+
+
+Fishing out 16S genes.
+
+
+Renaming 16S headers.
+
+
+Splitting 16S.
+
+
+Calculating intra-genomic mismatches and ANI for each genome.
+
+
+Alligning full-length 16S genes within genomes with muscle and building trees with fastree.
+
+
+Summarizing data into Alloacidobacterium/Alloacidobacterium-summary.csv.
+
+
+Skipping alignments and trees (if needed, use -m/--msa).
+
+
+
+Running amplicon analysis with default primers.
+
+
+-------------------------------------
+
+Working on v3v4-primers:
+
+
+Making amplicons with in_silico_pcr.
+
+
+Skipping alignments and trees (if needed, use -m/--msa).
+
+
+Making unique clusters with vsearch.
+
+
+Making amplicon cluster membership heatmaps.
+
+
+
+-------------------------------------
+
+Working on v1v9-primers:
+
+
+Making amplicons with in_silico_pcr.
+
+
+Skipping alignments and trees (if needed, use -m/--msa).
+
+
+Making unique clusters with vsearch.
+
+
+Making amplicon cluster membership heatmaps.
+
+
+
+-------------------------------------
+
+
+Done.
+
+
+
+
+***RibDif running on Bryocella***
+
+
+Downloading all strains of Bryocella into Bryocella/refseq/bacteria/ with ncbi-genome-download.
+
+	0 genomes downloaded.
+
+
+
+	Download failed, is Bryocella a correct genus?
+
+
+
+
+***RibDif running on Candidatus Koribacter***
+
+
+Detected species.
+
+
+Downloading all strains of Candidatus_Koribacter into Candidatus_Koribacter/refseq/bacteria/ with ncbi-genome-download.
+
+	1 genomes downloaded.
+
+
+Gunzipping all files.
+
+
+Renaming fastas and adding GCF (for genomes with multiple chromosomes).
+
+
+Finding all rRNA genes longer than 90% of expected length with barrnap.
+
+
+Fishing out 16S genes.
+
+
+Renaming 16S headers.
+
+
+Splitting 16S.
+
+
+Calculating intra-genomic mismatches and ANI for each genome.
+
+
+Alligning full-length 16S genes within genomes with muscle and building trees with fastree.
+
+
+Summarizing data into Candidatus_Koribacter/Candidatus_Koribacter-summary.csv.
+
+
+Skipping alignments and trees (if needed, use -m/--msa).
+
+
+
+Running amplicon analysis with default primers.
+
+
+-------------------------------------
+
+Working on v3v4-primers:
+
+
+Making amplicons with in_silico_pcr.
+
+
+Skipping alignments and trees (if needed, use -m/--msa).
+
+
+Making unique clusters with vsearch.
+
+
+Making amplicon cluster membership heatmaps.
+
+
+
+-------------------------------------
+
+Working on v1v9-primers:
+
+
+Making amplicons with in_silico_pcr.
+
+
+Skipping alignments and trees (if needed, use -m/--msa).
+
+
+Making unique clusters with vsearch.
+
+
+Making amplicon cluster membership heatmaps.
+
+
+
+-------------------------------------
+
+
+Done.
+
+
+
+
+***RibDif running on Candidatus Sulfotelmatobacter***
+
+
+Detected species.
+
+
+Downloading all strains of Candidatus_Sulfotelmatobacter into Candidatus_Sulfotelmatobacter/refseq/bacteria/ with ncbi-genome-download.
+
+	0 genomes downloaded.
+
+
+
+	Download failed, is Candidatus Sulfotelmatobacter a correct genus?
+
+
+
+
+***RibDif running on Candidatus Sulfotelmatomonas***
+
+
+Detected species.
+
+
+Downloading all strains of Candidatus_Sulfotelmatomonas into Candidatus_Sulfotelmatomonas/refseq/bacteria/ with ncbi-genome-download.
+
+	0 genomes downloaded.
+
+
+
+	Download failed, is Candidatus Sulfotelmatomonas a correct genus?
+
+
+
+
+***RibDif running on Edaphobacter***
+
+
+Downloading all strains of Edaphobacter into Edaphobacter/refseq/bacteria/ with ncbi-genome-download.
+
+	4 genomes downloaded.
+
+
+Gunzipping all files.
+
+
+Renaming fastas and adding GCF (for genomes with multiple chromosomes).
+
+
+Finding all rRNA genes longer than 90% of expected length with barrnap.
+
+
+Fishing out 16S genes.
+
+
+Renaming 16S headers.
+
+
+Splitting 16S.
+
+
+Calculating intra-genomic mismatches and ANI for each genome.
+
+
+Alligning full-length 16S genes within genomes with muscle and building trees with fastree.
+
+
+Summarizing data into Edaphobacter/Edaphobacter-summary.csv.
+
+
+Skipping alignments and trees (if needed, use -m/--msa).
+
+
+
+Running amplicon analysis with default primers.
+
+
+-------------------------------------
+
+Working on v3v4-primers:
+
+
+Making amplicons with in_silico_pcr.
+
+
+Skipping alignments and trees (if needed, use -m/--msa).
+
+
+Making unique clusters with vsearch.
+
+
+Making amplicon cluster membership heatmaps.
+
+
+Summary:
+
+Genomes: 4
+	Named: 2
+	Non-named: 2
+
+Named species: 2
+
+0 of 4 (0%) genomes have multiple alleles.
+
+0 of 2 (0%) species have at least one overlap.
+
+No species overlap.
+
+-------------------------------------
+
+Working on v1v9-primers:
+
+
+Making amplicons with in_silico_pcr.
+
+
+Skipping alignments and trees (if needed, use -m/--msa).
+
+
+Making unique clusters with vsearch.
+
+
+Making amplicon cluster membership heatmaps.
+
+
+Summary:
+
+Genomes: 4
+	Named: 2
+	Non-named: 2
+
+Named species: 2
+
+0 of 4 (0%) genomes have multiple alleles.
+
+0 of 2 (0%) species have at least one overlap.
+
+No species overlap.
+
+-------------------------------------
+
+
+Done.
+
+
+
+
+***RibDif running on Granulicella***
+
+
+Downloading all strains of Granulicella into Granulicella/refseq/bacteria/ with ncbi-genome-download.
+
+	4 genomes downloaded.
+
+
+Gunzipping all files.
+
+
+Renaming fastas and adding GCF (for genomes with multiple chromosomes).
+
+
+Finding all rRNA genes longer than 90% of expected length with barrnap.
+
+
+Fishing out 16S genes.
+
+
+Renaming 16S headers.
+
+
+Splitting 16S.
+
+
+Calculating intra-genomic mismatches and ANI for each genome.
+
+
+Alligning full-length 16S genes within genomes with muscle and building trees with fastree.
+
+
+Summarizing data into Granulicella/Granulicella-summary.csv.
+
+
+Skipping alignments and trees (if needed, use -m/--msa).
+
+
+
+Running amplicon analysis with default primers.
+
+
+-------------------------------------
+
+Working on v3v4-primers:
+
+
+Making amplicons with in_silico_pcr.
+
+
+Skipping alignments and trees (if needed, use -m/--msa).
+
+
+Making unique clusters with vsearch.
+
+
+Making amplicon cluster membership heatmaps.
+
+
+Summary:
+
+Genomes: 4
+	Named: 2
+	Non-named: 2
+
+Named species: 2
+
+0 of 4 (0%) genomes have multiple alleles.
+
+0 of 2 (0%) species have at least one overlap.
+
+No species overlap.
+
+-------------------------------------
+
+Working on v1v9-primers:
+
+
+Making amplicons with in_silico_pcr.
+
+
+Skipping alignments and trees (if needed, use -m/--msa).
+
+
+Making unique clusters with vsearch.
+
+
+Making amplicon cluster membership heatmaps.
+
+
+Summary:
+
+Genomes: 4
+	Named: 2
+	Non-named: 2
+
+Named species: 2
+
+0 of 4 (0%) genomes have multiple alleles.
+
+0 of 2 (0%) species have at least one overlap.
+
+No species overlap.
+
+-------------------------------------
+
+
+Done.
+
+
+
+
+***RibDif running on Occallatibacter***
+
+
+Downloading all strains of Occallatibacter into Occallatibacter/refseq/bacteria/ with ncbi-genome-download.
+
+	1 genomes downloaded.
+
+
+Gunzipping all files.
+
+
+Renaming fastas and adding GCF (for genomes with multiple chromosomes).
+
+
+Finding all rRNA genes longer than 90% of expected length with barrnap.
+
+
+Fishing out 16S genes.
+
+
+Renaming 16S headers.
+
+
+Splitting 16S.
+
+
+Calculating intra-genomic mismatches and ANI for each genome.
+
+
+Alligning full-length 16S genes within genomes with muscle and building trees with fastree.
+
+
+Summarizing data into Occallatibacter/Occallatibacter-summary.csv.
+
+
+Skipping alignments and trees (if needed, use -m/--msa).
+
+
+
+Running amplicon analysis with default primers.
+
+
+-------------------------------------
+
+Working on v3v4-primers:
+
+
+Making amplicons with in_silico_pcr.
+
+
+Skipping alignments and trees (if needed, use -m/--msa).
+
+
+Making unique clusters with vsearch.
+
+
+Making amplicon cluster membership heatmaps.
+
+
+
+-------------------------------------
+
+Working on v1v9-primers:
+
+
+Making amplicons with in_silico_pcr.
+
+
+Skipping alignments and trees (if needed, use -m/--msa).
+
+
+Making unique clusters with vsearch.
+
+
+Making amplicon cluster membership heatmaps.
+
+
+
+-------------------------------------
+
+
+Done.
+
+
+
+
+***RibDif running on Paracidobacterium***
+
+
+Downloading all strains of Paracidobacterium into Paracidobacterium/refseq/bacteria/ with ncbi-genome-download.
+
+	0 genomes downloaded.
+
+
+
+	Download failed, is Paracidobacterium a correct genus?
+
+
+
+
+***RibDif running on Pseudacidobacterium***
+
+
+Downloading all strains of Pseudacidobacterium into Pseudacidobacterium/refseq/bacteria/ with ncbi-genome-download.
+
+	0 genomes downloaded.
+
+
+
+	Download failed, is Pseudacidobacterium a correct genus?
+
+
+
+
+***RibDif running on Silvibacterium***
+
+
+Downloading all strains of Silvibacterium into Silvibacterium/refseq/bacteria/ with ncbi-genome-download.
+
+	0 genomes downloaded.
+
+
+
+	Download failed, is Silvibacterium a correct genus?
+
+
+
+
+***RibDif running on Telmatobacter***
+
+
+Downloading all strains of Telmatobacter into Telmatobacter/refseq/bacteria/ with ncbi-genome-download.
+
+	0 genomes downloaded.
+
+
+
+	Download failed, is Telmatobacter a correct genus?
+
+
+
+
+***RibDif running on Terracidiphilus***
+
+
+Downloading all strains of Terracidiphilus into Terracidiphilus/refseq/bacteria/ with ncbi-genome-download.
+
+	0 genomes downloaded.
+
+
+
+	Download failed, is Terracidiphilus a correct genus?
+
+
+
+
+***RibDif running on Terriglobus***
+
+
+Downloading all strains of Terriglobus into Terriglobus/refseq/bacteria/ with ncbi-genome-download.
+
+	3 genomes downloaded.
+
+
+Gunzipping all files.
+
+
+Renaming fastas and adding GCF (for genomes with multiple chromosomes).
+
+
+Finding all rRNA genes longer than 90% of expected length with barrnap.
+
+
+Fishing out 16S genes.
+
+
+Renaming 16S headers.
+
+
+Splitting 16S.
+
+
+Calculating intra-genomic mismatches and ANI for each genome.
+
+
+Alligning full-length 16S genes within genomes with muscle and building trees with fastree.
+
+
+Summarizing data into Terriglobus/Terriglobus-summary.csv.
+
+
+Skipping alignments and trees (if needed, use -m/--msa).
+
+
+
+Running amplicon analysis with default primers.
+
+
+-------------------------------------
+
+Working on v3v4-primers:
+
+
+Making amplicons with in_silico_pcr.
+
+
+Skipping alignments and trees (if needed, use -m/--msa).
+
+
+Making unique clusters with vsearch.
+
+
+Making amplicon cluster membership heatmaps.
+
+
+Summary:
+
+Genomes: 3
+	Named: 3
+	Non-named: 0
+
+Named species: 3
+
+0 of 3 (0%) genomes have multiple alleles.
+
+0 of 3 (0%) species have at least one overlap.
+
+No species overlap.
+
+-------------------------------------
+
+Working on v1v9-primers:
+
+
+Making amplicons with in_silico_pcr.
+
+
+Skipping alignments and trees (if needed, use -m/--msa).
+
+
+Making unique clusters with vsearch.
+
+
+Making amplicon cluster membership heatmaps.
+
+
+Summary:
+
+Genomes: 3
+	Named: 3
+	Non-named: 0
+
+Named species: 3
+
+0 of 3 (0%) genomes have multiple alleles.
+
+0 of 3 (0%) species have at least one overlap.
+
+No species overlap.
+
+-------------------------------------
+
+
+Done.
+
+
+
+
+***RibDif running on Bryobacter***
+
+
+Downloading all strains of Bryobacter into Bryobacter/refseq/bacteria/ with ncbi-genome-download.
+
+	0 genomes downloaded.
+
+
+
+	Download failed, is Bryobacter a correct genus?
+
+
+
+
+***RibDif running on Paludibaculum***
+
+
+Downloading all strains of Paludibaculum into Paludibaculum/refseq/bacteria/ with ncbi-genome-download.
+
+	1 genomes downloaded.
+
+
+Gunzipping all files.
+
+
+Renaming fastas and adding GCF (for genomes with multiple chromosomes).
+
+
+Finding all rRNA genes longer than 90% of expected length with barrnap.
+
+
+Fishing out 16S genes.
+
+
+Renaming 16S headers.
+
+
+Splitting 16S.
+
+
+Calculating intra-genomic mismatches and ANI for each genome.
+
+
+Alligning full-length 16S genes within genomes with muscle and building trees with fastree.
+
+
+Summarizing data into Paludibaculum/Paludibaculum-summary.csv.
+
+
+Skipping alignments and trees (if needed, use -m/--msa).
+
+
+
+Running amplicon analysis with default primers.
+
+
+-------------------------------------
+
+Working on v3v4-primers:
+
+
+Making amplicons with in_silico_pcr.
+
+
+Skipping alignments and trees (if needed, use -m/--msa).
+
+
+Making unique clusters with vsearch.
+
+
+Making amplicon cluster membership heatmaps.
+
+
+
+-------------------------------------
+
+Working on v1v9-primers:
+
+
+Making amplicons with in_silico_pcr.
+
+
+Skipping alignments and trees (if needed, use -m/--msa).
+
+
+Making unique clusters with vsearch.
+
+
+Making amplicon cluster membership heatmaps.
+
+
+
+-------------------------------------
+
+
+Done.
+
+
+
