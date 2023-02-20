@@ -1,0 +1,58 @@
+
+
+```{r}
+library("tidyverse")
+library(glue)
+library(cowplot)
+```
+### Reading in the data
+```{r}
+species <- read_csv("../data/genus_ribdif.csv",show_col_types = FALSE)
+taxinfo <- read_csv("../data/hpc_tax_info_full.csv",show_col_types = FALSE)
+
+taxinfo <- rename(taxinfo, genus = GENUS)
+D <- left_join(species, taxinfo, by="genus")
+```
+
+### Looking at the distribution
+```{r}
+taxplot <- function(D, tax, name){
+  plot <- D %>% 
+    group_by({{tax}}) %>%
+    summarise(n=n()) %>% 
+    mutate(tax_ordered = fct_reorder({{tax}},desc(n))) %>% 
+    ggplot() +
+    geom_segment(aes(x=tax_ordered, xend = tax_ordered,y=0, yend=n)) +
+    xlab(glue("taxonomic {name}")) + ylab("Number of entries") +
+    theme(axis.text.x=element_blank(),axis.ticks.x=element_blank()) +
+    ggtitle(glue("Entries pr. {name}"))
+  return(plot)
+}
+
+# Plloting the different taxs
+p1 <- taxplot(D, ORDER, "order")
+p2 <- taxplot(D, PHYLUM, "phylum")
+p3 <- taxplot(D, species, "species")
+plot_grid(p1,p2,p3,labels ="auto")
+```
+
+
+```{r}
+D %>% 
+  group_by(PHYLUM) %>% 
+  summarise(n = n()) %>% 
+  mutate(tax_ordered = fct_reorder(PHYLUM,desc(n))) %>% 
+  arrange(desc(n))
+
+
+D %>% 
+  group_by(species) %>% 
+  summarise(n = n()) %>% 
+  mutate(tax_ordered = fct_reorder(species,desc(n))) %>% 
+  arrange(desc(n))
+
+```
+
+
+
+

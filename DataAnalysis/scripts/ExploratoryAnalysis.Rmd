@@ -1,0 +1,619 @@
+---
+title: "Dataanalysis"
+output: pdf_document
+date: "2023-02-17"
+---
+## TODO
+Test for TAX VS AR VS GENOME SIZE
+mosaic plot?s
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library("tidyverse")
+library(xtable)
+library(glue)
+library(cowplot)
+library(ggpubr)
+library(patchwork)
+```
+
+## Reading in data
+Read in the data, and set the data types to the correct types
+Drop index number from the pandas dataframe and NCBI.tax.ID
+```{r}
+
+D_tmp <- read_csv("../data/dataset_joined.csv",show_col_types = FALSE)
+D_tmp <- mutate(D_tmp, across(species:PH.range, factor))
+D_tmp <- mutate(D_tmp, across(GC.content:total_genes, as.double))
+D_tmp <- select(D_tmp, !c(NCBI.tax.ID,...1))
+
+```
+
+Split up the dataset in two, one with the specific antibiotic resistance information and another with the rest of the data
+
+```{r}
+# With ar
+D_ar <- select(D_tmp, !antibiotics & species:spiramycin.II)
+# Without ar
+D <- select(D_tmp, !lincomycin:spiramycin.II)
+```
+
+## Summary Statistics
+
+```{r}
+sum <- summary(D)
+sum
+```
+We have NA for the following columns: motility,gram.stain,growth,oxygen.tolerance,PH.range
+
+## Looking at data distribution
+### For different taxonomic scales
+TODO: also make plot of just n species
+
+```{r}
+# Function to plot how often each tax is seen
+taxplot <- function(D, tax, name,ylimit){
+  plot <- D %>% 
+    group_by({{tax}}) %>%
+    summarise(n=n()) %>% 
+    mutate(tax_ordered = fct_reorder({{tax}},desc(n))) %>% 
+    ggplot() +
+    geom_segment(aes(x=tax_ordered, xend = tax_ordered,y=0, yend=n)) +
+    xlab(glue("taxonomic {name}")) + ylab("Number of entries") +
+    theme(axis.text.x=element_blank(),axis.ticks.x=element_blank()) +
+    ggtitle(glue("Entries pr. {name}")) +
+    ylim(0,ylimit)
+  return(plot)
+}
+
+# Plloting the different taxs
+p1 <- taxplot(D, family, "family",350)
+p2 <- taxplot(D, order, "order",350)
+p3 <- taxplot(D, class, "class",2000)
+p4 <- taxplot(D, phylum, "phylum",2000)
+p5 <- taxplot(D, genus, "genus",350)
+plot_grid(p5,p1, p2, p3, p4,labels ="auto")
+#gridExtra::grid.arrange(p5,p1,p2,p3,p4)
+```
+The goal of this part is to figure out how to take into consideration that some strains are sequences a lot more than others.
+I have already calculated the mean/mode of each value at the species level, but it seems that we still have an unequal distribution.
+Furthermore it seems that nomatter how high the taxonomic scale we go, There is still an unequal distribution. Even though wee took into 
+consideration that some species are sequences more we would still except an unequeal distribution. Based on this and the fact that information is lost
+for each "step" on the taxonomic scale I have choosen to go with the speceis level
+It is relevant as when we for example look at the distribution of numbers of 16s genes, more sequences genes will have a higher weight.
+
+```{r}
+taxboxplot <- function(D, tax, n16_var, name){
+  D_new <- D %>% 
+    group_by({{tax}}) %>%
+    summarise(mean_value=mean({{n16_var}}))
+  plot <- ggplot(D_new) +
+    geom_histogram(aes(x=mean_value, y=after_stat(density))) +
+    ggtitle(glue("density pr. {name}"))+
+    xlab("mean n16") + ylab("density") +
+    stat_function(fun = dnorm, col = "red", args = list(mean = mean(D_new$mean_value), sd = sd(D_new$mean_value)))
+  return(plot)
+}
+
+
+# Plloting the different taxs
+to_plot <- "n16"
+p0 <- taxboxplot(D, species, .data[[to_plot]],"species")
+p1 <- taxboxplot(D, genus, .data[[to_plot]],"genus")
+p2 <- taxboxplot(D, family,.data[[to_plot]], "family")
+p3 <- taxboxplot(D, order, .data[[to_plot]],"order")
+p4 <- taxboxplot(D, class,.data[[to_plot]], "class")
+p5 <- taxboxplot(D, phylum,.data[[to_plot]], "phylum")
+
+plot_grid(p0,p1, p2, p3, p4,p5,labels ="auto")
+
+
+```
+But the most important thing is the distribution. Here we can see that for species it looks a bit wierd, it looks better for genus
+Lets have a look at the log transformed
+
+```{r}
+# Not working:: Error in if (!is.finite(log_num)) { : the condition has length > 1
+L2log <- function(num){
+  log_num = log2(num)
+  print(log_num)
+  if (!is.finite(log_num)){return(0)}
+  else{
+  return (log_num)}
+}
+
+functaxboxplot <- function(D, tax, n16_var, name,func){
+  D_new <- D %>% 
+    group_by({{tax}}) %>%
+    summarise(mean_value=mean({{n16_var}}))
+  plot <- ggplot(D_new) +
+    geom_histogram(aes(x=func(mean_value), y=after_stat(density)),bins = 13) +
+    ggtitle(glue("density pr. {name}"))+
+    xlab("logn16") + ylab("density") +
+    stat_function(fun = dnorm, col = "red", args = list(mean = mean(func(D_new$mean_value)), sd = sd(func(D_new$mean_value))))
+  return(plot)
+}
+
+
+# Plloting the different taxs
+to_plot <- "n16"
+p0 <- functaxboxplot(D, (species), .data[[to_plot]],"species",log)
+p1 <- functaxboxplot(D, (genus), .data[[to_plot]],"genus",log)
+p2 <- functaxboxplot(D, (family),.data[[to_plot]], "family",log)
+p3 <- functaxboxplot(D, (order), .data[[to_plot]],"order",log)
+p4 <- functaxboxplot(D, (class),.data[[to_plot]], "class",log)
+p5 <- functaxboxplot(D, (phylum),.data[[to_plot]], "phylum",log)
+
+plot_grid(p0,p1, p2, p3, p4,p5,labels ="auto")
+
+
+```
+Here the distributions look ok for species. And again to not lose information im going with species.s
+
+#### D
+Lets have a look at the distributions for D
+
+```{r}
+
+taxboxplot <- function(D, tax, n16_var, name){
+  D_new <- D %>% 
+    group_by({{tax}}) %>%
+    summarise(mean_value=mean({{n16_var}}))
+  plot <- ggplot(D_new) +
+    geom_histogram(aes(x=mean_value, y=after_stat(density))) +
+    ggtitle(glue("Entries pr. {name}"))+
+    xlab("div") + ylab("density") +
+    stat_function(fun = dnorm, col = "red", args = list(mean = mean(D_new$mean_value), sd = sd(D_new$mean_value)))
+  return(plot)
+}
+
+to_plot <- "div"
+p0 <- taxboxplot(D, species, .data[[to_plot]],"species")
+p1 <- taxboxplot(D, genus, .data[[to_plot]],"genus")
+p2 <- taxboxplot(D, family,.data[[to_plot]], "family")
+p3 <- taxboxplot(D, order, .data[[to_plot]],"order")
+p4 <- taxboxplot(D, class,.data[[to_plot]], "class")
+p5 <- taxboxplot(D, phylum,.data[[to_plot]], "phylum")
+
+plot_grid(p0,p1, p2, p3, p4,p5,labels ="auto")
+
+
+```
+They do not look normal distributed.
+
+
+## Looking at n16 and var
+
+```{r}
+
+
+functaxboxplot <- function(D, tax, n16_var, name,func){
+  D_new <- D %>% 
+    group_by({{tax}}) %>%
+    summarise(mean_value=mean({{n16_var}}))
+  plot <- ggplot(D_new) +
+    geom_histogram(aes(x=func(mean_value), y=after_stat(density)),bins = 20) +
+    ggtitle(glue("density pr. {name}"))+
+    xlab("logdiv") + ylab("density") +
+    stat_function(fun = dnorm, col = "red", args = list(mean = mean(func(D_new$mean_value)), sd = sd(func(D_new$mean_value))))
+  return(plot)
+}
+
+# Plloting the different taxs
+to_plot <- "div"
+p0 <- functaxboxplot(D, (species), .data[[to_plot]],"species",log1p)
+p1 <- functaxboxplot(D, (genus), .data[[to_plot]],"genus",log1p)
+p2 <- functaxboxplot(D, (family),.data[[to_plot]], "family",log1p)
+p3 <- functaxboxplot(D, (order), .data[[to_plot]],"order",log1p)
+p4 <- functaxboxplot(D, (class),.data[[to_plot]], "class",log1p)
+p5 <- functaxboxplot(D, (phylum),.data[[to_plot]], "phylum",log1p)
+
+plot_grid(p0,p1, p2, p3, p4,p5,labels ="auto")
+
+```
+
+Here we can see we have alot of divs at = 0,
+Looking at not having them we get this
+```{r}
+
+# Plloting the different taxs
+to_plot <- "div"
+p0 <- functaxboxplot(D, (species), .data[[to_plot]],"species",log)
+p1 <- functaxboxplot(D, (genus), .data[[to_plot]],"genus",log)
+p2 <- functaxboxplot(D, (family),.data[[to_plot]], "family",log)
+p3 <- functaxboxplot(D, (order), .data[[to_plot]],"order",log)
+p4 <- functaxboxplot(D, (class),.data[[to_plot]], "class",log)
+p5 <- functaxboxplot(D, (phylum),.data[[to_plot]], "phylum",log)
+
+plot_grid(p0,p1, p2, p3, p4,p5,labels ="auto")
+```
+There is an argument for not working with the var of 0 or we can try and remove all entries with n16=1 (since they always has zero)
+It turns out n16=1 gives a ton with no var, n16 > 4 is more acurate. Alternativly you could have it for one speciefic n16 or take n16 into the model when modelling div
+```{r}
+# For n16 > 4
+D_sub <- filter(D, n16 > 4)
+to_plot <- "div"
+p0 <- functaxboxplot(D_sub, (species), .data[[to_plot]],"species",log1p)
+p1 <- functaxboxplot(D_sub, (genus), .data[[to_plot]],"genus",log1p)
+p2 <- functaxboxplot(D_sub, (family),.data[[to_plot]], "family",log1p)
+p3 <- functaxboxplot(D_sub, (order), .data[[to_plot]],"order",log1p)
+p4 <- functaxboxplot(D_sub, (class),.data[[to_plot]], "class",log1p)
+p5 <- functaxboxplot(D_sub, (phylum),.data[[to_plot]], "phylum",log1p)
+plot_grid(p0,p1, p2, p3, p4,p5,labels ="auto")
+
+# For n16 = 4
+D_sub <- filter(D, n16 == 10)
+to_plot <- "div"
+p0 <- functaxboxplot(D_sub, (species), .data[[to_plot]],"species",log1p)
+p1 <- functaxboxplot(D_sub, (genus), .data[[to_plot]],"genus",log1p)
+p2 <- functaxboxplot(D_sub, (family),.data[[to_plot]], "family",log1p)
+p3 <- functaxboxplot(D_sub, (order), .data[[to_plot]],"order",log1p)
+p4 <- functaxboxplot(D_sub, (class),.data[[to_plot]], "class",log1p)
+p5 <- functaxboxplot(D_sub, (phylum),.data[[to_plot]], "phylum",log1p)
+
+plot_grid(p0,p1, p2, p3, p4,p5,labels ="auto")
+
+```
+
+```{r}
+
+# Lets try for all different n16
+
+D_sub <- mutate(D, n16 = factor(as.integer(n16)))
+ggplot(D_sub) +
+    geom_histogram(aes(x=log1p(div), y=after_stat(density))) +
+  facet_wrap(~n16)
+
+
+```
+1 n16 always has zero, ofc. It seems the more n16 we get the less with zero div. Which again makes sense
+
+
+Furthermore i believe im going to continue working from a speceis level as the distributions look ok at that level and it is not worth sacreficing resolution to get better model assumptions.. for now
+
+### Div v n16
+We expect there to be a relationshio.. lets see
+
+
+## Antibiotics
+Lets start by checking in general
+The hypthesis was that they might have more div. 
+
+```{r}
+p1 <- ggplot(D)+
+  geom_boxplot(aes(x=antibiotics, y=log1p(div)))
+p2 <- ggplot(D)+
+  geom_boxplot(aes(x=antibiotics, y=log(div)))
+p3 <- ggplot(D)+
+  geom_boxplot(aes(x=antibiotics, y=log(n16)))
+p4 <- ggplot(D)+
+  geom_boxplot(aes(x=antibiotics, y=(n16)))
+plot_grid(p1,p2,p3,p4,labels="auto")
+```
+### Formatting daTA
+Lets check for more specifc types of AR
+First getting the subset of the data with AR resistence info about the Antibiotics
+which target the 16s rRNA
+```{r}
+# Getting the ones which are actually targeting 16S 
+# Reading them from ARtarget16s.csv
+target16S <- read_csv2("../data/ARtarget16s.csv",show_col_types = FALSE,col_names = FALSE)
+targetvector <- as.array(target16S$X1)
+found_16S <- as.array(colnames(select(D_tmp,lincomycin:spiramycin.II)))
+intersect <- intersect(targetvector,found_16S)
+D_ar <- select(D_tmp, intersect, n16, div)
+
+```
+### Different types
+#### Div
+Now lets look at some plots
+firstly for div
+```{r}
+library(gridExtra)
+
+plotlist = list()
+for(i in seq_along(intersect)){
+  antibiotic = intersect[i]
+  p <- ggplot(D_ar)+
+    geom_boxplot(aes(x=.data[[antibiotic]], y=log1p(div)))
+  plotlist = c(plotlist, list(p))
+}
+
+wrap_plots(plotlist)
+```
+#### n16
+and now for n16
+```{r}
+plotlist = list()
+for(i in seq_along(intersect)){
+  antibiotic = intersect[i]
+  p <- ggplot(D_ar)+
+    geom_boxplot(aes(x=.data[[antibiotic]], y=log(n16)))
+  plotlist = c(plotlist, list(p))
+}
+
+wrap_plots(plotlist)
+```
+### Deep dive into topramycin
+Some seem to have a change but it is my suspesion that its because of the randomness with a small subset randomly having more or just because of other factors. Eg the small subset which are Antibiotic resistenet to a specific AB might just share taxonmic. Lets check for tobramycin
+```{r}
+# Get the taxonomy info for all the different bacteria resistent to tobramycin
+D_ar_tax <- select(D_tmp, intersect, n16, div,genus,family,order, class,phylum)
+filter(D_ar_tax, tobramycin == "R") %>% 
+  select(genus,family,order,class,phylum) 
+# It seems most of them share the Gammaproteobacteria class / are from the..
+
+
+GorNot <- mutate(D_ar_tax, isGamma = ifelse(class == "Gammaproteobacteria","Gamma","notGamma")) %>% 
+  mutate(isGamma=factor(isGamma)) 
+
+p1 <- ggplot(GorNot) +
+geom_boxplot(aes(x=isGamma, y=log1p(div)))
+
+p2 <- ggplot(D_ar)+
+    geom_boxplot(aes(x=tobramycin, y=log1p(div)))
+                 
+
+p3 <- ggplot(GorNot) +
+geom_boxplot(aes(x=isGamma, y=log(n16)))
+
+p4 <- ggplot(D_ar)+
+    geom_boxplot(aes(x=tobramycin, y=log(n16)))
+          
+plot_grid(p1,p2,p3,p4)
+
+
+```
+
+So we can see that it's proberly just tax- information messing it up
+Statistically we should test types of AR agains tax.
+Here we have 895 different in Gammaproteo group but only 8 of them with the AR
+
+```{r}
+#Lastly lets try and plot the ones with AR against the ones which do not for gammaproteo
+# Its mostly saying for the ones which are Gammaproteo
+
+GorNot %>% 
+  ggplot()+
+    geom_boxplot(aes(x=tobramycin, y=log1p(div))) +
+    facet_wrap(~isGamma)
+
+# There actually seem to be more
+# Lest see for n16
+# We expect n16 to go up for R again since the are correlated
+GorNot %>% 
+  ggplot()+
+    geom_boxplot(aes(x=tobramycin, y=(n16))) +
+    facet_wrap(~isGamma)
+# It seems to actually go down ! 
+# so there is something going on :I
+
+```
+
+Lets try and remove the tax (maybe phylum (could be class)) information
+
+```{r}
+library(modelr)
+D_ar_tax %>% 
+  ggplot() +
+  geom_boxplot(aes(x=phylum, y=log1p(div)))
+
+D_ar_tax %<>% mutate(phylum = factor(phylum)) 
+# Fit the model
+tax_model <- lm(log1p(div) ~phylum ,data=D_ar_tax)
+summary(tax_model)
+
+# Visualize the predictions
+pred <- D_ar_tax %>% 
+  data_grid(phylum) %>% 
+  add_predictions(tax_model)
+ggplot() +
+  geom_boxplot(aes(y=phylum, x=log1p(div)), data=D_ar_tax) +
+  geom_point(aes(y=phylum, x=pred), data=pred, col="red")
+
+# Visulize the residuals
+res <- D_ar_tax %>% 
+  add_residuals(tax_model)
+# no need to specify x,y in aes()
+# We can see the effect here
+res %>% 
+  ggplot(aes(y=resid, x=tobramycin)) +
+  geom_boxplot()
+
+# Looking at the res there is still a lot of uneqplanied especially under
+res %>% 
+  ggplot(aes(resid)) +
+  geom_histogram()
+D_tmp
+# Lets see where it comes from
+res %>% 
+  ggplot(aes(n16 ,resid)) +
+  geom_point(size=0.5) +
+  geom_ref_line(h=0, col = "red", size = 1)
+
+
+
+```
+
+```{r}
+library(magrittr)
+# trying to take into consideration the n16
+tax_n16_model <- update(tax_model, ~.+n16)
+# Now it looks alot better:
+D_ar_tax %>% 
+  add_residuals(tax_n16_model) %>% 
+  ggplot(aes(resid)) + geom_histogram(bins = 40,binwidth = 0.1) 
+
+res <- D_ar_tax %>% 
+  add_residuals(tax_n16_model) 
+  
+plotlist = list()
+for(i in seq_along(intersect)){
+  antibiotic = intersect[i]
+  p <- ggplot(res)+
+    geom_boxplot(aes(x=.data[[antibiotic]], y=resid))
+  plotlist = c(plotlist, list(p))
+}
+
+wrap_plots(plotlist)
+
+
+```
+
+## Lets see for class
+```{r}
+
+# making the lm model
+tax_n16_model <- lm(log1p(div) ~ class+n16, D_ar_tax)
+# This looks better than before. Maybe go all the way down?
+D_ar_tax %>% 
+  add_residuals(tax_n16_model) %>% 
+  ggplot(aes(resid)) + geom_histogram(bins = 40,binwidth = 0.1) 
+
+res <- D_ar_tax %>% 
+  add_residuals(tax_n16_model) 
+  
+plotlist = list()
+for(i in seq_along(intersect)){
+  antibiotic = intersect[i]
+  p <- ggplot(res)+
+    geom_boxplot(aes(x=.data[[antibiotic]], y=resid))
+  plotlist = c(plotlist, list(p))
+}
+
+wrap_plots(plotlist)
+
+
+res %>% 
+  ggplot(aes(log(n16) ,resid)) +
+  geom_point(size=0.5) +
+  geom_ref_line(h=0, col = "red", size = 1) +
+  geom_smooth()
+
+```
+
+# Lets try with the log(n16)
+```{r}
+
+D_ar_sub <- mutate(D_ar_tax,logdiv = log1p(div), logn16 = log(n16))
+
+# making the lm model
+tax_n16_model <- lm(logdiv ~ phylum + logn16, data=D_ar_sub)
+
+# This looks better than before. Maybe go all the way down taxonomically?
+D_ar_sub %>% 
+  add_residuals(tax_n16_model) %>% 
+  ggplot(aes(resid)) + geom_histogram(bins = 40,binwidth = 0.1) 
+
+res <- D_ar_sub %>% 
+  add_residuals(tax_n16_model) 
+  
+
+#plotlist = list()
+#for(i in seq_along(intersect)){
+#  antibiotic = intersect[i]
+#  p <- ggplot(res)+
+#    geom_boxplot(aes(x=.data[[antibiotic]], y=resid))
+#  plotlist = c(plotlist, list(p))
+#}
+#
+#wrap_plots(plotlist)
+
+
+res
+res %>% 
+  ggplot(aes(2^logn16 ,resid)) +
+  geom_hex(bins=50) +
+  geom_ref_line(h=0, col = "red", size = 1) +
+  geom_smooth()
+# Here it looks good, might be because some genera only have like two species in them..
+
+```
+
+FOR 
+```{r}
+D_ar_sub <- mutate(D_ar_tax,logdiv = log1p(div), logn16 = log(n16))
+
+# making the lm model
+tax_n16_model <- lm(logdiv ~ order + logn16, data=D_ar_sub)
+
+# This looks better than before. Maybe go all the way down taxonomically?
+D_ar_sub %>% 
+  add_residuals(tax_n16_model) %>% 
+  ggplot(aes(resid)) + geom_histogram(bins = 40,binwidth = 0.1) 
+
+res <- D_ar_sub %>% 
+  add_residuals(tax_n16_model) 
+  
+
+#plotlist = list()
+#for(i in seq_along(intersect)){
+#  antibiotic = intersect[i]
+#  p <- ggplot(res)+
+#    geom_boxplot(aes(x=.data[[antibiotic]], y=resid))
+#  plotlist = c(plotlist, list(p))
+#}
+#
+#wrap_plots(plotlist)
+
+
+res
+res %>% 
+  ggplot(aes(2^logn16 ,resid)) +
+  geom_hex(bins=50) +
+  geom_ref_line(h=0, col = "red", size = 1) +
+  geom_smooth()
+# Here it looks good, might be because some ORDERs only have like two species in them..
+
+
+# Lets look at order distribution
+D_ar_tax %>% 
+  group_by(phylum) %>% 
+  summarise(n = n()) %>% 
+  mutate(tax_ordered = fct_reorder(phylum,desc(n))) %>% 
+  filter(n < 10) %>% 
+  ggplot() +
+  geom_segment(aes(x=tax_ordered, xend = tax_ordered,y=0, yend=n))
+
+s
+
+# 10 out of 34 tax have under 10 entries. Largest Pseudomonadota have 1800
+D_ar_tax %>% 
+  group_by(phylum) %>% 
+  summarise(n = n()) %>% 
+  mutate(tax_ordered = fct_reorder(phylum,desc(n))) %>% 
+  filter(n < 10) %>% 
+  nrow()
+
+
+D_ar_tax %>% 
+  group_by(phylum) %>% 
+  summarise(n = n()) %>% 
+  mutate(tax_ordered = fct_reorder(phylum,desc(n))) %>% 
+  nrow()
+
+
+D_ar_tax %>% 
+  group_by(phylum) %>% 
+  summarise(n = n()) %>% 
+  mutate(tax_ordered = fct_reorder(phylum,desc(n))) %>% 
+  arrange(desc(n))
+
+nrow(D_tmp)
+```
+Probelemet ift tax er at det for de små tax basically bare giver dem svaret
+
+
+
+
+## Genome size v total seq length
+
+```{r}
+ggplot(D, aes(x=total_seq_length, y=n16, label=species)) + 
+  geom_point()
+
+
+```
+
+
+
