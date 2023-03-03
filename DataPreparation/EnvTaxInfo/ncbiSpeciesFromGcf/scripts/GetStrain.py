@@ -45,6 +45,7 @@ for gcf_chunk in divide_chunks(all_gcf, 500):
         print("running without API-key")
         dat = subprocess.run(["datasets","summary","genome","accession"]+gcf_chunk, stdout=subprocess.PIPE)
     dat = dat.stdout
+    
     dat_json = json.loads(dat)
 
     # Loop though the json output and extract relevant information

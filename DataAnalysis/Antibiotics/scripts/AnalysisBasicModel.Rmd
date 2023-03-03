@@ -1,0 +1,474 @@
+---
+title: "Untitled"
+output:
+  pdf_document: default
+  html_document: default
+date: "2023-03-03"
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(RSQLite)
+library(tidyverse)
+library(caret)
+library(magrittr)
+library(glue)
+library(cowplot)
+library(modelr)
+```
+## Reading in the data
+Read in the data, and set the data types to the correct types
+Drop index number from the pandas dataframe and NCBI.tax.ID
+```{r}
+# Connect to the DB
+conn <- dbConnect(SQLite(),"../../../s16.sqlite")
+# List of all the tables
+dbListTables(conn)
+
+D_tmp <- dbGetQuery(conn, "SELECT * FROM ribdif_bacdive_joined")
+D_tmp <- tibble(D_tmp, .name_repair ="universal")
+
+D_tmp <- mutate(D_tmp, across(antibiotics:PH.range, factor))
+D_tmp <- select(D_tmp, !c(NCBI.tax.ID,strain.designation))
+
+# Chainging AR with no annotation to PNR
+D_tmp <- mutate(D_tmp, antibiotics = ifelse(is.na(antibiotics), "PNR", "R"))
+```
+
+
+
+# Splitting up data
+
+```{r}
+set.seed(25022023)
+# Adding ID as a column
+D_tmp %<>% mutate(ID = row_number(species))
+# Randomly selecting the training/exploration data with seed set
+D <- D_tmp %>% slice_sample(prop = 0.7)
+# Assigning the rest of the data to the test dataset
+D_test <- anti_join(D_tmp, D, by = "ID")
+
+# Checking if its correctly split up
+percent_in_test <- nrow(D_test)/(nrow(D)+nrow(D_test))
+percent_in_test
+
+```
+
+## Modeling
+The goal of this part is to build a model which takes into consideration 
+n16 and taxonomic relationships as it seems they might have a big impact.
+We could either:
+1) Remove all positions with n16 = 0, as they are not going to include any information about 
+the relationship between bacterial ecology and div. Here the intercept could now be set to (0,0) or not
+2) Fit a model with a varying intercept
+3) Fit a model with 0,0 as intercept as described in the next paragraph
+Below we can see div against n16.
+The main takeway is that we have a lot small values and a few large, therefore there is an arguemt
+for applying a transformation to both axis.
+
+```{r}
+ggplot(D,aes(x=n16, y=div)) + 
+  geom_point(size = 0.2) +
+  geom_smooth()
+```
+
+## Transformations
+
+```{r}
+Dt <- D %>% 
+  mutate(Tn16=log(n16), Tdiv=log1p(div)) 
+
+# Plotting the different transformations
+p1 <- ggplot(Dt,aes(x=Tn16, y=Tdiv)) + 
+  geom_point(size=0.2) +
+  geom_smooth()
+
+p2 <- ggplot(Dt,aes(x=n16, y=Tdiv)) + 
+  geom_point(size=0.2) +
+  geom_smooth()
+
+p3 <- ggplot(Dt,aes(x=n16, y=div)) + 
+  geom_point(size=0.2) +
+  geom_smooth()
+
+plot_grid(p1,p2,p3,labels ="auto")
+
+```
+## Looking at residuals for each
+```{r}
+a <- lm(Tdiv ~ Tn16  ,Dt)
+b <- lm(Tdiv ~ n16  ,Dt)
+c <- lm(div ~ n16 ,Dt)
+
+```
+a)
+```{r}
+par(mfrow=c(2,2))
+plot(a)
+```
+b)
+```{r}
+par(mfrow=c(2,2))
+plot(b)
+```
+c)
+```{r}
+par(mfrow=c(2,2))
+plot(c)
+```
+
+Based on this im going to go with the transformation of both sides. Since these transformations decrease the leverage of larger numbers
+
+
+### Taxonomic information in the model
+Lets try and add taxonomic information to the mdoel
+Lets first visualize the phylums with over 20 entries
+Here it seems that there could be some gain in including phylum in the model, as it seems to have an effect
+
+```{r}
+# Plotting for different phylum
+Dt %>% 
+  group_by(phylum) %>% 
+  mutate(n = n()) %>% 
+  ungroup() %>% 
+  filter(n > 50) %>% 
+  ggplot(aes(x=Tn16, y=Tdiv)) +
+    geom_point(size=0.5, alpha=0.6) +
+    theme(legend.position="none") +
+    facet_wrap(~phylum) +
+    geom_smooth(method=lm, formula = "y~x") +
+    ggtitle("By phylum")
+
+
+```
+Lets also have a look for class, 
+```{r}
+library(magrittr)
+# Plotting for different orders
+Dt %>% 
+  group_by(class) %>% 
+  mutate(n = n()) %>% 
+  ungroup() %>% 
+  filter(n > 20) %>% 
+  ggplot(aes(x=Tn16, y=Tdiv)) +
+    geom_point(size=0.5, alpha=0.6) +
+    theme(legend.position="none") +
+    facet_wrap(~class) +
+    geom_smooth(method=lm, formula = "y~x+0") +
+    ggtitle("By class")
+
+```
+Here it's hard to see how much information we lose by just including phylum instead of order. Therefore lets
+try and remove the effect of phylum by plotting the residuals of a simple model
+
+```{r}
+fitTaxPhylum <- lm(Tdiv ~ 0 + Tn16 + Tn16:factor(phylum)  ,Dt)
+summary(fitTaxPhylum)
+res <- Dt %>% 
+  add_residuals(fitTaxPhylum)
+
+res %>% 
+  group_by(class) %>% 
+  mutate(n = n()) %>% 
+  ungroup() %>% 
+  filter(n > 20) %>% 
+  ggplot(aes(x=Tn16, y=resid)) +
+    geom_point(size=0.5, alpha=0.6) +
+    theme(legend.position="none") +
+    facet_wrap(~class) +
+    geom_smooth(method=lm, formula = "y~x+0") +
+    geom_ref_line(h=0, col = "red", size = 0.1) +
+    ggtitle("Residuals vs n16 By class")
+
+
+```
+The residuals seems ok distributed. It seems to make sense stay at the phylum level just based on this
+But checking the amount of entries in both it seems that they are about the same.
+So this effect could be due to each phylum just having one class.
+```{r}
+print("class:")
+res %>% 
+  group_by(class) %>% 
+  mutate(n = n()) %>% 
+  ungroup() %>% 
+  filter(n > 20) %>% 
+  nrow()
+print("phylum:")
+res %>% 
+  group_by(phylum) %>% 
+  mutate(n = n()) %>% 
+  ungroup() %>% 
+  filter(n > 20) %>% 
+  nrow()
+
+```
+Lets check
+```{r}
+res %>% 
+  group_by(phylum) %>% 
+  reframe(uClass = unique(class)) %>% 
+  ggplot() + geom_bar(aes(x=phylum)) +coord_flip()
+
+
+```
+This seems to be the case
+We could also do the same for order.
+Here there is more varibilty. But it will argue that we get closer to just predicting the datapoints directly instead of 
+the tendency. Therefore i am going to just keep the model with including the phylum level
+
+```{r}
+fitTaxPhylum <- lm(Tdiv ~ 0 + Tn16 + Tn16:phylum ,Dt)
+summary(fitTaxPhylum)
+res <- Dt %>% 
+  add_residuals(fitTaxPhylum)
+
+res %>% 
+  group_by(order) %>% 
+  mutate(n = n()) %>% 
+  ungroup() %>% 
+  filter(n > 20) %>% 
+  ggplot(aes(x=Tn16, y=resid)) +
+    geom_point(size=0.5, alpha=0.6) +
+    theme(legend.position="none") +
+    facet_wrap(~order) +
+    geom_smooth(method=lm, formula = "y~x+0") +
+    geom_ref_line(h=0, col = "red", size = 0.1) +
+    ggtitle("Residuals vs n16 By order")
+```
+
+## Looking at tax + n16 model
+
+
+```{r}
+Dt <- Dt %>% 
+  group_by(phylum) %>% 
+  mutate(n = n()) %>% 
+  ungroup() %>% 
+  filter(n > 20)
+# Lets add it to the model
+Dt
+fitTaxPhylum <- lm(Tdiv ~ Tn16 + phylum + Tn16:phylum ,Dt)
+summary(fitTaxPhylum)
+res <- Dt %>% 
+  add_residuals(fitTaxPhylum)
+
+res %>% 
+  ggplot(aes(resid)) + geom_histogram(bins = 40,binwidth = 0.1) 
+
+res %>% 
+  ggplot(aes(x=exp(Tn16) ,y=resid)) +
+  geom_hex(bins=50) +
+  geom_ref_line(h=0, col = "red", size = 1) +
+  geom_smooth()
+
+par(mfrow=c(2,2))
+plot(fitTaxPhylum )
+
+# We have on with a very large amount of n16
+#Dsub %>% filter(n16>20)
+
+#I checked and its also high here
+#https://www.arb-silva.de/search/
+#Tumebacillus avium
+# we observe more var at the start in the res since they are predicting wrong
+
+```
+We can observe that we tend to overestimate the div on genera with larger amount of #16s. 
+And we tend to underestimate div for genera with samller amounts of #16s.
+Therefore we still have some unexplained variance in the model
+
+Lets also have a look for order
+
+```{r}
+Dt <- Dt %>% 
+  filter(n16 > 1)
+# Lets add it to the model
+Dt
+fitTaxOrder <- lm(Tdiv ~ Tn16 + Tn16:order ,Dt)
+res <- Dt %>% 
+  add_residuals(fitTaxOrder)
+
+res %>% 
+  ggplot(aes(resid)) + geom_histogram(bins = 40,binwidth = 0.1) 
+
+res %>% 
+  ggplot(aes(x=exp(Tn16) ,y=resid)) +
+  geom_hex(bins=50) +
+  geom_ref_line(h=0, col = "red", size = 1) +
+  geom_smooth()
+
+par(mfrow=c(2,2))
+plot(fitTaxPhylum )
+
+```
+While some of the plots look ok,
+we can see that most of the orders have few entries (~half having below 10 entries)
+
+```{r}
+# Under 10
+print("under 10")
+Dt %>% 
+  group_by(order) %>% 
+  summarise(n = n()) %>% 
+  filter(n < 10) %>% 
+  nrow
+
+# Over or equal to 10
+print("over or equal to 10")
+Dt %>% 
+  group_by(order) %>% 
+  summarise(n = n()) %>% 
+  filter(n >= 10) %>% 
+  nrow
+
+```
+
+### SAMPLING
+Lets try and get an idea about the effect of where it is samples from
+```{r}
+
+Dt <- D %>% 
+  mutate(Tn16=log(n16), Tdiv=log1p(div)) 
+Dt <- Dt %>% 
+  group_by(phylum) %>% 
+  mutate(n = n()) %>% 
+  ungroup() %>% 
+  filter(n > 20)
+
+Denv <- Dt %>% mutate(aquaP = aquatic.counts/Total.samples , 
+              animalP = animal.counts/Total.samples, 
+              plantP = plant.counts/Total.samples, 
+              soilP = soil.counts/Total.samples)
+
+fitTaxPhylum <- lm(Tdiv ~ Tn16 + Tn16:phylum ,Denv)
+res <- Denv %>% 
+  add_residuals(fitTaxPhylum)
+summary(fitTaxPhylum)
+
+
+p1 <- ggplot(res, aes(x=aquaP, y=resid)) +
+  geom_point()
+p2 <- ggplot(res, aes(x=plantP, y=resid)) +
+  geom_point()
+p3 <- ggplot(res, aes(x=animalP, y=resid)) +
+  geom_point()
+p4 <- ggplot(res, aes(x=soilP, y=resid)) +
+  geom_point()
+plot_grid(p1, p2, p3, p4,labels ="auto")
+
+```
+It seems that there is no difference here
+
+## Antibiotics, motility, PH, gramstain motility
+
+```{r}
+
+
+
+
+res <- Dt %>% 
+  add_residuals(fitTaxPhylum)
+summary(fitTaxPhylum)
+
+
+
+p1 <- ggplot(res, aes(x=gram.stain, y=resid)) +
+  geom_boxplot()
+p2 <- ggplot(res, aes(x=PH.range, y=resid)) +
+  geom_boxplot() +
+  geom_point(size=0.2)
+p3 <- ggplot(res, aes(x=motility, y=resid)) +
+  geom_boxplot()+
+  geom_point(size=0.2)
+p4 <- ggplot(res, aes(x=antibiotics, y=resid)) +
+  geom_boxplot() +
+  geom_point(size=0.2)
+plot_grid(p1, p2, p3, p4,labels ="auto")
+```
+Lets test antibiotics
+
+```{r}
+library(car)
+# Updating model and running ancova on it
+fit_ar <- update(fitTaxPhylum, . ~ . + factor(antibiotics) + Tn16:factor(antibiotics))
+Anova(fit_ar)
+drop1(fit_ar)
+fit_ar2 <- update(fit_ar, .~. -Tn16:factor(antibiotics))
+Anova(fit_ar2)
+
+```
+It seems there is no significant effect of antibiotics
+
+
+
+#### Lets have a look at specific antibiotics
+
+### Formatting daTA
+Lets check for more specifc types of AR
+First getting the subset of the data with AR resistence info about the Antibiotics
+which target the 16s rRNA
+```{r}
+# Getting the ones which are actually targeting 16S 
+# Reading them from ARtarget16s.csv
+target16S <- read_csv2("../data/ARtarget16s.csv",show_col_types = FALSE,col_names = FALSE)
+targetvector <- as.array(target16S$X1)
+found_16S <- as.array(colnames(select(D_tmp,lincomycin:spiramycin.II)))
+intersect <- intersect(targetvector,found_16S)
+D_ar <- select(Dt, all_of(intersect), Tn16, Tdiv, phylum)
+```
+### Different types
+#### Div
+Now lets look at some plots
+firstly for div
+```{r}
+library(patchwork)
+
+plotlist = list()
+for(i in seq_along(intersect)){
+  antibiotic = intersect[i]
+  p <- ggplot(res)+
+    geom_boxplot(aes(x=.data[[antibiotic]], y=resid)) +
+    geom_point(aes(x=.data[[antibiotic]], y=resid), size = 0.5, alpha = 0.5)
+  plotlist = c(plotlist, list(p))
+}
+
+wrap_plots(plotlist)
+```
+
+# Lets test it
+```{r}
+
+update(fitTaxPhylum, . ~ . + minocycline + Tn16:minocycline) %>% 
+  Anova()
+
+filter(D_ar, !is.na(minocycline ))
+
+update(fitTaxPhylum, . ~ . + streptomycin + Tn16:streptomycin) %>% 
+  Anova()
+
+#update(fitTaxPhylum, . ~ . + tobramycin + Tn16:tobramycin) %>% 
+#  Anova()
+
+
+```
+
+
+
+
+```{r}
+plotlist = list()
+for(i in seq_along(intersect)){
+  antibiotic = intersect[i]
+  p <- ggplot(D_ar)+
+    geom_bar(aes(x=.data[[antibiotic]],na.rm = TRUE))
+  plotlist = c(plotlist, list(p))
+}
+
+wrap_plots(plotlist)
+```
+
+
+
+
+
+#### Lets have a look at interactions
+

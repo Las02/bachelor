@@ -1,0 +1,43 @@
+---
+title: "sequence analysis"
+output: html_document
+date: "2023-03-03"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(RSQLite)
+library(Biostrings)
+library(msa)
+```
+
+## Reading in the data
+```{r}
+conn <- dbConnect(SQLite(),"../../s16.sqlite")
+dbListTables(conn)
+D <- dbGetQuery(conn, "SELECT * FROM s16full_sequence")
+```
+Convert the sequences to bioString object
+```{r}
+
+D <- mutate(D, sequence = map(sequence, DNAString))
+
+```
+
+## MSA
+
+```{r}
+# Building data as string set
+set <- DNAStringSet(D$sequence)
+names(set) <- D$id
+
+```
+```{r}
+# Running MSA
+alignment = msa(set)
+
+```
+
+
+

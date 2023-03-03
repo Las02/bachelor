@@ -50,8 +50,14 @@ ribdifD <- select(ribdifD,number_16s, 2, genus,species)
 inner_join(ribdifD, countD, by="gcf") %>% 
   select(genus,species,gcf, number_16s, total) %>% 
   mutate(diff = number_16s - total) %>% 
-  filter(diff > 0) %>% 
-  arrange(desc(diff))
+  filter(diff != 0) %>% 
+  arrange(genus)
+
+
+inner_join(ribdifD, countD, by="gcf") %>% 
+  select(genus,species,gcf, number_16s, total) %>% 
+  mutate(diff = number_16s - total) %>% 
+  filter(diff != 0)
 
 # But it is not a problem .. yet
 
@@ -61,6 +67,45 @@ nrow(countD)
 # Ribdif is incorrect at : GCF_018361065.1, Dickeya
 # And Salmonella GCF_901457615.1 Same bug
 # Seems to only happen ~times
+ribdifD <- select(ribdifD,number_16s, 2, genus,species) 
+inner_join(ribdifD, countD, by="gcf") %>% 
+  select(genus,species,gcf, number_16s, total) %>% 
+  mutate(diff = number_16s - total) %>% 
+  filter(diff > 0) %>% 
+  arrange(desc(diff)) 
+
+
+%>% 
+  filter(gcf == "GCF_018361065.1")
 ```
 
+
+GCF_000247605.1	5	10	-5
+GCF_023700225.1	5	10	-5
+GCF_000247605.1	5	10	-5
+GCF_023700225.1
+
+
+```{r}
+ribdifD %>% filter(gcf %in% c("GCF_014467055.1"))
+
+ribdifD %>% group_by(gcf) %>% 
+  mutate(n=n()) %>% 
+  arrange(desc(n)) %>% 
+  filter(n>1)
+
+
+inner_join(ribdifD, countD, by="gcf") %>% 
+  select(genus,species,gcf, number_16s, total) %>% 
+  mutate(diff = number_16s - total) %>% 
+  filter(diff != 0) %>% 
+  group_by(gcf) %>% 
+  mutate(n=n()) %>% 
+  arrange(desc(n)) %>% 
+  filter(n>1)
+
+```
+GCF_001887285.1	Microbacterium	Microbacterium paludicola strain CC3 chromosome complete genome
+
+GCF_001887285.1	Microbacterium	Microbacterium paludicola strain CC3 chromosome complete genome	2
 

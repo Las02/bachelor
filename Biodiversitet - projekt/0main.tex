@@ -1,0 +1,58 @@
+\documentclass[12pt,oneside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper,width=165mm,top=20mm,bottom=20mm,bindingoffset=6mm]{geometry}
+% For spacing:
+\usepackage{setspace}
+\onehalfspacing
+% To insert the last page:
+\usepackage{lastpage}
+% To place things more precise:
+\usepackage{float} 
+% To be able to insert images:
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage[export]{adjustbox}
+% To make header and footer:
+\usepackage{fancyhdr}
+\setlength{\headheight}{24pt}
+\pagestyle{fancy}
+\fancyhead[L]{27051 Diversity and application of microorganisms}
+\fancyhead[R]{\includegraphics[height=0.68cm]{Figures/DTU.png}}
+\fancyfoot[L]{Cecille, Lasse, Mathilde, Mille \& Nicolai}
+\fancyfoot[C]{}
+\fancyfoot[R]{Page \thepage \hspace{0.03cm} of \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.1 pt}
+
+
+\title{Biodiversitet - projekt}
+\author{Cecille, Lasse, Mathilde, Mille \& Nicolai}
+\date{March 2022}
+
+\begin{document}
+
+\input{0Titlepage}
+\newpage
+
+\tableofcontents
+\newpage
+
+\input{1BSummary}
+
+\input{1Purpose}
+
+\input{2Efflux}
+
+\input{3Biofilm}
+
+\input{4Alternative treatment}
+
+\input{5Conclusion}
+
+
+%%%%%%%%%%%%%%%%%% indsættelse af kilder %%%%%%%%%%%%%%%%%%
+\addcontentsline{toc}{section}{References}
+\bibliography{references.bib}
+%\bibliography{FællesRef.bib}
+\bibliographystyle{ieeetr}
+
+\end{document}
